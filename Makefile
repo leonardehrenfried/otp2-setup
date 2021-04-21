@@ -44,5 +44,7 @@ debug-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -jar otp.jar --load --serve $*
 
 clean:
-	rm -rf berlin/*.obj
-	rm -rf stuttgart/*.obj
+	find . -name osm.pbf -printf '%p\n' -exec rm {} \;
+	find . -name gtfs.zip -printf '%p\n' -exec rm {} \;
+	find . -name graph.obj -printf '%p\n' -exec rm {} \;
+	rm -f otp.jar
