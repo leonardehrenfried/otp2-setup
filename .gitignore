@@ -1,3 +1,4 @@
 *.jar
 osm.pbf
 *.zip
+graph.obj
