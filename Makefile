@@ -13,9 +13,15 @@ stuttgart/osm.pbf:
 	mkdir -p stuttgart
 	${WGET} http://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
 
-stuttgart/gtfs.zip:
+stuttgart/gtfs.raw.zip:
 	mkdir -p stuttgart
 	${WGET} https://www.openvvs.de/dataset/e66f03e4-79f2-41d0-90f1-166ca609e491/resource/bfbb59c7-767c-4bca-bbb2-d8d32a3e0378/download/google_transit.zip -o $@
+stuttgart/gtfs: stuttgart/gtfs.raw.zip
+	unzip -d stuttgart/gtfs stuttgart/gtfs.raw.zip
+	echo "patching GTFS-Flex data for Herrenberg on-demand routes into VVS/Stuttgart GTFS"
+	docker run -v $(abspath stuttgart/gtfs):/gtfs --rm -it derhuerst/generate-herrenberg-gtfs-flex
+stuttgart/gtfs.zip: stuttgart/gtfs
+	zip -j -1 $@ stuttgart/gtfs/*
 
 norway/osm.pbf:
 	mkdir -p norway
@@ -48,5 +54,7 @@ debug-%: otp.jar
 clean:
 	find . -name osm.pbf -printf '%p\n' -exec rm {} \;
 	find . -name gtfs.zip -printf '%p\n' -exec rm {} \;
+	rm -f */gtfs.raw.zip
+	rm -rf */gtfs
 	find . -name graph.obj -printf '%p\n' -exec rm {} \;
 	rm -f otp.jar
