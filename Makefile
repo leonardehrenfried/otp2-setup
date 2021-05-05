@@ -32,7 +32,7 @@ oxford/gtfs.zip:
 	echo "No Oxford GTFS yet!"
 
 otp.jar:
-	${WGET} https://leonard.io/otp-2-shaded-2.1.0-SNAPSHOT.jar -o $@
+	${WGET} https://leonard.io/stadtnavi/otp-2.jar -o $@
 
 build-%: otp.jar %/osm.pbf %/gtfs.zip
 	java -Xmx12G -jar otp.jar --build --save $*
