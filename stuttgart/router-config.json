@@ -11,7 +11,8 @@
       "comment": "Ignore walkOnStreetReluctance as implementation is too simple and causes unexpected detours",
       "ignored_walkOnStreetReluctance": 1.5,
       "carParkCarLegWeight": 2,
-      "itineraryFiltering": 1.0
+      "itineraryFiltering": 1.0,
+      "allowKeepingRentedBicycleAtDestination": true
   },
   "vectorTileLayers": [
     {
@@ -60,7 +61,7 @@
       "sourceType": "gbfs",
       "url": "https://gtfs.mfdz.de/gbfs/regiorad_stuttgart/",
       "network": "regiorad",
-      "rentalType": "station-based-with-temporary-drop-off"
+      "allowKeepingRentedBicycleAtDestination": true
     },
     {
       "id": "taxi-stands",
