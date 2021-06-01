@@ -38,9 +38,6 @@ build-%: otp.jar %/osm.pbf %/gtfs.zip
 	java -Xmx12G -jar otp.jar --build --save $*
 
 run-%: otp.jar
-	java -jar otp.jar --load --serve $*
-
-debug-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -jar otp.jar --load --serve $*
 
 clean:
