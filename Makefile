@@ -15,7 +15,7 @@ stuttgart/osm.pbf:
 
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
-	${WGET} https://www.openvvs.de/dataset/e66f03e4-79f2-41d0-90f1-166ca609e491/resource/bfbb59c7-767c-4bca-bbb2-d8d32a3e0378/download/google_transit.zip -o $@
+	${WGET} https://gtfs.mfdz.de/hbg3.merged.with_flex.gtfs.zip -o $@
 
 norway/osm.pbf:
 	mkdir -p norway
