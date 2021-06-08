@@ -79,6 +79,13 @@
       "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/gueltstein-mobil/gbfs.json",
       "network": "gueltstein-mobil",
       "allowKeepingRentedBicycleAtDestination": true
+    },
+    {
+      "type": "vehicle-parking",
+      "sourceType": "park-api",
+      "frequencySec": 30,
+      "feedId": "PAPI",
+      "url": "https://api.stadtnavi.de/herrenberg/parking/parkapi.json"
     }
   ]
 }
