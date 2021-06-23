@@ -15,7 +15,7 @@ stuttgart/osm.pbf:
 
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
-	${WGET} https://gtfs.mfdz.de/hbg3.merged.with_flex.gtfs.zip -o $@
+	${WGET} http://116.203.235.64:8002/hbg5.merged.with_flex.gtfs.zip -o $@
 
 norway/osm.pbf:
 	mkdir -p norway
