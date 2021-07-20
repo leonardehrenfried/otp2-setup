@@ -24,6 +24,12 @@ norway/osm.pbf:
 norway/gtfs.zip:
 	echo "No Norway GTFS yet!"
 
+drammen/osm.pbf: norway/osm.pbf
+	osmium extract norway/osm.pbf --polygon drammen/drammen.geojson -o $@
+
+drammen/gtfs.zip:
+	echo "No Drammen GTFS yet!"
+
 oxford/osm.pbf:
 	mkdir -p oxford
 	${WGET} http://download.geofabrik.de/europe/great-britain/england/oxfordshire-latest.osm.pbf -o $@

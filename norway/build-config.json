@@ -1,3 +1,4 @@
 {
-  "osmWayPropertySet": "norway"
+  "osmWayPropertySet": "norway",
+  "areaVisibility": true
 }
