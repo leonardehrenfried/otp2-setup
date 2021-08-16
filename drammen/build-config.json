@@ -1,5 +1,5 @@
 {
   "osmWayPropertySet": "norway",
-  "areaVisibility": true,
-  "staticBikeParkAndRide": true
+  "areaVisibility": false,
+  "staticBikeParkAndRide": false
 }
