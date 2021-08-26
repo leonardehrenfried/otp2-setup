@@ -1,0 +1,31 @@
+{
+  "routingDefaults": {
+      "walkSpeed": 1.3,
+      "transferSlack": 100,
+      "maxTransfers": 4,
+      "waitReluctance": 0.4,
+      "waitAtBeginningFactor": 0.7,
+      "walkReluctance": 1.75,
+      "stairsReluctance": 1.65,
+      "walkBoardCost": 540,
+      "carParkCarLegWeight": 2,
+      "itineraryFiltering": 1.0,
+      "allowKeepingRentedBicycleAtDestination": true,
+      "bikeRentalPickupTime": 180,
+      "bikeRentalPickupCost": 900,
+      "itineraryFilters" : {
+        "parkAndRideDurationRatio": 0.6,
+        "flexOnlyToDestination": true
+      }
+  },
+  "updaters": [
+    {
+      "id": "tier-oslo-bike-rental",
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://api.entur.io/mobility/v2/gbfs/tieroslo/gbfs.json",
+      "network": "tier"
+    }
+  ]
+}

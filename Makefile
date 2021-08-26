@@ -30,6 +30,12 @@ drammen/osm.pbf: norway/osm.pbf
 drammen/gtfs.zip:
 	${WGET} https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_bra-aggregated-gtfs.zip -o $@
 
+oslo/osm.pbf: norway/osm.pbf
+	osmium extract norway/osm.pbf --polygon oslo/oslo.geojson -o $@
+
+oslo/gtfs.zip:
+	echo "No GTFS yet!"
+
 oxford/osm.pbf:
 	mkdir -p oxford
 	${WGET} http://download.geofabrik.de/europe/great-britain/england/oxfordshire-latest.osm.pbf -o $@
