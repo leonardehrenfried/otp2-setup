@@ -1,5 +1,12 @@
 {
   "osmWayPropertySet": "norway",
   "areaVisibility": false,
-  "staticBikeParkAndRide": false
+  "staticBikeParkAndRide": false,
+  "netex" : {
+    "moduleFilePattern" : ".*-netex\\.zip",
+    "sharedFilePattern": "_stops.xml",
+    "sharedGroupFilePattern": "_(\\w{3})(_flexible)?_shared_data.xml",
+    "groupFilePattern": "(\\w{3})_.*\\.xml",
+    "netexFeedId": "EN"
+  }
 }
