@@ -1,7 +1,11 @@
 {
-  "osmWayPropertySet": "norway",
   "areaVisibility": false,
-  "staticBikeParkAndRide": false,
+  "parentStopLinking": true,
+  "platformEntriesLinking": true,
+  "osmWayPropertySet": "norway",
+  "islandWithoutStopsMaxSize": 5,
+  "islandWithStopsMaxSize": 5,
+  "dataImportReport": true,
   "netex" : {
     "moduleFilePattern" : ".*-netex\\.zip",
     "sharedFilePattern": "_stops.xml",
@@ -10,3 +14,4 @@
     "netexFeedId": "EN"
   }
 }
+
