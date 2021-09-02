@@ -1,3 +1,4 @@
+.PRECIOUS: %/streetGraph.obj
 WGET:=curl -\#
 
 download: otp.jar
@@ -52,8 +53,11 @@ oxford/gtfs.zip:
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
-build-%: otp.jar %/osm.pbf %/gtfs.zip
-	java -Xmx12G -jar otp.jar --build --save $*
+%/streetGraph.obj:
+	java -Xmx12G -jar otp.jar --buildStreet --save $*
+
+build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
+	java -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -jar otp.jar --load --serve $*
