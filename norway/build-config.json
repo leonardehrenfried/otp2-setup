@@ -11,7 +11,12 @@
     "sharedFilePattern": "_stops.xml",
     "sharedGroupFilePattern": "_(\\w{3})(_flexible)?_shared_data.xml",
     "groupFilePattern": "(\\w{3})_.*\\.xml",
-    "netexFeedId": "EN"
+    "netexFeedId": "EN",
+    "ferryWithoutBicycleIds": [
+      "RUT:1",
+      "RUT:2",
+      "RUT:3"
+    ]
   }
 }
 

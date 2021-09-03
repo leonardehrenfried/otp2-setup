@@ -26,7 +26,7 @@ norway/rb_norway-aggregated-netex.zip:
 	${WGET} https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip -o $@
 
 norway/gtfs.zip: norway/rb_norway-aggregated-netex.zip
-	echo "Not GTFS yet"
+	echo "No GTFS, but Netex instead."
 
 drammen/osm.pbf: norway/osm.pbf
 	osmium extract norway/osm.pbf --polygon drammen/drammen.geojson -o $@
@@ -57,7 +57,7 @@ otp.jar:
 	java -Xmx12G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
-	java -Xmx12G -jar otp.jar --loadStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -jar otp.jar --load --serve $*
