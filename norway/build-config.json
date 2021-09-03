@@ -1,11 +1,11 @@
 {
   "areaVisibility": false,
   "parentStopLinking": true,
-  "platformEntriesLinking": true,
+  "platformEntriesLinking": false,
   "osmWayPropertySet": "norway",
   "islandWithoutStopsMaxSize": 5,
   "islandWithStopsMaxSize": 5,
-  "dataImportReport": true,
+  "dataImportReport": false,
   "netex" : {
     "moduleFilePattern" : ".*-netex\\.zip",
     "sharedFilePattern": "_stops.xml",
