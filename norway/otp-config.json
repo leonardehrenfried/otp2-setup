@@ -1,5 +1,6 @@
 {
   "otpFeatures": {
-    "ReportApi": true
+    "ReportApi": true,
+    "SandboxAPITransmodelApi": true
   }
 }
