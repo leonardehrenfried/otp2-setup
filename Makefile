@@ -10,6 +10,14 @@ berlin/osm.pbf:
 berlin/gtfs.zip:
 	${WGET} https://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213/latest/download -o $@
 
+hamburg/osm.pbf:
+	mkdir -p hamburg
+	${WGET} https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf -o $@
+
+hamburg/gtfs.zip:
+	mkdir -p hamburg
+	${WGET} https://gtfs.mfdz.de/hh.merged.gtfs.zip -o $@
+
 stuttgart/osm.pbf:
 	mkdir -p stuttgart
 	${WGET} http://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
