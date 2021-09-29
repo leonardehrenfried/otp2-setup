@@ -65,9 +65,21 @@ oxford/osm.pbf:
 oxford/gtfs.zip:
 	echo "No Oxford GTFS yet!"
 
+## flex example feeds
+
 massachusetts/osm.pbf:
 	mkdir -p massachusetts
 	${WGET} https://download.geofabrik.de/north-america/us/massachusetts-latest.osm.pbf -o $@
+
+colorado/osm.pbf:
+	mkdir -p colorado
+	${WGET} https://download.geofabrik.de/north-america/us/colorado-latest.osm.pbf -o $@
+
+aspen/osm.pbf: colorado/osm.pbf
+	osmium extract colorado/osm.pbf --polygon aspen/aspen.geojson -o $@
+
+aspen/gtfs.zip: flex/osm.pbf
+	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--on-demand-service.zip -o $@
 
 flex/osm.pbf: massachusetts/osm.pbf
 	osmium extract massachusetts/osm.pbf --polygon flex/brockton.geojson -o $@
