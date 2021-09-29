@@ -65,6 +65,16 @@ oxford/osm.pbf:
 oxford/gtfs.zip:
 	echo "No Oxford GTFS yet!"
 
+massachusetts/osm.pbf:
+	mkdir -p massachusetts
+	${WGET} https://download.geofabrik.de/north-america/us/massachusetts-latest.osm.pbf -o $@
+
+flex/osm.pbf: massachusetts/osm.pbf
+	osmium extract massachusetts/osm.pbf --polygon flex/brockton.geojson -o $@
+
+flex/gtfs.zip: flex/osm.pbf
+	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--on-demand-service.zip -o $@
+
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
@@ -85,7 +95,6 @@ clean-all:
 	rm -f otp.jar
 
 clean-%:
-	find $* -name osm.pbf -printf '%p\n' -exec rm {} \;
 	find $* -name gtfs.zip -printf '%p\n' -exec rm {} \;
 	find $* -name graph.obj -printf '%p\n' -exec rm {} \;
 	find $* -name streetGraph.obj -printf '%p\n' -exec rm {} \;
