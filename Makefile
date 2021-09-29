@@ -36,6 +36,13 @@ norway/rb_norway-aggregated-netex.zip:
 norway/gtfs.zip: norway/rb_norway-aggregated-netex.zip
 	echo "No GTFS, but Netex instead."
 
+germany/gtfs.zip:
+	echo "No GTFS, but Netex instead."
+
+germany/osm.pbf:
+	mkdir -p germany
+	${WGET} https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf -o $@
+
 drammen/osm.pbf: norway/osm.pbf
 	osmium extract norway/osm.pbf --polygon drammen/drammen.geojson -o $@
 
