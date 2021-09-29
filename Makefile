@@ -1,5 +1,5 @@
 .PRECIOUS: %/streetGraph.obj
-WGET:=curl -\#
+WGET:=curl -\# --fail
 
 download: otp.jar
 
@@ -87,11 +87,11 @@ cripple-creek/osm.pbf: colorado/osm.pbf
 cripple-creek/gtfs.zip: cripple-creek/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--same-day-service.zip -o $@
 
-flex/osm.pbf: massachusetts/osm.pbf
+brockton/osm.pbf: massachusetts/osm.pbf
 	osmium extract massachusetts/osm.pbf --polygon flex/brockton.geojson -o $@
 
-flex/gtfs.zip: flex/osm.pbf
-	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--on-demand-service.zip -o $@
+brockton/gtfs.zip: brockton/osm.pbf
+	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
 
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
