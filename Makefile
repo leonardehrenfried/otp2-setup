@@ -78,8 +78,14 @@ colorado/osm.pbf:
 aspen/osm.pbf: colorado/osm.pbf
 	osmium extract colorado/osm.pbf --polygon aspen/aspen.geojson -o $@
 
-aspen/gtfs.zip: flex/osm.pbf
+aspen/gtfs.zip: aspen/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--on-demand-service.zip -o $@
+
+cripple-creek/osm.pbf: colorado/osm.pbf
+	osmium extract colorado/osm.pbf --polygon cripple-creek/cripple-creek.geojson -o $@
+
+cripple-creek/gtfs.zip: cripple-creek/osm.pbf
+	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--same-day-service.zip -o $@
 
 flex/osm.pbf: massachusetts/osm.pbf
 	osmium extract massachusetts/osm.pbf --polygon flex/brockton.geojson -o $@
