@@ -16,7 +16,7 @@ hamburg/osm.pbf:
 
 hamburg/gtfs.zip:
 	mkdir -p hamburg
-	${WGET} https://gtfs.mfdz.de/hh.merged.gtfs.zip -o $@
+	${WGET} https://gtfs.mfdz.de/HVV.with_bikes_allowed.gtfs.zip -o $@
 
 stuttgart/osm.pbf:
 	mkdir -p stuttgart
