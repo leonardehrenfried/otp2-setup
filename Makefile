@@ -88,7 +88,7 @@ cripple-creek/gtfs.zip: cripple-creek/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--same-day-service.zip -o $@
 
 brockton/osm.pbf: massachusetts/osm.pbf
-	osmium extract massachusetts/osm.pbf --polygon flex/brockton.geojson -o $@
+	osmium extract massachusetts/osm.pbf --polygon brockton/brockton.geojson -o $@
 
 brockton/gtfs.zip: brockton/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
