@@ -1,5 +1,5 @@
 .PRECIOUS: %/streetGraph.obj
-WGET:=curl -\# --fail
+WGET:=curl -L -\# --fail
 
 download: otp.jar
 
@@ -90,7 +90,10 @@ cripple-creek/gtfs.zip: cripple-creek/osm.pbf
 brockton/osm.pbf: massachusetts/osm.pbf
 	osmium extract massachusetts/osm.pbf --polygon brockton/brockton.geojson -o $@
 
-brockton/gtfs.zip: brockton/osm.pbf
+brockton/mtba.gtfs.zip:
+	${WGET} https://transitfeeds.com/p/mbta/64/latest/download -o $@
+
+brockton/gtfs.zip: brockton/mtba.gtfs.zip brockton/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
 
 otp.jar:
@@ -113,7 +116,8 @@ clean-all:
 	rm -f otp.jar
 
 clean-%:
-	find $* -name gtfs.zip -printf '%p\n' -exec rm {} \;
+	find $* -name *gtfs.zip -printf '%p\n' -exec rm {} \;
 	find $* -name graph.obj -printf '%p\n' -exec rm {} \;
 	find $* -name streetGraph.obj -printf '%p\n' -exec rm {} \;
+	find $* -name osm.pbf -printf '%p\n' -exec rm {} \;
 
