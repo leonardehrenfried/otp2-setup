@@ -71,6 +71,10 @@ massachusetts/osm.pbf:
 	mkdir -p massachusetts
 	${WGET} https://download.geofabrik.de/north-america/us/massachusetts-latest.osm.pbf -o $@
 
+georgia/osm.pbf:
+	mkdir -p georgia
+	${WGET} https://download.geofabrik.de/north-america/us/georgia-latest.osm.pbf -o $@
+
 colorado/osm.pbf:
 	mkdir -p colorado
 	${WGET} https://download.geofabrik.de/north-america/us/colorado-latest.osm.pbf -o $@
@@ -95,6 +99,15 @@ brockton/mtba.gtfs.zip:
 
 brockton/gtfs.zip: brockton/mtba.gtfs.zip brockton/osm.pbf
 	${WGET} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
+
+cobb/osm.pbf: georgia/osm.pbf
+	osmium extract georgia/osm.pbf --polygon cobb/cobb-county.geojson -o $@
+
+cobb/mtba.gtfs.zip:
+	${WGET} https://transitfeeds.com/p/mbta/64/latest/download -o $@
+
+cobb/gtfs.zip: brockton/osm.pbf
+	${WGET} https://leonard.io/ibi/cobblinc-flex.zip -o $@
 
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
