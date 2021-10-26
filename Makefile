@@ -20,7 +20,7 @@ hamburg/gtfs.zip:
 
 stuttgart/osm.pbf:
 	mkdir -p stuttgart
-	${WGET} http://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
+	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
 
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
