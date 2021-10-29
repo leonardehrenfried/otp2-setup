@@ -22,6 +22,12 @@ stuttgart/osm.pbf:
 	mkdir -p stuttgart
 	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
 
+karlsruhe/gtfs.zip:
+	${WGET} https://gtfs.mfdz.de/KVV.with_shapes.gtfs.zip -o $@
+
+karlsruhe/osm.pbf:
+	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.pbf -o $@
+
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
 	${WGET} https://gtfs.mfdz.de/hbg5.merged.with_flex.gtfs.zip -o $@
