@@ -1,5 +1,6 @@
 .PRECIOUS: %/streetGraph.obj
 WGET:=curl -L -\# --fail
+current_dir = $(shell pwd)
 
 download: otp.jar
 
@@ -125,7 +126,7 @@ build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -jar otp.jar --load --serve $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 clean-all:
 	find . -name osm.pbf -printf '%p\n' -exec rm {} \;
