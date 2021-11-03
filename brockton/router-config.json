@@ -1,5 +1,5 @@
 {
   "flex": {
-    "maxTransferMeters": 300
+    "maxTransferDurationSeconds": 300
   }
 }
