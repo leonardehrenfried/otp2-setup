@@ -67,6 +67,9 @@
       "expansionFactor": 0.5
     }
   ],
+  "flex": {
+    "maxTransferDurationSeconds": 240
+  },
   "updaters": [
         {
       "type": "stop-time-updater",
