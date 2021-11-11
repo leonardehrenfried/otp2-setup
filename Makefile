@@ -110,8 +110,11 @@ brockton/gtfs.zip: brockton/mtba.gtfs.zip brockton/osm.pbf
 cobb/osm.pbf: georgia/osm.pbf
 	osmium extract georgia/osm.pbf --polygon cobb/cobb-county.geojson -o $@
 
-cobb/gtfs.zip: cobb/osm.pbf
-	${WGET} https://leonard.io/ibi/cobblinc-flex-single-stop-time.zip -o $@
+cobb/cobblinc.gtfs.zip:
+	${WGET} https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data -o $@
+
+cobb/gtfs.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
+	${WGET} https://leonard.io/ibi/cobblinc-flex-with-farezones.zip -o $@
 
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
