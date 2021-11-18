@@ -19,10 +19,6 @@ hamburg/gtfs.zip:
 	mkdir -p hamburg
 	${WGET} https://gtfs.mfdz.de/HVV.with_bikes_allowed.gtfs.zip -o $@
 
-stuttgart/osm.pbf:
-	mkdir -p stuttgart
-	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
-
 karlsruhe/gtfs.zip:
 	${WGET} https://gtfs.mfdz.de/KVV.with_shapes.gtfs.zip -o $@
 
@@ -32,6 +28,17 @@ karlsruhe/osm.pbf:
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
 	${WGET} https://gtfs.mfdz.de/hbg5.merged.with_flex.gtfs.zip -o $@
+
+stuttgart/osm.pbf:
+	mkdir -p stuttgart
+	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf -o $@
+
+reutlingen/gtfs.zip:
+	echo "none"
+
+reutlingen/osm.pbf:
+	mkdir -p reutlingen
+	${WGET} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf -o $@
 
 norway/osm.pbf:
 	mkdir -p norway
