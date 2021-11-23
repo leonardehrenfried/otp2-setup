@@ -11,6 +11,13 @@ berlin/osm.pbf:
 berlin/gtfs.zip:
 	${WGET} https://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213/latest/download -o $@
 
+herzberg/osm.pbf: berlin/osm.pbf
+	mkdir -p berlin
+	osmium extract berlin/osm.pbf --polygon herzberg/herzberg.geojson -o $@
+
+herzberg/gtfs.zip:
+	echo "No GTFS"
+
 hamburg/osm.pbf:
 	mkdir -p hamburg
 	${WGET} https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf -o $@
@@ -127,7 +134,7 @@ otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj:
-	java -Xmx12G -jar otp.jar --buildStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --loadStreet --save $*
