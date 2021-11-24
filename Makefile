@@ -134,7 +134,7 @@ otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj:
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --loadStreet --save $*
