@@ -1,0 +1,8 @@
+{
+  "otpFeatures" : {
+    "SandboxAPILegacyGraphQLApi": true,
+    "SandboxAPIMapboxVectorTilesApi": true,
+    "FlexRouting": true,
+    "FloatingBike": true
+  }
+}

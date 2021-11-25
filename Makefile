@@ -9,14 +9,14 @@ berlin/osm.pbf:
 	${WGET} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
 
 berlin/gtfs.zip:
-	${WGET} https://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213/latest/download -o $@
+	${WGET} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
 herzberg/osm.pbf: berlin/osm.pbf
 	mkdir -p berlin
 	osmium extract berlin/osm.pbf --polygon herzberg/herzberg.geojson -o $@
 
 herzberg/gtfs.zip:
-	echo "No GTFS"
+	#${WGET} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
 hamburg/osm.pbf:
 	mkdir -p hamburg
