@@ -136,10 +136,10 @@ atlanta/osm.pbf: georgia/osm.pbf
 atlanta/cobblinc.gtfs.zip:
 	${WGET} https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data -o $@
 
-atlanta/cobblinc-flex.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
+atlanta/cobblinc-flex.gtfs.zip:
 	${WGET} https://leonard.io/ibi/cobblinc-flex-with-farezones.zip -o $@
 
-atlanta/gtfs.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
+atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-flex.gtfs.zip
 	${WGET} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
 
 otp.jar:
