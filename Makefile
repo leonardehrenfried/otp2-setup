@@ -130,6 +130,18 @@ cobb/cobblinc.gtfs.zip:
 cobb/gtfs.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
 	${WGET} https://leonard.io/ibi/cobblinc-flex-with-farezones.zip -o $@
 
+atlanta/osm.pbf: georgia/osm.pbf
+	osmium extract georgia/osm.pbf --polygon atlanta/atlanta.geojson -o $@
+
+atlanta/cobblinc.gtfs.zip:
+	${WGET} https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data -o $@
+
+atlanta/cobblinc-flex.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
+	${WGET} https://leonard.io/ibi/cobblinc-flex-with-farezones.zip -o $@
+
+atlanta/gtfs.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
+	${WGET} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
+
 otp.jar:
 	${WGET} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
