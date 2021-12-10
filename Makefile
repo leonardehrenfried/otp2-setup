@@ -34,7 +34,7 @@ karlsruhe/osm.pbf:
 
 stuttgart/gtfs.zip:
 	mkdir -p stuttgart
-	${CURL} https://gtfs.mfdz.de/hbg5.merged.with_flex.gtfs.zip -o $@
+	${CURL} https://gtfs.mfdz.de/hbg6.merged.with_flex.gtfs.zip -o $@
 
 stuttgart/osm.pbf:
 	mkdir -p stuttgart
