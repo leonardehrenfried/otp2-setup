@@ -1,0 +1,111 @@
+{
+  "streetRoutingTimeout": 5,
+  "routingDefaults": {
+    "walkSpeed": 1.3,
+    "bikeSpeed": 5,
+    "carSpeed": 40,
+    "wheelchairAccessible": false,
+    "numItineraries": 12,
+    "showIntermediateStops": false,
+    "transferPenalty": 0,
+    "walkReluctance": 4.0,
+    "bikeReluctance": 5.0,
+    "bikeWalkingReluctance": 10.0,
+    "carReluctance": 10.0,
+    "extraSearchCoachReluctance": 1.25,
+    "stairsReluctance": 1.65,
+    "turnReluctance": 1.0,
+    "elevatorBoardTime": 90,
+    "elevatorBoardCost": 90,
+    "elevatorHopTime": 20,
+    "elevatorHopCost": 20,
+    "bikeRentalPickupCost": 120,
+    "bikeRentalDropoffTime": 30,
+    "bikeRentalDropoffCost": 30,
+    "bikeParkTime": 60,
+    "bikeParkCost": 120,
+    "carDropoffTime": 120,
+    "waitReluctance": 1.0,
+    "walkBoardCost": 600,
+    "bikeBoardCost": 600,
+    "otherThanPreferredRoutesPenalty": 300,
+    "transferSlack": 120,
+    //Defaultslackforanymodeis0(zero)"boardSlackForMode": {
+      "AIRPLANE": 2100
+    },
+    "alightSlackForMode": {
+      "AIRPLANE": 900
+    },
+    "transitReluctanceForMode": {
+      "RAIL": 0.85
+    },
+    "maxAccessEgressDurationSecondsForMode": {
+      "BIKE_RENTAL": 1200
+    },
+    "itineraryFilters": {
+      "minSafeTransferTimeFactor": 0.0,
+      "transitGeneralizedCostLimit": "3600 + 2.5 x",
+      "bikeRentalDistanceRatio": 0.3
+    },
+    "carDecelerationSpeed": 2.9,
+    "carAccelerationSpeed": 2.9,
+    "ignoreRealtimeUpdates": false,
+    "disableRemainingWeightHeuristic": false,
+    "disableAlertFiltering": false,
+    "geoidElevation": false,
+    "transferOptimization": {
+      "optimizeTransferWaitTime": true,
+      "minSafeWaitTimeFactor": 5.0,
+      //'inverseWaitReluctance'isreplacedby'backTravelWaitTimeFactor',
+      removeafter2021-11-20"inverseWaitReluctance": 1.0,
+      "backTravelWaitTimeFactor": 1.0,
+      "extraStopBoardAlightCostsFactor": 8.0
+    }
+  },
+  "transit": {
+    "maxNumberOfTransfers": 12,
+    "dynamicSearchWindow": {
+      "minTransitTimeCoefficient": 0.5,
+      "minWaitTimeCoefficient": 0.5,
+      "minWinTimeMinutes": 60,
+      "maxWinTimeMinutes": 300
+    },
+    "stopTransferCost": {
+      "DISCOURAGED": 1500,
+      "ALLOWED": 75,
+      "RECOMMENDED": 30,
+      "PREFERRED": 0
+    }
+  },
+  "bikeRentalServiceDirectory": {
+    "url": "https://api.entur.io/mobility/v2/gbfs/",
+    "sourcesName": "systems",
+    "updaterUrlName": "url",
+    "updaterNetworkName": "id",
+    "headers": {
+      "ET-Client-Name": "entur-otp2"
+    }
+  },
+  "transmodelApi": {
+    "hideFeedId": true
+  },
+  "updaters": [
+    //SIRISXservicealerts{
+      "type": "siri-sx-updater",
+      "frequencySec": 60,
+      "url": "https://api.entur.io/realtime/v1/services",
+      "feedId": "RB",
+      "timeoutSec": 10,
+      "blockReadinessUntilInitialized": true
+    },
+    //SIRIETupdater{
+      "type": "siri-et-updater",
+      "frequencySec": 20,
+      "previewIntervalMinutes": 180,
+      "url": "https://api.entur.io/realtime/v1/services",
+      "feedId": "RB",
+      "timeoutSec": 60,
+      "blockReadinessUntilInitialized": true
+    }
+  ]
+}
