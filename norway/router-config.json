@@ -30,7 +30,7 @@
     "bikeBoardCost": 600,
     "otherThanPreferredRoutesPenalty": 300,
     "transferSlack": 120,
-    //Defaultslackforanymodeis0(zero)"boardSlackForMode": {
+    "boardSlackForMode": {
       "AIRPLANE": 2100
     },
     "alightSlackForMode": {
@@ -56,8 +56,7 @@
     "transferOptimization": {
       "optimizeTransferWaitTime": true,
       "minSafeWaitTimeFactor": 5.0,
-      //'inverseWaitReluctance'isreplacedby'backTravelWaitTimeFactor',
-      removeafter2021-11-20"inverseWaitReluctance": 1.0,
+      "inverseWaitReluctance": 1.0,
       "backTravelWaitTimeFactor": 1.0,
       "extraStopBoardAlightCostsFactor": 8.0
     }
@@ -88,24 +87,5 @@
   },
   "transmodelApi": {
     "hideFeedId": true
-  },
-  "updaters": [
-    //SIRISXservicealerts{
-      "type": "siri-sx-updater",
-      "frequencySec": 60,
-      "url": "https://api.entur.io/realtime/v1/services",
-      "feedId": "RB",
-      "timeoutSec": 10,
-      "blockReadinessUntilInitialized": true
-    },
-    //SIRIETupdater{
-      "type": "siri-et-updater",
-      "frequencySec": 20,
-      "previewIntervalMinutes": 180,
-      "url": "https://api.entur.io/realtime/v1/services",
-      "feedId": "RB",
-      "timeoutSec": 60,
-      "blockReadinessUntilInitialized": true
-    }
-  ]
+  }
 }
