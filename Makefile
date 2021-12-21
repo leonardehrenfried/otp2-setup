@@ -121,13 +121,13 @@ cripple-creek/osm.pbf: colorado/osm.pbf
 cripple-creek/gtfs.zip: cripple-creek/osm.pbf
 	${CURL} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--same-day-service.zip -o $@
 
-brockton/osm.pbf: massachusetts/osm.pbf
-	osmium extract massachusetts/osm.pbf --polygon brockton/brockton.geojson -o $@
+boston/osm.pbf: massachusetts/osm.pbf
+	osmium extract massachusetts/osm.pbf --polygon boston/boston.geojson -o $@
 
-brockton/mtba.gtfs.zip:
-	${CURL} https://transitfeeds.com/p/mbta/64/latest/download -o $@
+boston/mtba.gtfs.zip:
+	${CURL} https://cdn.mbta.com/MBTA_GTFS.zip -o $@
 
-brockton/gtfs.zip: brockton/mtba.gtfs.zip brockton/osm.pbf
+boston/gtfs.zip: boston/mtba.gtfs.zip boston/osm.pbf
 	${CURL} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
 
 cobb/osm.pbf: georgia/osm.pbf
