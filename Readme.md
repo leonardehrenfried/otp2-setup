@@ -8,6 +8,7 @@ various cities/regions around the world.
 - make
 - curl
 - Java 11
+- osmium (for some regions)
 
 ### Example Commands
 
