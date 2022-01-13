@@ -3,6 +3,7 @@
     "FlexRouting": true,
     "SandboxAPILegacyGraphQLApi": true,
     "SandboxAPITransmodeApi": true,
-    "ActuatorAPI": true
+    "ActuatorAPI": true,
+    "OptimizeTransfers": true
   }
 }
