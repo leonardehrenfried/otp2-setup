@@ -163,6 +163,10 @@ build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
+build-nogtfs-%: otp.jar %/osm.pbf
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --build --save $*
+
+
 clean-all:
 	find . -name osm.pbf -printf '%p\n' -exec rm {} \;
 	find . -name gtfs.zip -printf '%p\n' -exec rm {} \;
