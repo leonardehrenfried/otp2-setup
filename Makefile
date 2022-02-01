@@ -18,6 +18,12 @@ herzberg/osm.pbf: berlin/osm.pbf
 herzberg/gtfs.zip:
 	#${CURL} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
+angermuende/osm.pbf: berlin/osm.pbf
+	osmium extract berlin/osm.pbf --polygon angermuende/angermuende.geojson -o $@
+
+angermuende/gtfs.zip:
+	${CURL} https://github.com/bbnavi/gtfs-flex/releases/download/2022-01-25/gtfs-flex.zip -o $@
+
 hamburg/osm.pbf:
 	mkdir -p hamburg
 	${CURL} https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf -o $@
