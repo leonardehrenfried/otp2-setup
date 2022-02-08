@@ -55,10 +55,10 @@ reutlingen/osm.pbf:
 
 norway/osm.pbf:
 	mkdir -p norway
-	${CURL} http://download.geofabrik.de/europe/norway-latest.osm.pbf -o $@
+	${CURL} https://download.geofabrik.de/europe/norway-210101.osm.pbf -o $@
 
 norway/rb_norway-aggregated-netex.zip:
-	${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip -o $@
+	${CURL} https://leonard.io/otp/rb_norway-aggregated-netex-2021-12-11.zip -o $@
 
 norway/gtfs.zip: norway/rb_norway-aggregated-netex.zip
 	echo "No GTFS, but Netex instead."
