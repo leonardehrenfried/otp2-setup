@@ -1,5 +1,10 @@
 {
   "flex": {
     "maxTransferDurationSeconds": 300
+  },
+  "routingDefaults": {
+    "itineraryFilters": {
+      "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
+    }
   }
 }
