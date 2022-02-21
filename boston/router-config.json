@@ -4,7 +4,9 @@
   },
   "routingDefaults": {
     "itineraryFilters": {
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
       "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
+      //"transitGeneralizedCostLimit" : "0 + 1.5 x"
     }
   }
 }
