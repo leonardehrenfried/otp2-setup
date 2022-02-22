@@ -164,6 +164,15 @@ atlanta/cobblinc-flex.gtfs.zip:
 atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-flex.gtfs.zip
 	${CURL} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
 
+mexico/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
+
+mexico-city/gtfs.zip:
+	${CURL} https://datos.cdmx.gob.mx/dataset/75538d96-3ade-4bc5-ae7d-d85595e4522d/resource/32ed1b6b-41cd-49b3-b7f0-b57acb0eb819/download/gtfs.zip -o $@
+
+mexico-city/osm.pbf: mexico/osm.pbf mexico-city/gtfs.zip
+	osmium extract mexico/osm.pbf --polygon mexico-city/mexico-city.geojson -o $@
+
 otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
 
