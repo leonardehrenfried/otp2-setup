@@ -8,5 +8,14 @@
       "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
       //"transitGeneralizedCostLimit" : "0 + 1.5 x"
     }
-  }
+  },
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "sourceType": "gtfs-http",
+      "url": "https://cdn.mbta.com/realtime/TripUpdates.pb",
+      "feedId": "1"
+    }
+  ]
 }
