@@ -5,6 +5,7 @@
     "FlexRouting": true,
     "FloatingBike": true,
     "OptimizeTransfers": false,
-    "TransferConstraints": false
+    "TransferConstraints": false,
+    "ParallelRouting": true
   }
 }
