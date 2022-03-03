@@ -53,6 +53,12 @@ reutlingen/osm.pbf:
 	mkdir -p reutlingen
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf -o $@
 
+bawue/gtfs.zip:
+	${CURL} 10.70.190.201/data-report/nvbw.tidy.gtfs.zip -o $@
+
+bawue/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
+
 norway/osm.pbf:
 	mkdir -p norway
 	${CURL} https://download.geofabrik.de/europe/norway-210101.osm.pbf -o $@
@@ -174,7 +180,7 @@ mexico-city/osm.pbf: mexico/osm.pbf mexico-city/gtfs.zip
 	osmium extract mexico/osm.pbf --polygon mexico-city/mexico-city.geojson -o $@
 
 otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/2.1-SNAPSHOT/otp-2.1.0-SNAPSHOT-shaded-latest.jar -o $@
+	${CURL} https://otp.leonard.io/snapshots/2.2-SNAPSHOT/otp-2.2.0-shaded-latest.jar -o $@
 
 %/streetGraph.obj:
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
