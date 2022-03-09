@@ -162,10 +162,10 @@ atlanta/osm.pbf: georgia/osm.pbf
 	osmium extract georgia/osm.pbf --polygon atlanta/atlanta.geojson -o $@
 
 atlanta/cobblinc.gtfs.zip:
-	${CURL} https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data -o $@
+	${CURL}  https://internal-test-gtfs-testing.s3.amazonaws.com/Cobblinc-static-extended-dates.zip -o $@
 
 atlanta/cobblinc-flex.gtfs.zip:
-	${CURL} https://leonard.io/ibi/cobblinc-flex-with-farezones.zip -o $@
+	${CURL} https://internal-test-gtfs-testing.s3.amazonaws.com/cobblinc-gtfs-flex.zip -o $@
 
 atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-flex.gtfs.zip
 	${CURL} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
@@ -180,7 +180,7 @@ mexico-city/osm.pbf: mexico/osm.pbf mexico-city/gtfs.zip
 	osmium extract mexico/osm.pbf --polygon mexico-city/mexico-city.geojson -o $@
 
 otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/2.2-SNAPSHOT/otp-2.2.0-shaded-latest.jar -o $@
+	${CURL} https://otp.leonard.io/snapshots/2.2-SNAPSHOT/otp-2.2.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj:
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
