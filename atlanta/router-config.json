@@ -1,0 +1,30 @@
+{
+  "routingDefaults": {
+    "allowKeepingRentedBicycleAtDestination": true,
+    "keepingRentedBicycleAtDestinationCost": 180,
+    "numItineraries": 5,
+    "bikeTriangleSafetyFactor": 0.4,
+    "bikeTriangleSlopeFactor": 0.3,
+    "bikeTriangleTimeFactor": 0.3,
+    "bikeRentalPickupTime": 180,
+    "bikeRentalPickupCost": 850
+  },
+  "flex": {
+    "maxTransferDurationSeconds": 240
+  },
+  "updaters": [
+    {
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.hopr.city/api/gbfs/20"
+    },
+    {
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://relaybikeshare.socialbicycles.com/opendata/gbfs.json"
+    }
+  ]
+}
+
