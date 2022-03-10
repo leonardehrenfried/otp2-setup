@@ -1,0 +1,12 @@
+{
+  "updaters": [
+    {
+      "type": "vehicle-positions",
+      "sourceType": "gtfs-http",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
+      "feedId": "1",
+      "frequencySec": 59
+    }
+  ]
+}
+

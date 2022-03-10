@@ -117,16 +117,16 @@ tampere/osm.pbf: finland/osm.pbf
 ## America
 
 massachusetts/osm.pbf:
-	mkdir -p massachusetts
 	${CURL} https://download.geofabrik.de/north-america/us/massachusetts-latest.osm.pbf -o $@
 
 georgia/osm.pbf:
-	mkdir -p georgia
 	${CURL} https://download.geofabrik.de/north-america/us/georgia-latest.osm.pbf -o $@
 
 colorado/osm.pbf:
-	mkdir -p colorado
 	${CURL} https://download.geofabrik.de/north-america/us/colorado-latest.osm.pbf -o $@
+
+washington/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 
 aspen/osm.pbf: colorado/osm.pbf
 	osmium extract colorado/osm.pbf --polygon aspen/aspen.geojson -o $@
@@ -169,6 +169,12 @@ atlanta/cobblinc-flex.gtfs.zip:
 
 atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-flex.gtfs.zip
 	${CURL} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
+
+seattle/gtfs.zip:
+	${CURL} https://metro.kingcounty.gov/GTFS/google_transit.zip -o $@
+
+seattle/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
