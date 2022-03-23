@@ -20,6 +20,13 @@
       "url": "https://gbfs.hopr.city/api/gbfs/20"
     },
     {
+      "type": "vehicle-positions",
+      "sourceType": "gtfs-http",
+      "url": "https://bustime.cobbcounty.org/gtfsrt/vehicles",
+      "feedId": "1",
+      "frequencySec": 60
+    },
+    {
       "type": "bike-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
