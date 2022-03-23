@@ -1,0 +1,112 @@
+{
+  "routingDefaults": {
+    "walkSpeed": 1.3,
+    "transferSlack": 120,
+    "walkReluctance": 1.75,
+    "stairsReluctance": 2,
+    "walkBoardCost": 540,
+    "allowKeepingRentedBicycleAtDestination": true,
+    "keepingRentedBicycleAtDestinationCost": 180,
+    "numItineraries": 5,
+    "bikeTriangleSafetyFactor": 0.4,
+    "bikeTriangleSlopeFactor": 0.3,
+    "bikeTriangleTimeFactor": 0.3,
+    "bikeRentalPickupTime": 180,
+    "bikeRentalPickupCost": 850,
+    "itineraryFilters" : {
+      "flexOnlyToDestination": false,
+      "bikeRentalDistanceRatio": 0.75,
+      "parkAndRideDurationRatio": 0.6,
+      "minBikeParkingDistance": 500,
+      "transitGeneralizedCostLimit": "900 + 2.0 x"
+    },
+    "maxAccessEgressDurationSecondsForMode": {
+      "WALK": 1200 // 20 minutes
+    }
+  },
+  "flex": {
+    "maxTransferDurationSeconds": 300
+  },
+  "vectorTileLayers": [
+    {
+      "name": "stops",
+      "type": "Stop",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 600,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "stations",
+      "type": "Station",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 12,
+      "cacheMaxSeconds": 600,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "citybikes",
+      "type": "VehicleRental",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "parking",
+      "type": "VehicleParking",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60,
+      "expansionFactor": 0.5
+    }
+  ],
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 15,
+      "sourceType": "gtfs-http",
+      "url": "https://bbnavi-gtfs-rt-feed.jannisr.de/feed",
+      "feedId": "3"
+    },
+    {
+      "id": "nextbike_dc",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json"
+    },
+    {
+      "id": "nextbike_bn",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
+    },
+    {
+      "id": "barshare-bike",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/bicycle/gbfs.json"
+    },
+    {
+      "id": "barshare-car",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json"
+    },
+    {
+      "id": "barshare-other",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json"
+    }
+  ]
+}
