@@ -9,6 +9,9 @@
     "bikeRentalPickupTime": 180,
     "bikeRentalPickupCost": 850
   },
+  "accessibility": {
+    "evaluation": "ALLOW_UNKNOWN_INFORMATION"
+  },
   "flex": {
     "maxTransferDurationSeconds": 240
   },
