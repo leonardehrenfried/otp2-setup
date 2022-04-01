@@ -7,7 +7,11 @@
     "bikeTriangleSlopeFactor": 0.3,
     "bikeTriangleTimeFactor": 0.3,
     "bikeRentalPickupTime": 180,
-    "bikeRentalPickupCost": 850
+    "bikeRentalPickupCost": 850,
+    "itineraryFilters": {
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
+      "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
+    }
   },
   "accessibility": {
     "evaluation": "ALLOW_UNKNOWN_INFORMATION"
@@ -101,7 +105,7 @@
       "frequencySec": 30,
       "url": "https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/tripupdate/tripupdates.pb",
       "sourceType": "gtfs-http",
-      "feedId": "4"
+      "feedId": "3"
     }
   ]
 }
