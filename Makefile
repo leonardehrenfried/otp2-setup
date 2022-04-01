@@ -181,6 +181,12 @@ seattle/gtfs.zip:
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+noco/gtfs.zip:
+	${CURL} https://leonard.io/ibi/ride-noco.gtfs.zip -o $@
+
+noco/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
