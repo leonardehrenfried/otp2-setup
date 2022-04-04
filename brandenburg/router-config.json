@@ -121,6 +121,12 @@
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json",
       "network": "cargo-bike"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json"
     }
   ]
 }
