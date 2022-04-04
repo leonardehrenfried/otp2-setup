@@ -71,7 +71,7 @@
   },
   "updaters": [
     {
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/gbfs.json"

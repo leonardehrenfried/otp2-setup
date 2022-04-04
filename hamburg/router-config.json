@@ -85,7 +85,7 @@
       "feedId": "hh"
     },
     {
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 30,
       "sourceType": "gbfs",
       "url": "https://gtfs.mfdz.de/gbfs/stadtrad_hh/gbfs.json"

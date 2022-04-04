@@ -84,7 +84,7 @@
     },
     {
       "id": "nextbike_dc",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json",
@@ -92,7 +92,7 @@
     },
     {
       "id": "nextbike_bn",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
@@ -100,7 +100,7 @@
     },
     {
       "id": "barshare-bike",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/bicycle/gbfs.json",
@@ -108,7 +108,7 @@
     },
     {
       "id": "barshare-car",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json",
@@ -116,7 +116,7 @@
     },
     {
       "id": "barshare-other",
-      "type": "bike-rental",
+      "type": "vehicle-rental",
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json",
