@@ -187,6 +187,12 @@ noco/gtfs.zip:
 noco/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+denver/gtfs.zip:
+	${CURL} https://www.rtd-denver.com/files/gtfs/google_transit.zip -o $@
+
+denver/osm.pbf: colorado/osm.pbf
+	osmium extract colorado/osm.pbf --polygon denver/denver.geojson -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
