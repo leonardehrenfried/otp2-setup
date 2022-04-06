@@ -11,10 +11,19 @@
     "itineraryFilters": {
       // only show non-transit (ie. walking) when it's at least as good as the transit option
       "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
+    },
+    "wheelchairAccessibility": {
+      "trips": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      },
+      "stops": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      }
     }
-  },
-  "accessibility": {
-    "evaluation": "ALLOW_UNKNOWN_INFORMATION"
   },
   "flex": {
     "maxTransferDurationSeconds": 240
