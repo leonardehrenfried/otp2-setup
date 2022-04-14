@@ -14,7 +14,7 @@ brandenburg/osm.pbf:
 	${CURL} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
 
 brandenburg/gtfs.zip:
-	${CURL} https://gtfs.mfdz.de/DELFI.BB.gtfs.zip -o $@
+	${CURL} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
 herzberg/osm.pbf: berlin/osm.pbf
 	mkdir -p berlin
