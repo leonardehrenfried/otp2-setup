@@ -1,3 +1,5 @@
 {
-  "transferRequests": [ { "modes": "WALK" }, { "modes": "WALK", "wheelchairAccessibility": { "enabled": true }} ]
+  "transferRequests": [ { "modes": "WALK" }, { "modes": "WALK", "wheelchairAccessibility": { "enabled": true }} ],
+
+  "staticBikeParkAndRide": true
 }
