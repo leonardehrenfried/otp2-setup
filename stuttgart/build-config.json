@@ -1,4 +1,6 @@
 {
   "osmWayPropertySet": "germany",
-  "staticBikeParkAndRide": true
+  "staticBikeParkAndRide": true,
+  "areaVisibility": true,
+  "boardingLocationTags": ["ref", "ref:IFOPT"]
 }
