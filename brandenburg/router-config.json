@@ -125,7 +125,7 @@
       "type": "stop-time-updater",
       "frequencySec": 60,
       "sourceType": "gtfs-http",
-      "url": "http://amarillo.mfdz.de:8000/gtfs/mfdz.bb.gtfsrt.pbf",
+      "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
     }
   ]
