@@ -1,4 +1,9 @@
 {
+  "routingDefaults": {
+    "itineraryFilters": {
+      "filterItinerariesWithSameFirstOrLastTrip": true
+    }
+  },
   "updaters": [
     {
       "type": "vehicle-positions",
