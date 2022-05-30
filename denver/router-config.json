@@ -1,7 +1,7 @@
 {
   "routingDefaults": {
     "itineraryFilters": {
-      "filterItinerariesWithSameFirstOrLastTrip": true
+      "filterItinerariesWithSameFirstOrLastTrip": false
     }
   },
   "updaters": [
