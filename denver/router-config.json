@@ -1,7 +1,7 @@
 {
   "routingDefaults": {
     "itineraryFilters": {
-      "filterItinerariesWithSameFirstOrLastTrip": true
+      "filterItinerariesWithSameFirstOrLastTrip": false
     },
     "maxDirectStreetDurationForMode": {
       "CAR_TO_PARK": "0m"
