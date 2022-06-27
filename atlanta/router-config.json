@@ -15,12 +15,12 @@
       "accessibilityScore": true
     },
     "wheelchairAccessibility": {
-      "trips": {
+      "trip": {
         "onlyConsiderAccessible": false,
         "unknownCost": 600,
         "inaccessibleCost": 3600
       },
-      "stops": {
+      "stop": {
         "onlyConsiderAccessible": false,
         "unknownCost": 600,
         "inaccessibleCost": 3600
