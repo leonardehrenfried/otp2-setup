@@ -1,3 +1,5 @@
 {
-  "dataImportReport": true
+  "dataImportReport": true,
+  "islandWithoutStopsMaxSize": 300,
+  "islandWithStopsMaxSize": 300
 }
