@@ -136,6 +136,9 @@ georgia/osm.pbf:
 colorado/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/colorado-latest.osm.pbf -o $@
 
+texas/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/texas-latest.osm.pbf -o $@
+
 washington/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 
@@ -159,6 +162,12 @@ boston/mtba.gtfs.zip:
 
 boston/gtfs.zip: boston/mtba.gtfs.zip boston/osm.pbf
 	${CURL} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
+
+houston/osm.pbf: texas/osm.pbf
+	osmium extract texas/osm.pbf --polygon houston/houston.geojson -o $@
+
+houston/gtfs.zip:
+	${CURL} https://ridemetro-api.ibi-transit.com/download/liveGTFS.zip -o $@
 
 cobb/osm.pbf: georgia/osm.pbf
 	osmium extract georgia/osm.pbf --polygon cobb/cobb-county.geojson -o $@
