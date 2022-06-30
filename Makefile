@@ -139,6 +139,9 @@ colorado/osm.pbf:
 texas/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/texas-latest.osm.pbf -o $@
 
+california/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/california-latest.osm.pbf -o $@
+
 washington/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 
@@ -210,6 +213,15 @@ denver/gtfs.zip: denver/easyride.gtfs.zip
 
 denver/osm.pbf: colorado/osm.pbf
 	osmium extract colorado/osm.pbf --polygon denver/denver.geojson -o $@
+
+mexico/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
+
+turlock/gtfs.zip:
+	${CURL} https://leonard.io/otp/turlock-fares-v2.gtfs.zip -o $@
+
+turlock/osm.pbf: california/osm.pbf
+	osmium extract colorado/osm.pbf --polygon turlock/turlock.geojson -o $@
 
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
