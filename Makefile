@@ -142,6 +142,9 @@ texas/osm.pbf:
 california/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/california-latest.osm.pbf -o $@
 
+maryland/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/maryland-latest.osm.pbf -o $@
+
 washington/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 
@@ -221,7 +224,13 @@ turlock/gtfs.zip:
 	${CURL} https://leonard.io/otp/turlock-fares-v2.gtfs.zip -o $@
 
 turlock/osm.pbf: california/osm.pbf
-	osmium extract colorado/osm.pbf --polygon turlock/turlock.geojson -o $@
+	osmium extract california/osm.pbf --polygon turlock/turlock.geojson -o $@
+
+baltimore/gtfs.zip:
+	${CURL} https://mdotmta-gtfs.s3.amazonaws.com/mdotmta_gtfs_metro.zip -o $@
+
+baltimore/osm.pbf: maryland/osm.pbf
+	osmium extract maryland/osm.pbf --polygon baltimore/baltimore.geojson -o $@
 
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@

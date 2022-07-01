@@ -1,0 +1,10 @@
+{
+  "routingDefaults": {
+    "itineraryFilters": {
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
+      "nonTransitGeneralizedCostLimit": "0 + 0.1 x",
+      // add IBI accessibility score between 0 and 1
+      "accessibilityScore": true
+    }
+  }
+}
