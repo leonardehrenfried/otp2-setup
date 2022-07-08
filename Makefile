@@ -220,7 +220,16 @@ denver/osm.pbf: colorado/osm.pbf
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
-turlock/gtfs.zip:
+turlock/StanRTA.gtfs.zip:
+	${CURL} https://leonard.io/trillium/StanRTA.gtfs.zip -o $@
+
+turlock/SJRTD.gtfs.zip:
+	${CURL} https://leonard.io/trillium/SJRTD.gtfs.zip -o $@
+
+turlock/manteca.gtfs.zip:
+	${CURL} https://leonard.io/trillium/manteca.gtfs.zip -o $@
+
+turlock/gtfs.zip: turlock/manteca.gtfs.zip turlock/SJRTD.gtfs.zip turlock/StanRTA.gtfs.zip
 	${CURL} https://leonard.io/otp/turlock-fares-v2.gtfs.zip -o $@
 
 turlock/osm.pbf: california/osm.pbf
