@@ -1,0 +1,1 @@
+Interline: http://localhost:8080/?module=planner&fromPlace=33.68749608856894%2C-84.503231048584&toPlace=33.763950277656605%2C-84.41911697387697&time=9%3A12pm&date=07-08-2022&mode=TRANSIT%2CWALK&arriveBy=false&wheelchair=false&showIntermediateStops=true&debugItineraryFilter=false&locale=en&baseLayer=OSM%20Standard%20Tiles
