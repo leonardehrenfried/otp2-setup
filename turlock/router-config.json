@@ -6,5 +6,13 @@
       // add IBI accessibility score between 0 and 1
       "accessibilityScore": true
     }
+  },
+  "transit": {
+    "maxNumberOfTransfers" : 12,
+    "dynamicSearchWindow" : {
+      "minTripTimeCoefficient" : 0.75,
+      "minWinTimeMinutes" : 360,
+      "maxWinTimeMinutes" : 720
+    }
   }
 }
