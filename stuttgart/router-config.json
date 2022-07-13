@@ -135,6 +135,13 @@
       "sourceType": "gbfs",
       "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-teilauto-neckar-alb/gbfs.json",
       "routeAsCar": true
+    },
+    {
+      "type": "vehicle-parking",
+      "sourceType": "park-api",
+      "frequencySec": 600,
+      "feedId": "park-api-rt",
+      "url": "https://api.stadtnavi.de/herrenberg/parking/parkapi.json"
     }
   ]
 }
