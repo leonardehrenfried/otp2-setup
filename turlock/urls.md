@@ -1,1 +1,2 @@
 Stockton Express: https://tinyurl.com/2oymq6wf
+StanRTA & Turlock: http://localhost:8080/?module=planner&fromPlace=37.6370724640931%2C-121.00410461425783&toPlace=37.477344313561005%2C-120.84718465805055&time=3%3A14pm&date=07-15-2022&mode=TRANSIT%2CWALK&arriveBy=false&wheelchair=false&showIntermediateStops=true&debugItineraryFilter=false&numItineraries=4&additionalParameters=numItineraries&locale=en&baseLayer=OSM%20Standard%20Tiles
