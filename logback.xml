@@ -49,7 +49,10 @@
   <logger name="org.opentripplanner.transit.raptor.RaptorService" level="info"/>
   <logger name="org.opentripplanner.updater.stoptime.TimetableSnapshotSource" level="info"/>
   <logger name="org.opentripplanner.routing.framework.DebugTimingAggregator" level="debug"/>
-  <logger name="org.opentripplanner.graph_builder.module.interlining.InterlineProcessor" level="debug"/>
+  <logger name="org.opentripplanner.graph_builder.module.interlining.InterlineProcessor" level="info"/>
+  <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RaptorRoutingRequestTransitDataCreator" level="debug"/>
+  <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RoutingRequestTransitDataProviderFilter" level="debug"/>
+  <logger name="org.opentripplanner.transit.raptor.service.HeuristicSearchTask" level="debug"/>
 
   <!-- THIRD PARTY LOGGERS -->
 

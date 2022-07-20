@@ -260,7 +260,7 @@ build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx50G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nogtfs-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --build --save $*
