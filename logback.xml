@@ -52,7 +52,7 @@
   <logger name="org.opentripplanner.graph_builder.module.interlining.InterlineProcessor" level="info"/>
   <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RaptorRoutingRequestTransitDataCreator" level="debug"/>
   <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RoutingRequestTransitDataProviderFilter" level="debug"/>
-  <logger name="org.opentripplanner.transit.raptor.service.HeuristicSearchTask" level="debug"/>
+  <logger name="org.opentripplanner.transit.raptor.service.HeuristicSearchTask" level="info"/>
 
   <!-- THIRD PARTY LOGGERS -->
 
