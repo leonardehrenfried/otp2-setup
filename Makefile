@@ -65,7 +65,7 @@ reutlingen/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf -o $@
 
 bawue/gtfs.zip:
-	${CURL} 10.70.190.201/data-report/nvbw.tidy.gtfs.zip -o $@
+	${CURL} https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwgesamt.zip -o $@
 
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@

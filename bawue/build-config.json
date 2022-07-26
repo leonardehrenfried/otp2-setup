@@ -1,4 +1,5 @@
 {
   "osmWayPropertySet": "germany",
-  "staticBikeParkAndRide": true
+  "staticBikeParkAndRide": true,
+  "discardMinTransferTimes": true
 }

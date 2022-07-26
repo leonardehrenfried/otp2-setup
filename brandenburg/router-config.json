@@ -18,7 +18,11 @@
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
-      "transitGeneralizedCostLimit": "900 + 2.0 x"
+      "transitGeneralizedCostLimit": "900 + 1.5 x"
+    },
+    "unpreferredRouteCost": "300 + 5.0 x",
+    "unpreferred": {
+      "agencies": ["3:108"]
     },
     "maxAccessEgressDurationSecondsForMode": {
       "WALK": 1200 // 20 minutes
