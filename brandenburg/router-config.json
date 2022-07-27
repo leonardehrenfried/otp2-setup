@@ -20,7 +20,7 @@
       "minBikeParkingDistance": 500,
       "transitGeneralizedCostLimit": "900 + 1.5 x"
     },
-    "unpreferredRouteCost": "300 + 5.0 x",
+    "unpreferredCost": "300 + 5.0 x",
     "unpreferred": {
       "agencies": ["3:108"]
     },

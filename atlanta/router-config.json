@@ -35,88 +35,14 @@
       "type": "vehicle-rental",
       "sourceType": "gbfs",
       "network": "HOPR",
-      "url": "https://gbfs.hopr.city/api/gbfs/20",
-      "frequencySec": 30
+      "url": "https://leonard.io/ibi/hopr-atlanta/gbfs.json",
+      "frequencySec": 60
     },
     {
       "type": "vehicle-rental",
       "sourceType": "gbfs",
-      "network": "spin atlanta",
       "url": "https://gbfs.spin.pm/api/gbfs/v2_2/atlanta/gbfs",
-      "frequencySec": 30
-    },
-    {
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "https://bustime.cobbcounty.org/gtfsrt/alerts",
-      "feedId": "2"
-    },
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 30,
-      "url": "https://bustime.cobbcounty.org/gtfsrt/trips",
-      "sourceType": "gtfs-http",
-      "feedId": "2"
-    },
-    {
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "https://passio3.com/douglas/passioTransit/gtfs/realtime/serviceAlerts",
-      "feedId": "7"
-    },
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 30,
-      "url": "https://passio3.com/douglas/passioTransit/gtfs/realtime/tripUpdates",
-      "sourceType": "gtfs-http",
-      "feedId": "7"
-    },
-    {
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "https://myxpress2.xpressga.com/gtfsrt/alerts",
-      "feedId": "6"
-    },
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 30,
-      "url": "https://myxpress2.xpressga.com/gtfsrt/trips",
-      "sourceType": "gtfs-http",
-      "feedId": "6"
-    },
-    {
-      "type": "vehicle-positions",
-      "sourceType": "gtfs-http",
-      "url": "https://myxpress2.xpressga.com/gtfsrt/vehicles",
-      "feedId": "6",
-      "frequencySec": 59
-    },
-    {
-      "type": "vehicle-positions",
-      "sourceType": "gtfs-http",
-      "url": "https://bustime.cobbcounty.org/gtfsrt/vehicles",
-      "feedId": "2",
-      "frequencySec": 59
-    },
-    {
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "https://realtimegwinnett.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=Alert",
-      "feedId": "4"
-    },
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 30,
-      "url": "https://realtimegwinnett.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=TripUpdate",
-      "sourceType": "gtfs-http",
-      "feedId": "4"
-    },
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 30,
-      "url": "https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/tripupdate/tripupdates.pb",
-      "sourceType": "gtfs-http",
-      "feedId": "3"
+      "frequencySec": 60
     }
   ]
 }
