@@ -148,6 +148,9 @@ maryland/osm.pbf:
 washington/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 
+minnesota/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/minnesota-latest.osm.pbf -o $@
+
 aspen/osm.pbf: colorado/osm.pbf
 	osmium extract colorado/osm.pbf --polygon aspen/aspen.geojson -o $@
 
@@ -241,6 +244,12 @@ baltimore/gtfs.zip:
 baltimore/osm.pbf: maryland/osm.pbf
 	osmium extract maryland/osm.pbf --polygon baltimore/baltimore.geojson -o $@
 
+minneapolis/gtfs.zip:
+	${CURL} https://leonard.io/ibi/minneapolis-flex.gtfs.zip -o $@
+
+minneapolis/osm.pbf: minnesota/osm.pbf
+	osmium extract minnesota/osm.pbf --polygon minneapolis/minneapolis.geojson -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
@@ -257,7 +266,7 @@ otp.jar:
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx12G -jar otp.jar --loadStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx50G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
