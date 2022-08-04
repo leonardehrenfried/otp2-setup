@@ -13,28 +13,25 @@
     "bikeTriangleTimeFactor": 0.3,
     "bikeRentalPickupTime": 180,
     "bikeRentalPickupCost": 850,
+    "carReluctance": 3.0,
     "itineraryFilters" : {
       "flexOnlyToDestination": false,
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500,
-      "transitGeneralizedCostLimit": "900 + 1.5 x"
+      "transitGeneralizedCostLimit": "900 + 2.0 x"
     },
-    "unpreferredCost": "300 + 5.0 x",
-    "unpreferred": {
-      "agencies": ["3:108"]
-    },
-    "maxAccessEgressDurationSecondsForMode": {
-      "WALK": 1200 // 20 minutes
+    "maxAccessEgressDurationForMode": {
+      "WALK": "20m"
     },
     "maxJourneyDuration": "12h"
   },
   "transit": {
     "dynamicSearchWindow" : {
-      "minTransitTimeCoefficient" : 0.5,
-      "minWaitTimeCoefficient" : 0.5,
+      "minTransitTimeCoefficient" : 1.5,
+      "minWaitTimeCoefficient" : 1.5,
       "minWinTimeMinutes" : 60,
-      "maxWinTimeMinutes" : 300
+      "maxWinTimeMinutes" : 360
     }
   },
   "flex": {
@@ -79,58 +76,61 @@
     }
   ],
   "updaters": [
-    {
-      "id": "nextbike_dc",
-      "type": "vehicle-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json",
-      "network": "cargo-bike"
-    },
-    {
-      "id": "nextbike_bn",
-      "type": "vehicle-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json",
-      "network": "cargo-bike"
-    },
-    {
-      "id": "barshare-bike",
-      "type": "vehicle-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://data.mfdz.de/gbfs/barshare/bicycle/gbfs.json",
-      "network": "cargo-bike"
-    },
-    {
-      "id": "barshare-car",
-      "type": "vehicle-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://data.mfdz.de/gbfs/barshare/car/gbfs.json",
-      "network": "car-sharing"
-    },
-    {
-      "id": "barshare-other",
-      "type": "vehicle-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://data.mfdz.de/gbfs/barshare/other/gbfs.json",
-      "network": "cargo-bike"
-    },
-    {
-      "type": "vehicle-rental",
-      "frequencySec": 60,
-      "sourceType": "gbfs",
-      "url": "https://stables.donkey.bike/api/public/gbfs/2/donkey_berlin/gbfs.json"
-    },
-    {
+     {
       "type": "stop-time-updater",
       "frequencySec": 60,
       "sourceType": "gtfs-http",
       "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 15,
+      "sourceType": "gtfs-http",
+      "url": "https://bbnavi-gtfs-rt-feed.jannisr.de/feed",
+      "feedId": "3"
+    },
+    {
+      "id": "nextbike_dc",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_dc/gbfs.json"
+    },
+    {
+      "id": "nextbike_bn",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_bn/gbfs.json"
+    },
+    {
+      "id": "nextbike_cb",
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://gbfs.nextbike.net/maps/gbfs/v2/nextbike_cb/gbfs.json"
+    },
+    {
+      "id": "barshare-bike",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/barshare/bicycle/gbfs.json"
+    },
+    {
+      "id": "barshare-car",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/barshare/car/gbfs.json"
+    },
+    {
+      "id": "barshare-other",
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
     }
   ]
 }

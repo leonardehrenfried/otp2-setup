@@ -35,7 +35,7 @@
       "type": "vehicle-rental",
       "sourceType": "gbfs",
       "network": "HOPR",
-      "url": "https://leonard.io/ibi/hopr-atlanta/gbfs.json",
+      "url": "https://leonard.io/ibi/hopr-atlanta-timeout/gbfs.json",
       "frequencySec": 60
     },
     {
