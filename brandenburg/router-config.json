@@ -18,8 +18,7 @@
       "flexOnlyToDestination": false,
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
-      "minBikeParkingDistance": 500,
-      "transitGeneralizedCostLimit": "900 + 2.0 x"
+      "minBikeParkingDistance": 500
     },
     "maxAccessEgressDurationForMode": {
       "WALK": "20m"
