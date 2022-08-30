@@ -70,6 +70,12 @@ bawue/gtfs.zip:
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
 
+bedford/gtfs.zip:
+	${CURL} https://leonard.io/trillium/stagecoach-midlands-2022-08-30.gtfs.zip -o $@
+
+bedford/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/great-britain/england/bedfordshire-latest.osm.pbf -o $@
+
 norway/osm.pbf:
 	mkdir -p norway
 	${CURL} https://download.geofabrik.de/europe/norway-210101.osm.pbf -o $@
