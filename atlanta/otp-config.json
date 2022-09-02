@@ -3,6 +3,7 @@
     "FlexRouting": true,
     "SandboxAPILegacyGraphQLApi": true,
     "VehicleToStopHeuristics": true,
-    "ParallelRouting": true
+    "ParallelRouting": true,
+    "OptimizeTransfers": false
   }
 }

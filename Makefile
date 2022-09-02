@@ -187,6 +187,9 @@ houston/gtfs.zip:
 cobb/osm.pbf: georgia/osm.pbf
 	osmium extract georgia/osm.pbf --polygon cobb/cobb-county.geojson -o $@
 
+cobb/osm.filtered.pbf: cobb/osm.pbf
+	osmium tags-filter cobb/osm.pbf w/highway w/public_transport=platform w/railway=platform w/park_ride=yes r/type=restriction r/type=route -o $@ -f pbf,add_metadata=false --overwrite
+
 cobb/cobblinc.gtfs.zip:
 	${CURL} https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data -o $@
 
