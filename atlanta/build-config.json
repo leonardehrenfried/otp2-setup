@@ -1,5 +1,7 @@
 {
-  "transferRequests": [ { "modes": "WALK" }, { "modes": "WALK", "wheelchairAccessibility": { "enabled": true }} ],
-  "staticBikeParkAndRide": true,
-  "areaVisibility": false
+  "osmDefaults": {
+    "osmTagMapping": "atlanta"
+  },
+  "transferRequests": [ { "modes": "WALK" }, { "modes": "WALK", "wheelchairAccessibility": { "enabled": true } } ]
 }
+

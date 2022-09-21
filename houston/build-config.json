@@ -1,5 +1,6 @@
 {
-  "dataImportReport": true,
-  "islandWithoutStopsMaxSize": 300,
-  "islandWithStopsMaxSize": 300
+  "fares": {
+    "type": "highestFareInFreeTransferWindow",
+    "analyzeInterlinedTransfers": "true"
+  }
 }
