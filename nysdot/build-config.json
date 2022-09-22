@@ -1,5 +1,5 @@
 {
-"timeZone":"America/New_York",
+  "transitModelTimeZone":"America/New_York",
   "htmlAnnotations": true,
   "stationTransfers": null,
   "subwayAccessTime": null,
