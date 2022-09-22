@@ -5,6 +5,7 @@
     "FlexRouting": true,
     "VehicleToStopHeuristics": true,
     "OptimizeTransfers": false,
+    "TransferConstraints": false,
     "FloatingBike": true,
     "SandboxAPIParkAndRideApi": true,
     "ParallelRouting":true
