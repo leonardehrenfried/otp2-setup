@@ -1,0 +1,41 @@
+
+{
+  "updaters": [
+    {
+      "type": "bike-rental",
+      "sourceType": "gbfs",
+      "network": "CITIBIKE",
+      "url": "https://gbfs.citibikenyc.com/gbfs",
+      "frequencySec": 30
+    },
+{
+    "type": "bike-rental",
+    "frequencySec": 30,
+    "sourceType": "gbfs",
+    "network": "HOPR",
+    "url": "https://gbfs.hopr.city/api/gbfs/32/"
+    },
+    {
+      "type": "bike-rental",
+      "sourceType": "gbfs",
+      "network": "JUMP",
+      "url": "https://gbfs.uber.com/v1/nycb",
+      "frequencySec": 30
+    },
+    {
+      "type": "bike-rental",
+      "sourceType": "gbfs",
+      "network": "LIME",
+      "url": "https://data.lime.bike/api/partners/v1/gbfs/new_york",
+      "frequencySec": 30
+    },
+    {
+      "type": "bike-rental",
+      "sourceType": "gbfs",
+      "network": "REDDY",
+      "url": "https://reddybikeshare.socialbicycles.com/opendata",
+      "frequencySec": 30
+    }
+  ]
+}
+
