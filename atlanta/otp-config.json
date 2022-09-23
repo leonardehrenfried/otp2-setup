@@ -4,6 +4,7 @@
     "SandboxAPILegacyGraphQLApi": true,
     "VehicleToStopHeuristics": true,
     "ParallelRouting": true,
-    "OptimizeTransfers": false
+    "OptimizeTransfers": false,
+    "ReportApi": true
   }
 }

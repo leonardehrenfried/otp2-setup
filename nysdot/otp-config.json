@@ -8,7 +8,8 @@
     "TransferConstraints": false,
     "FloatingBike": true,
     "SandboxAPIParkAndRideApi": true,
-    "ParallelRouting":true
+    "ParallelRouting":true,
+    "ReportApi": true
   }
 }
 
