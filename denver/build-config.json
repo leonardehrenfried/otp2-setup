@@ -1,0 +1,9 @@
+{
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "gtfs.zip",
+      "feedId": "denver-rtd"
+    }
+  ]
+}
