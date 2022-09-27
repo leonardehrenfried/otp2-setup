@@ -1,0 +1,103 @@
+{
+  "routingDefaults": {
+    "walkSpeed": 1.3,
+    "transferSlack": 120,
+    "waitReluctance": 0.95,
+    "walkReluctance": 1.75,
+    "stairsReluctance": 1.65,
+    "walkBoardCost": 540,
+    "wheelchairAccessibility": {
+      "maxSlope": 0.125
+    },
+    "itineraryFilters": {
+      "transitGeneralizedCostLimit": {
+        "costLimitFunction": "600 + 1.5x"
+      }
+    },
+    "unpreferredCost": "600 + 3.0x",
+    "unpreferred": {
+      "routes": [
+        "HSL:2143A",
+        "HSL:2146A",
+        "HSL:2147A",
+        "HSL:2164A",
+        "HSL:2164VA",
+        "HSL:2321",
+        "HSL:7191",
+        "HSL:7192",
+        "HSL:7192T",
+        "HSL:7192V",
+        "HSL:7193",
+        "HSL:7193V",
+        "HSL:7194V",
+        "HSL:7194VK",
+        "HSL:7194VT",
+        "HSL:7195",
+        "HSL:7275",
+        "HSL:7280",
+        "HSL:7346",
+        "HSL:7375",
+        "HSL:7375V",
+        "HSL:7453",
+        "HSL:7455",
+        "HSL:7455A",
+        "HSL:7456",
+        "HSL:7456A",
+        "HSL:7456N",
+        "HSL:7457",
+        "HSL:7457A",
+        "HSL:7459",
+        "HSL:7465",
+        "HSL:7465B",
+        "HSL:7848",
+        "HSL:7999"
+      ]
+    }
+  },
+  "streetRoutingTimeout": "6s",
+  "updaters": [
+    {
+      "id": "hsl-trip-updates",
+      "type": "mqtt-gtfs-rt-updater",
+      "url": "tcp://test91.rt.hsl.fi",
+      "topic": "gtfsrt/dev/fi/hsl/tu",
+      "feedId": "HSL",
+      "fuzzyTripMatching": true
+    },
+    {
+      "id": "hsl-alerts",
+      "type": "real-time-alerts",
+      "frequencySec": 30,
+      "url": "https://dev-api.digitransit.fi/realtime/service-alerts/v2/hsl",
+      "feedId": "HSL",
+      "fuzzyTripMatching": true
+    },
+    {
+      "id": "hsl-park",
+      "type": "vehicle-parking",
+      "sourceType": "hsl-park",
+      "feedId": "hslpark",
+      "timeZone": "Europe/Helsinki",
+      "facilitiesFrequencySec": 3600,
+      "facilitiesUrl": "http://digitransit-proxy:8080/out/test.liipi.hsldev.com/api/v1/facilities.json?limit=-1",
+      "utilizationsFrequencySec": 600,
+      "utilizationsUrl": "http://digitransit-proxy:8080/out/test.liipi.hsldev.com/api/v1/utilizations.json?limit=-1"
+    },
+    {
+      "id": "vantaa-bike-rental",
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "frequencySec": 30,
+      "network": "vantaa",
+      "url": "http://digitransit-proxy:8080/out/vantaa-api.giravolta.io/api-opendata/gbfs/2_3/gbfs"
+    },
+    {
+      "id": "hsl-bike-rental",
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "frequencySec": 30,
+      "network": "smoove",
+      "url": "https://helsinki-gbfs.smoove.pro/gbfs/gbfs.json"
+    }
+  ]
+}
