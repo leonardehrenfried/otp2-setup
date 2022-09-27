@@ -1,0 +1,9 @@
+{
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "mtba.gtfs.zip",
+      "feedId": "mbta"
+    }
+  ]
+}

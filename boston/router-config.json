@@ -15,7 +15,7 @@
       "frequencySec": 60,
       "sourceType": "gtfs-http",
       "url": "https://cdn.mbta.com/realtime/TripUpdates.pb",
-      "feedId": "1"
+      "feedId": "mbta"
     }
   ]
 }
