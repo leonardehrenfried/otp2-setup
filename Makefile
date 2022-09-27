@@ -81,7 +81,7 @@ norway/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/norway-210101.osm.pbf -o $@
 
 norway/rb_norway-aggregated-netex.zip:
-	${CURL} https://leonard.io/otp/rb_norway-aggregated-netex-2021-12-11.zip -o $@
+	${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip -o $@
 
 norway/gtfs.zip: norway/rb_norway-aggregated-netex.zip
 	echo "No GTFS, but Netex instead."
@@ -296,4 +296,5 @@ clean-%:
 	find $* -name graph.obj -printf '%p\n' -exec rm {} \;
 	find $* -name streetGraph.obj -printf '%p\n' -exec rm {} \;
 	find $* -name osm.pbf -printf '%p\n' -exec rm {} \;
+	find $* -name *netex.zip -printf '%p\n' -exec rm {} \;
 

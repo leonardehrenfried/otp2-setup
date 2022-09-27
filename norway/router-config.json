@@ -87,5 +87,26 @@
   },
   "transmodelApi": {
     "hideFeedId": true
-  }
+  },
+  "updaters": [
+    {
+      "type": "siri-sx-updater",
+      "frequencySec": 60,
+      "url": "https://api.entur.io/realtime/v1/services",
+      "feedId": "RB",
+      "blockReadinessUntilInitialized": true,
+      "timeoutSec": 120
+    },
+    {
+      "type": "siri-et-updater",
+      "frequencySec": 60,
+      "previewIntervalMinutes": 180,
+      "url": "https://api.entur.io/realtime/v1/services",
+      "maxSnapshotFrequencyMs": 10000,
+      "feedId": "RB",
+      "blockReadinessUntilInitialized": true,
+      "timeoutSec": 120,
+      "fuzzyTripMatching": true
+    }
+  ]
 }
