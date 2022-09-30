@@ -1,4 +1,7 @@
 {
+  "osmDefaults": {
+    "osmTagMapping": "houston"
+  },
   "fares": {
     "type": "highestFareInFreeTransferWindow",
     "analyzeInterlinedTransfers": "true"
