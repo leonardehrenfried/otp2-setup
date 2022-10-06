@@ -1,0 +1,10 @@
+{
+"transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "gtfs.zip",
+      "feedId": "kcm"
+    }
+  ]
+
+}
