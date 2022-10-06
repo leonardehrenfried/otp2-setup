@@ -59,8 +59,8 @@
     {
       "id": "hsl-trip-updates",
       "type": "mqtt-gtfs-rt-updater",
-      "url": "tcp://test91.rt.hsl.fi",
-      "topic": "gtfsrt/dev/fi/hsl/tu",
+      "url": "tcp://pred.rt.hsl.fi",
+      "topic": "gtfsrt/v2/fi/hsl/tu",
       "feedId": "HSL",
       "fuzzyTripMatching": true
     },

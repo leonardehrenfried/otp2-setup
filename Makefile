@@ -174,6 +174,7 @@ boston/osm.pbf: massachusetts/osm.pbf
 
 boston/mtba.gtfs.zip:
 	${CURL} https://cdn.mbta.com/MBTA_GTFS.zip -o $@
+	zip -d $@ facilities_properties.txt
 
 boston/gtfs.zip: boston/mtba.gtfs.zip boston/osm.pbf
 	${CURL} https://raw.githubusercontent.com/MobilityData/gtfs-flex/master/spec/FlexExample--various.zip -o $@
