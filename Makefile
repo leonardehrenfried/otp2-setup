@@ -148,6 +148,9 @@ texas/osm.pbf:
 california/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/california-latest.osm.pbf -o $@
 
+pennsylvania/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/pennsylvania-latest.osm.pbf -o $@
+
 maryland/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/maryland-latest.osm.pbf -o $@
 
@@ -259,6 +262,12 @@ minneapolis/gtfs.zip:
 
 minneapolis/osm.pbf: minnesota/osm.pbf
 	osmium extract minnesota/osm.pbf --polygon minneapolis/minneapolis.geojson -o $@
+
+septa/gtfs.zip:
+	echo "none"
+
+septa/osm.pbf: pennsylvania/osm.pbf
+	osmium extract pennsylvania/osm.pbf --polygon septa/septa.geojson -o $@
 
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
