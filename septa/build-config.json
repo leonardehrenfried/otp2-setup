@@ -10,5 +10,6 @@
       "source": "https://www3.septa.org/developer/google_bus.zip",
       "feedId": "septa-bus"
     }
-  ]
+  ],
+  "fares": "combine-interlined-legs"
 }
