@@ -270,6 +270,12 @@ septa/gtfs.zip:
 septa/osm.pbf: pennsylvania/osm.pbf
 	osmium extract pennsylvania/osm.pbf --polygon septa/septa.geojson -o $@
 
+oklahoma-city/gtfs.zip:
+	echo "none"
+
+oklahoma-city/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/oklahoma-latest.osm.pbf -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
