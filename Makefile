@@ -285,6 +285,16 @@ mexico-city/gtfs.zip:
 mexico-city/osm.pbf: mexico/osm.pbf mexico-city/gtfs.zip
 	osmium extract mexico/osm.pbf --polygon mexico-city/mexico-city.geojson -o $@
 
+australia/osm.pbf:
+	${CURL} https://download.geofabrik.de/australia-oceania/australia-latest.osm.pbf -o $@
+
+sydney/gtfs.zip:
+	${CURL} https://leonard.io/otp/full_greater_sydney_gtfs_static.zip -o $@
+	zip -d $@ notes.txt
+
+sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
+	osmium extract australia/osm.pbf --polygon sydney/new-south-wales.geojson -o $@
+
 otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/2.2-SNAPSHOT/otp-2.2.0-SNAPSHOT-shaded-latest.jar -o $@
 
