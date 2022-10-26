@@ -1,0 +1,109 @@
+{
+  "routingDefaults": {
+    "walkSpeed": 1.4,
+    "transferSlack": 121,
+    "waitReluctance": 0.4,
+    "waitAtBeginningFactor": 0.7,
+    "walkReluctance": 1.75,
+    "stairsReluctance": 1.65,
+    "walkBoardCost": 540,
+    "allowKeepingRentedBicycleAtDestination": true,
+    "keepingRentedBicycleAtDestinationCost": 180,
+    "numItineraries": 5,
+    "bikeTriangleSafetyFactor": 0.4,
+    "bikeTriangleSlopeFactor": 0.3,
+    "bikeTriangleTimeFactor": 0.3,
+    "bikeRentalPickupTime": 180,
+    "bikeRentalPickupCost": 850,
+    "bannedVehicleRentalNetworks": [],
+    "maxAccessEgressDurationForMode": {
+      // 30 min
+      "WALK": "30m",
+      // 20 min
+      "BIKE_TO_PARK": "20m",
+      "CAR_TO_PARK": "20m",
+      "BIKE_RENTAL": "20m",
+      "BIKE": "20m"
+    },
+    "itineraryFilters" : {
+      "flexOnlyToDestination": false,
+      "bikeRentalDistanceRatio": 0.75,
+      "parkAndRideDurationRatio": 0.6,
+      "minBikeParkingDistance": 0
+    }
+  },
+  "transit": {
+    "maxNumberOfTransfers" : 6,
+    "dynamicSearchWindow" : {
+      "minTransitTimeCoefficient" : 3,
+      "minWinTimeCoefficient" : 1,
+      "minWinTimeMinutes" : 120,
+      "maxWinTimeMinutes" : 720
+    }
+  },
+  "vectorTileLayers": [
+    {
+      "name": "stops",
+      "type": "Stop",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 600,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "stations",
+      "type": "Station",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 12,
+      "cacheMaxSeconds": 600,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "citybikes",
+      "type": "VehicleRental",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60,
+      "expansionFactor": 0.5
+    },
+    {
+      "name": "parking",
+      "type": "VehicleParking",
+      "mapper": "Digitransit",
+      "maxZoom": 20,
+      "minZoom": 14,
+      "cacheMaxSeconds": 60,
+      "expansionFactor": 0.5
+    }
+  ],
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "sourceType": "gtfs-http",
+      "url": "https://gtfs.efa-bw.de/bwgesamt/",
+      "feedId": "1"
+    },
+    {
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://www.mobidata-bw.de/data/stadtmobil-S/gbfs.json"
+    },
+    {
+      "type": "bike-rental",
+      "frequencySec": 600,
+      "sourceType": "gbfs",
+      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-stadtmobil-pforzheim/gbfs.json"
+    },
+    {
+      "type": "bike-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://ip-api.mobidata-bw.de/v1/NVBW/gbfs/v2/gbfs.json"
+    }
+  ]
+}

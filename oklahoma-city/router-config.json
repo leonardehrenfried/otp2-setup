@@ -1,0 +1,10 @@
+{
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "url": "https://mna.mecatran.com/utw/ws/gtfsfeed/realtime/embarkok?apiKey=6b73485b3b3c060e5655343f661a292243394475",
+      "feedId": "1",
+      "frequencySec": 60
+    }
+  ]
+}
