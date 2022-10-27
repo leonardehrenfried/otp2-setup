@@ -1,0 +1,8 @@
+{
+  "routingDefaults": {
+    "numItineraries": 5,
+    "maxAccessEgressDurationForMode": {
+      "WALK": "20m"
+    }
+  }
+}
