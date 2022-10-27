@@ -2,7 +2,16 @@
   "routingDefaults": {
     "numItineraries": 5,
     "maxAccessEgressDurationForMode": {
-      "WALK": "20m"
+      "WALK": "30m"
+    }
+  },
+  "transit": {
+    "maxNumberOfTransfers" : 8,
+    "dynamicSearchWindow" : {
+      "minTransitTimeCoefficient" : 0.5,
+      "minWaitTimeCoefficient" : 0.5,
+      "minWinTimeMinutes" : 30,
+      "maxWinTimeMinutes" : 120
     }
   }
 }

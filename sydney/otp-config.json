@@ -1,5 +1,7 @@
 {
   "otpFeatures" : {
-    "ParallelRouting": true
+    "ParallelRouting": true,
+    "ReportApi": true,
+    "OptimizeTransfers": false
   }
 }
