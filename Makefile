@@ -97,7 +97,7 @@ drammen/osm.pbf: norway/osm.pbf
 	osmium extract norway/osm.pbf --polygon drammen/drammen.geojson -o $@
 
 drammen/rb_bra_aggregate-netex.zip:
-	${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_bra-aggregated-netex.zip -o $@
+	#${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_bra-aggregated-netex.zip -o $@
 
 drammen/gtfs.zip: drammen/rb_bra_aggregate-netex.zip
 	echo "No GTFS"
@@ -214,7 +214,7 @@ atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-fle
 	${CURL} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
 
 seattle/gtfs.zip:
-	${CURL} https://metro.kingcounty.gov/GTFS/google_transit.zip -o $@
+	echo "nothing"
 
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
@@ -296,7 +296,7 @@ sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
 	osmium extract australia/osm.pbf --polygon sydney/new-south-wales.geojson -o $@
 
 otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/2.2-SNAPSHOT/otp-2.2.0-SNAPSHOT-shaded-latest.jar -o $@
+	${CURL} https://otp.leonard.io/snapshots/2.3-SNAPSHOT/otp-2.3.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj:
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*

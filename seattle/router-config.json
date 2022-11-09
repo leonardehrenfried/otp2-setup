@@ -1,19 +1,74 @@
 {
   "updaters": [
     {
-      "type": "vehicle-positions",
-      "sourceType": "gtfs-http",
-      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
-      "feedId": "kcm",
-      "frequencySec": 59
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "network": "JUMP",
+      "url": "https://gbfs.uber.com/v1/seab/",
+      "frequencySec": 30
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 30,
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/alerts.pb",
+"sourceType": "gtfs-http",
+      "feedId": "CommTrans"
     },
     {
       "type": "stop-time-updater",
+      "frequencySec": 30,
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/tripupdates.pb",
       "sourceType": "gtfs-http",
+      "feedId": "CommTrans"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 30,
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/vehiclepositions.pb",
+      "sourceType": "gtfs-http",
+      "feedId": "CommTrans"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 30,
       "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/tripupdates.pb",
-      "feedId": "kcm",
-      "frequencySec": 59
+      "sourceType": "gtfs-http",
+      "feedId": "kcm"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 30,
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/alerts.pb",
+"sourceType": "gtfs-http",
+      "feedId": "kcm"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 30,
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
+"sourceType": "gtfs-http",
+      "feedId": "kcm"
+    },
+{
+      "type": "stop-time-updater",
+      "frequencySec": 30,
+      "url": "http://www.skagittransit.org/gtfs/GTFS_TripUpdates.pb",
+      "sourceType": "gtfs-http",
+      "feedId": "Skagit"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 30,
+      "url": "http://www.skagittransit.org/gtfs/GTFS_ServiceAlerts.pb",
+"sourceType": "gtfs-http",
+      "feedId": "Skagit"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 30,
+      "url": "https://www.skagittransit.org/gtfs/GTFS_VehiclePositions.pb",
+"sourceType": "gtfs-http",
+      "feedId": "Skagit"
     }
   ]
 }
-

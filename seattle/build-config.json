@@ -1,10 +1,4 @@
 {
-"transitFeeds": [
-    {
-      "type": "gtfs",
-      "source": "gtfs.zip",
-      "feedId": "kcm"
-    }
-  ]
 
+  "transitModelTimeZone": "America/Los_Angeles"
 }
