@@ -151,6 +151,9 @@ california/osm.pbf:
 pennsylvania/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/pennsylvania-latest.osm.pbf -o $@
 
+oregon/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/us/oregon-latest.osm.pbf -o $@
+
 maryland/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/maryland-latest.osm.pbf -o $@
 
@@ -276,6 +279,12 @@ oklahoma-city/gtfs.zip:
 oklahoma-city/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/oklahoma-latest.osm.pbf -o $@
 
+portland/gtfs.zip:
+	echo "none"
+
+portland/osm.pbf: oregon/osm.pbf
+	osmium extract oregon/osm.pbf --polygon portland/portland-tiny.geojson -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
@@ -298,10 +307,10 @@ sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
 otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/2.3-SNAPSHOT/otp-2.3.0-SNAPSHOT-shaded-latest.jar -o $@
 
-%/streetGraph.obj:
+%/streetGraph.obj: %/osm.pbf
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
 
-build-%: otp.jar %/osm.pbf %/streetGraph.obj %/gtfs.zip
+build-%: otp.jar %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx12G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
