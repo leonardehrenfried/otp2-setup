@@ -8,9 +8,12 @@
     "walkReluctance": 1.75,
     "stairsReluctance": 1.65,
     "walkBoardCost": 540,
-    "maxSlope": 0.125
+    "maxSlope": 0.125,
+    "itineraryFilters": {
+      "flexOnlyToDestination": true,
+      "minBikeParkingDistance": 1000
+    }
   },
-  "streetRoutingTimeout": 8,
   "transit": {
     "maxNumberOfTransfers": 12,
     "dynamicSearchWindow": {

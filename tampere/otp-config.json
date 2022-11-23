@@ -3,10 +3,6 @@
     "MinimumTransferTimeIsDefinitive": true,
     "SandboxAPILegacyGraphQLApi": true,
     "APIGraphInspectorTile": true,
-    "APIServerInfo": true,
-    "APIUpdaterStatus": false,
-    "APIExternalGeocoder": false,
-    "APIBikeRental": false,
     "SandboxAPIMapboxVectorTilesApi": true,
     "FloatingBike": true
   }
