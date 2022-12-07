@@ -78,7 +78,7 @@ bedford/osm.pbf:
 
 norway/osm.pbf:
 	mkdir -p norway
-	${CURL} https://download.geofabrik.de/europe/norway-210101.osm.pbf -o $@
+	${CURL} https://download.geofabrik.de/europe/norway-latest.osm.pbf -o $@
 
 norway/rb_norway-aggregated-netex.zip:
 	${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip -o $@

@@ -1,15 +1,13 @@
 {
+  "routingDefaults": {
+    "bikeStairsReluctance": 10
+  },
   "updaters": [
     {
-      "feedId": "bikely",
-      "type" : "vehicle-parking",
-      "sourceType" : "bikely",
-      "url" : "https://api.safebikely.com/api/v1/s/locations",
-      "headers" : {
-        "X-Bikely-Token" : "${BIKELY_TOKEN}",
-        "Authorization" : "${BIKELY_AUTHORIZATION}"
-      }
+      "type" : "vehicle-rental",
+      "sourceType" : "gbfs",
+      "frequencySec" : 3600,
+      "url" : "https://api.entur.io/mobility/v2/gbfs/tieroslo/gbfs"
     }
   ]
-
 }
