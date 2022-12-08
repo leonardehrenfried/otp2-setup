@@ -20,12 +20,12 @@
   },
   "updaters": [
     {
-      "id": "tier-oslo-vehicle-rental",
       "type": "vehicle-rental",
       "frequencySec": 60,
       "sourceType": "gbfs",
-      "url": "https://api.entur.io/mobility/v2/gbfs/tieroslo/gbfs.json",
-      "network": "tier"
+      "url": "https://otp-performance.leonard.io/data/norway/tieroslo/gbfs.json"
     }
-  ]
+  ],
+
+  "streetRoutingTimeout": "5m"
 }
