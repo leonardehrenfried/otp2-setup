@@ -1,0 +1,11 @@
+{
+  "updaters": [
+    {
+      "type" : "vehicle-rental",
+      "sourceType" : "gbfs",
+      "url" : "https://mds.bird.co/gbfs/v2/public/portland/gbfs.json",
+      "geofencingZones": true
+    }
+  ]
+}
+
