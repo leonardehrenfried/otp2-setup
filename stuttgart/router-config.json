@@ -139,8 +139,9 @@
     {
       "type": "vehicle-parking",
       "sourceType": "park-api",
-      "frequencySec": 600,
+      "frequencySec": 60,
       "feedId": "park-api-rt",
+      "timeZone": "Europe/Berlin",
       "url": "https://api.stadtnavi.de/herrenberg/parking/parkapi.json"
     }
   ]
