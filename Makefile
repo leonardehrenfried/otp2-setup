@@ -125,7 +125,7 @@ helsinki/osm.pbf: finland/osm.pbf
 	osmium extract finland/osm.pbf --polygon helsinki/helsinki.geojson -o $@
 
 tampere/gtfs.zip:
-	${CURL} https://leonard.io/ibi/tampere.gtfs.zip -o $@
+	echo "no gtfs"
 
 tampere/osm.pbf: finland/osm.pbf
 	osmium extract finland/osm.pbf --polygon tampere/tampere.geojson -o $@

@@ -4,6 +4,7 @@
     "SandboxAPILegacyGraphQLApi": true,
     "APIGraphInspectorTile": true,
     "SandboxAPIMapboxVectorTilesApi": true,
-    "FloatingBike": true
+    "FloatingBike": true,
+    "ActuatorAPI": true
   }
 }
