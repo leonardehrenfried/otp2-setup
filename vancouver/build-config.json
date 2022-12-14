@@ -1,0 +1,10 @@
+{
+  "areaVisibility": false,
+  "transitFeeds":[
+    {
+      "source":"https://transitfeeds.com/p/translink-vancouver/29/latest/download",
+      "type": "gtfs",
+      "feedId": "translink"
+    }
+  ]
+}

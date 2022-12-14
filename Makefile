@@ -285,6 +285,15 @@ portland/gtfs.zip:
 portland/osm.pbf: oregon/osm.pbf
 	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
 
+british-columbia/osm.pbf:
+	${CURL} https://download.geofabrik.de/north-america/canada/british-columbia-latest.osm.pbf -o $@
+
+vancouver/gtfs.zip:
+	echo "none"
+
+vancouver/osm.pbf: british-columbia/osm.pbf
+	osmium extract british-columbia/osm.pbf --polygon vancouver/vancouver.geojson -o $@
+
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
