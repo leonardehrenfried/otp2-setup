@@ -207,14 +207,8 @@ cobb/gtfs.zip: cobb/osm.pbf cobb/cobblinc.gtfs.zip
 atlanta/osm.pbf: georgia/osm.pbf
 	osmium extract georgia/osm.pbf --polygon atlanta/atlanta.geojson -o $@
 
-atlanta/cobblinc.gtfs.zip:
-	${CURL}  https://internal-test-gtfs-testing.s3.amazonaws.com/Cobblinc-static-extended-dates.zip -o $@
-
-atlanta/cobblinc-flex.gtfs.zip:
-	${CURL} https://internal-test-gtfs-testing.s3.amazonaws.com/cobblinc-gtfs-flex.zip -o $@
-
-atlanta/gtfs.zip: atlanta/osm.pbf atlanta/cobblinc.gtfs.zip atlanta/cobblinc-flex.gtfs.zip
-	${CURL} https://itsmarta.com/google_transit_feed/google_transit.zip -o $@
+atlanta/gtfs.zip:
+	echo "nothing"
 
 seattle/gtfs.zip:
 	echo "nothing"
