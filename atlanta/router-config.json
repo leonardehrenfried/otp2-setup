@@ -32,17 +32,20 @@
   },
   "updaters": [
     {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "network": "HOPR",
-      "url": "https://leonard.io/ibi/hopr-atlanta-timeout/gbfs.json",
-      "frequencySec": 60
+      "type": "stop-time-updater",
+      "url": "https://api.goswift.ly/real-time/marta/gtfs-rt-trip-updates",
+      "feedId": "MARTA",
+      "headers": {
+        "Authorization" : "${ATL_SWITFTLY_API_KEY}"
+      }
     },
     {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://gbfs.spin.pm/api/gbfs/v2_2/atlanta/gbfs",
-      "frequencySec": 60
+      "type": "vehicle-positions",
+      "url": "https://api.goswift.ly/real-time/marta/gtfs-rt-vehicle-positions",
+      "feedId": "MARTA",
+      "headers": {
+        "Authorization" : "ba8847745af6014949baf9258469ffae"
+      }
     }
   ]
 }

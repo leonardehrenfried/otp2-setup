@@ -9,5 +9,14 @@
       "frequencySec" : 3600,
       "url" : "https://api.entur.io/mobility/v2/gbfs/tieroslo/gbfs"
     }
-  ]
+  ],
+  "vehicleRentalServiceDirectory": {
+    "url": "https://api.entur.io/mobility/v2/gbfs",
+    "sourcesName": "systems",
+    "updaterUrlName": "url",
+    "updaterNetworkName": "id",
+    "headers": {
+      "ET-Client-Name": "hannes-otp2"
+    }
+  }
 }

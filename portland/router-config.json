@@ -1,4 +1,5 @@
 {
+  "streetRoutingTimeout": "5m",
   "updaters": [
     {
       "type" : "vehicle-rental",

@@ -4,3 +4,4 @@
 graph.obj
 streetGraph.obj
 */report/
+.env

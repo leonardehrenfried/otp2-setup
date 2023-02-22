@@ -211,10 +211,16 @@ atlanta/gtfs.zip:
 	echo "nothing"
 
 seattle/gtfs.zip:
-	echo "nothing"
+	${CURL} "https://picsapi.commtrans.org/download/liveGTFS.zip" -o $@
 
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
+
+hopelink/osm.pbf: seattle/osm.pbf
+	cp seattle/osm.pbf $@
+
+hopelink/gtfs.zip:
+	echo "no gtfs"
 
 noco/gtfs.zip:
 	${CURL} https://leonard.io/ibi/ride-noco.gtfs.zip -o $@
@@ -268,7 +274,7 @@ septa/osm.pbf: pennsylvania/osm.pbf
 	osmium extract pennsylvania/osm.pbf --polygon septa/septa.geojson -o $@
 
 oklahoma-city/gtfs.zip:
-	echo "none"
+	echo "no gtfs"
 
 oklahoma-city/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/oklahoma-latest.osm.pbf -o $@

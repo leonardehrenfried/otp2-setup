@@ -98,6 +98,12 @@
       "frequencySec": 30,
       "network": "smoove",
       "url": "https://helsinki-gbfs.smoove.pro/gbfs/gbfs.json"
+    },
+    {
+      "type" : "vehicle-positions",
+      "url" : "https://realtime.hsl.fi/realtime/vehicle-positions/v2/hsl",
+      "feedId" : "HSL",
+      "frequencySec" : 60
     }
   ]
 }
