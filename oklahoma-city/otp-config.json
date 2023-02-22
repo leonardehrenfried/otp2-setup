@@ -1,0 +1,8 @@
+{
+  "otpFeatures" : {
+    "FaresV2" : false,
+    "SandboxAPILegacyGraphQLApi": true,
+    "SandboxAPIGeocoder": true
+  }
+}
+
