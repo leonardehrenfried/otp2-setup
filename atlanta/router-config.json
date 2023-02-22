@@ -36,7 +36,7 @@
       "url": "https://api.goswift.ly/real-time/marta/gtfs-rt-trip-updates",
       "feedId": "MARTA",
       "headers": {
-        "Authorization" : "${ATL_SWITFTLY_API_KEY}"
+        "Authorization" : "${ATL_SWIFTLY_API_KEY}"
       }
     },
     {
