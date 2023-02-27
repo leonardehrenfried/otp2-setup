@@ -216,6 +216,12 @@ seattle/gtfs.zip:
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+snow-goose/gtfs.zip:
+	echo "Downloaded by OTP"
+
+snow-goose/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon snow-goose/tiny.geojson -o $@
+
 hopelink/osm.pbf: seattle/osm.pbf
 	cp seattle/osm.pbf $@
 
