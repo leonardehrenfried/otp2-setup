@@ -1,6 +1,6 @@
 {
   "transitModelTimeZone": "America/Los_Angeles",
-
+  "fares": "orca",
   "transitFeeds" : [
     {
       "type" : "gtfs",
