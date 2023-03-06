@@ -1,0 +1,12 @@
+{
+  "configVersion" : "dev",
+  "updaters" : [
+    {
+      "type" : "vehicle-rental",
+      "sourceType" : "gbfs",
+      "frequencySec" : 30,
+      "allowKeepingRentedBicycleAtDestination" : false,
+      "url" : "https://gbfs.derp.si/gbfs/avant2go/gbfs.json"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "transitModelTimezone": "Europe/Berlin",
+   "osm" : [
+    {
+      "source" : "https://download.geofabrik.de/europe/slovenia-latest.osm.pbf",
+      "timeZone" : "Europe/Berlin"
+    }
+  ],
+  "transitFeeds": [
+    {
+      "type":"gtfs",
+      "source": "https://gtfs.pro/files/uran/improved-gtfs-ljubljanski-potniski.zip"
+    }
+  ]
+}

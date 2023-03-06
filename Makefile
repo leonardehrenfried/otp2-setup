@@ -76,6 +76,12 @@ bedford/gtfs.zip:
 bedford/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/great-britain/england/bedfordshire-latest.osm.pbf -o $@
 
+slovenia/osm.pbf:
+	echo "none"
+
+slovenia/gtfs.zip:
+	echo "none"
+
 norway/osm.pbf:
 	mkdir -p norway
 	${CURL} https://download.geofabrik.de/europe/norway-latest.osm.pbf -o $@
