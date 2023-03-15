@@ -7,6 +7,14 @@
       "url" : "https://mds.bird.co/gbfs/v2/public/portland/gbfs.json",
       "geofencingZones": true
     }
+  ],
+  "rideHailingServices": [
+    {
+      "type": "uber-car-hailing",
+      "clientId": "${UBER_CLIENT_ID}",
+      "clientSecret": "${UBER_CLIENT_SECRET}",
+      "wheelchairAccessibleRideType": "car"
+    }
   ]
 }
 
