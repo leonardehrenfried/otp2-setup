@@ -1,0 +1,9 @@
+{
+  "otpFeatures" : {
+    "SandboxAPILegacyGraphQLApi": true,
+    "VehicleToStopHeuristics": true,
+    "ParallelRouting": true,
+    "ReportApi": true,
+    "ActuatorApi": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "routingDefaults": {},
+  "updaters": [
+    {
+      "type": "siri-et-updater",
+      "url": "${NORTHUMBERLAND_SIRI_ET_URL}",
+      "feedId": "BODS",
+      "timeoutSec": 30,
+      "headers": {
+        "Authorization": "Basic ${NORTHUMBERLAND_SIRI_ET_TOKEN}"
+      }
+    }
+  ]
+}

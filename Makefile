@@ -136,6 +136,11 @@ tampere/gtfs.zip:
 tampere/osm.pbf: finland/osm.pbf
 	osmium extract finland/osm.pbf --polygon tampere/tampere.geojson -o $@
 
+northumberland/gtfs.zip:
+	echo "no gtfs"
+
+northumberland/osm.pbf:
+	echo "no OSM"
 
 ## America
 

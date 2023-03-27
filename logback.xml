@@ -14,7 +14,7 @@
   <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <!-- print out file and line number in parenthesis, which Eclipse and IDEA will link -->
-      <pattern>%d{HH:mm:ss.SSS} %level \(%F:%L\) %msg%n</pattern>
+      <pattern>%d{HH:mm:ss.SSS} %highlight([%level]) \(%F:%L\) %msg%n</pattern>
     </encoder>
   </appender>
 
@@ -58,7 +58,7 @@
 
   <logger name="ch.qos.logback" level="warn"/>
   <logger name="com.amazonaws" level="info"/>
-  <logger name="org.apache.http" level="info" />
+  <logger name="org.apache.http" level="DEBUG" />
   <logger name="com.conveyal" level="info"/>
 
   <!-- Avoid printing info messages about calendars when building graph -->
