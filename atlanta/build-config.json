@@ -6,7 +6,7 @@
   "fares": "atlanta",
   "transitFeeds": [
     {
-      "source": "https://itsmarta.com/google_transit_feed/google_transit.zip",
+      "source": "https://leonard.io/ibi/marta-with-fares.gtfs.zip",
       "feedId": "MARTA",
       "type": "gtfs"
     },
