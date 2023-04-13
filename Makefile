@@ -347,16 +347,16 @@ build-nogtfs-%: otp.jar
 
 
 clean-all:
-	find . -name osm.pbf -printf '%p\n' -exec rm {} \;
-	find . -name gtfs.zip -printf '%p\n' -exec rm {} \;
-	find . -name graph.obj -printf '%p\n' -exec rm {} \;
-	find . -name streetGraph.obj -printf '%p\n' -exec rm {} \;
+	find . -name osm.pbf -print -exec rm {} \;
+	find . -name gtfs.zip -print -exec rm {} \;
+	find . -name graph.obj -print -exec rm {} \;
+	find . -name streetGraph.obj -print -exec rm {} \;
 	rm -f otp.jar
 
 clean-%:
-	find $* -name *gtfs.zip -printf '%p\n' -exec rm {} \;
-	find $* -name graph.obj -printf '%p\n' -exec rm {} \;
-	find $* -name streetGraph.obj -printf '%p\n' -exec rm {} \;
-	find $* -name osm.pbf -printf '%p\n' -exec rm {} \;
-	find $* -name *netex.zip -printf '%p\n' -exec rm {} \;
+	find $* -name *gtfs.zip -print -exec rm {} \;
+	find $* -name graph.obj -print -exec rm {} \;
+	find $* -name streetGraph.obj -print -exec rm {} \;
+	find $* -name osm.pbf -print -exec rm {} \;
+	find $* -name *netex.zip -print -exec rm {} \;
 
