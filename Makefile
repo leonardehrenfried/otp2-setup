@@ -354,9 +354,9 @@ clean-all:
 	rm -f otp.jar
 
 clean-%:
-	find . -name *gtfs.zip -print -exec rm {} \;
-	find . -name graph.obj -print -exec rm {} \;
-	find . -name streetGraph.obj -print -exec rm {} \;
-	find . -name osm.pbf -print -exec rm {} \;
-	find . -name *netex.zip -print -exec rm {} \;
+	find $* -name *gtfs.zip -print -exec rm {} \;
+	find $* -name graph.obj -print -exec rm {} \;
+	find $* -name streetGraph.obj -print -exec rm {} \;
+	find $* -name osm.pbf -print -exec rm {} \;
+	find $* -name *netex.zip -print -exec rm {} \;
 
