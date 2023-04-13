@@ -1,14 +1,31 @@
 {
-  "routingDefaults": {},
-  "updaters": [
+  "routingDefaults": {
+    "bikeRentalPickupTime": 180,
+    "bikeRentalPickupCost": 850,
+    "maxAccessEgressDurationForMode": {
+      "BIKE_TO_PARK": "30m",
+      "CAR_TO_PARK": "30m",
+      "BIKE_RENTAL": "30m",
+      "BIKE": "30m",
+      "WALK": "30m"
+    },
+    "itineraryFilters" : {
+      "nonTransitGeneralizedCostLimit": "0 + 0.5 x"
+    }
+  },
+  "transit": {
+    "transferCacheRequests": [
+      { "modes": "WALK"                                                     },
+      { "modes": "WALK",    "wheelchairAccessibility": { "enabled": true  } }
+    ]
+  },
+  "updaters" : [
     {
-      "type": "siri-et-updater",
-      "url": "${NORTHUMBERLAND_SIRI_ET_URL}",
-      "feedId": "BODS",
-      "timeoutSec": 30,
-      "headers": {
-        "Authorization": "Basic ${NORTHUMBERLAND_SIRI_ET_TOKEN}"
-      }
+      "type" : "siri-et-updater",
+      "url" : "${NORTHUMBERLAND_SIRI_URL}",
+      "feedId" : "BODS",
+      "timeoutSec" : 30,
+      "fuzzyTripMatching": true
     }
   ]
 }
