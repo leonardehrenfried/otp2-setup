@@ -3,5 +3,13 @@
   "staticBikeParkAndRide": true,
   "areaVisibility": false,
   "timeZone": "Europe/Berlin",
-  "islandWithStopsMaxSize": 200
+  "islandWithStopsMaxSize": 200,
+
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip",
+      "feedId": "vbb"
+    }
+  ]
 }

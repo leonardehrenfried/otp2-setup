@@ -75,12 +75,17 @@
     }
   ],
   "updaters": [
-     {
+    {
       "type": "stop-time-updater",
       "frequencySec": 60,
-      "sourceType": "gtfs-http",
       "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
       "feedId": "mfdz"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://v0.berlin-gtfs-rt.transport.rest/feed",
+      "feedId": "vbb"
     },
     {
       "type": "vehicle-rental",

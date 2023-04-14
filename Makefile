@@ -13,11 +13,8 @@ berlin/gtfs.zip:
 brandenburg/osm.pbf:
 	${CURL} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
 
-brandenburg/gtfs.zip: brandenburg/carpool.gtfs.zip brandenburg/flex.gtfs.zip
-	${CURL} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
-
-brandenburg/carpool.gtfs.zip:
-	${CURL} https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfs.zip -o $@
+brandenburg/gtfs.zip:
+	echo "no GTFS"
 
 brandenburg/flex.gtfs.zip:
 	${CURL} https://github.com/bbnavi/gtfs-flex/releases/download/2022-01-25/gtfs-flex.zip -o $@
