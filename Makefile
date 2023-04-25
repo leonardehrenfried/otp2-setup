@@ -96,6 +96,12 @@ germany/osm.pbf:
 	mkdir -p germany
 	${CURL} https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf -o $@
 
+britain/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/great-britain-latest.osm.pbf -o $@
+
+britain/gtfs.zip:
+	echo "No GTFS."
+
 drammen/osm.pbf: norway/osm.pbf
 	osmium extract norway/osm.pbf --polygon drammen/drammen.geojson -o $@
 
@@ -331,17 +337,20 @@ otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/2.3-SNAPSHOT/otp-2.3.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj: %/osm.pbf
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --buildStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx12G -jar otp.jar --loadStreet --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx50G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx50G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nogtfs-%: otp.jar
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx12G -jar otp.jar --build --save $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
 
+build-otp:
+	cd ../OpenTripPlanner/ && \
+		mvn clean package -Dmaven.test.skip -P prettierSkip && cp target/otp-*-SNAPSHOT-shaded.jar ../otp2-setup/otp.jar
 
 clean-all:
 	find . -name osm.pbf -print -exec rm {} \;

@@ -1,0 +1,18 @@
+{
+  "transitFeeds": [
+    {
+      "source": "https://data.bus-data.dft.gov.uk/timetable/download/gtfs-file/all/",
+      "feedId": "BODS",
+      "type": "gtfs"
+    }
+  ],
+   "gtfsDefaults" : {
+    "discardMinTransferTimes" : true,
+    "blockBasedInterlining" : false
+  },
+  "osmDefaults" : {
+    "timeZone" : "Europe/London",
+    "osmTagMapping" : "uk"
+  }
+}
+

@@ -1,7 +1,7 @@
 {
   "osmWayPropertySet": "germany",
   "staticBikeParkAndRide": true,
-  "areaVisibility": false,
+  "areaVisibility": true,
   "timeZone": "Europe/Berlin",
   "islandWithStopsMaxSize": 200,
 

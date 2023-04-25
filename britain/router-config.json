@@ -1,0 +1,22 @@
+{
+  "routingDefaults": {
+    "bikeRentalPickupTime": 180,
+    "bikeRentalPickupCost": 850,
+    "maxAccessEgressDurationForMode": {
+      "BIKE_TO_PARK": "30m",
+      "CAR_TO_PARK": "30m",
+      "BIKE_RENTAL": "30m",
+      "BIKE": "30m",
+      "WALK": "15m"
+    },
+    "itineraryFilters" : {
+      "nonTransitGeneralizedCostLimit": "0 + 0.5 x"
+    }
+  },
+  "transit": {
+    "transferCacheRequests": [
+      { "modes": "WALK"                                                     },
+      { "modes": "WALK",    "wheelchairAccessibility": { "enabled": true  } }
+    ]
+  }
+}
