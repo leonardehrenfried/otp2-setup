@@ -26,6 +26,12 @@
       "feedId" : "BODS",
       "timeoutSec" : 30,
       "fuzzyTripMatching": true
+    },
+    {
+      "type" : "vehicle-positions",
+      "url" : "https://data.bus-data.dft.gov.uk/api/v1/gtfsrtdatafeed/?api_key=${BODS_API_KEY}&boundingBox=-3.541,54.4116,-0.6942,55.565",
+      "feedId" : "BODS",
+      "frequencySec" : 60
     }
   ]
 }
