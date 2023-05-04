@@ -28,7 +28,7 @@
     }
   },
   "flex": {
-    "maxTransferDurationSeconds": 240
+    "maxTransferDuration": "4m"
   },
   "updaters": [
     {
