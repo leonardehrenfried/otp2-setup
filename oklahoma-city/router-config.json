@@ -1,0 +1,10 @@
+{
+  "transit" : {
+    "stopTransferCost" : {
+      "DISCOURAGED" : 3600,
+      "ALLOWED" : 900,
+      "RECOMMENDED" : 600,
+      "PREFERRED" : 0
+    }
+  }
+}
