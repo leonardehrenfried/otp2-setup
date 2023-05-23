@@ -5,6 +5,8 @@
     "APIGraphInspectorTile": true,
     "SandboxAPIMapboxVectorTilesApi": true,
     "FloatingBike": true,
-    "ActuatorAPI": true
+    "ActuatorAPI": true,
+    "SandboxAPITransmodelApi": true,
+    "SandboxAPIGeocoder": true
   }
 }

@@ -125,6 +125,24 @@
       "frequencySec": 600,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/barshare/other/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-berlin/gbfs.n"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-potsdam/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequencySec": 60,
+      "sourceType": "gbfs",
+      "url": "https://opendata.bbnavi.de/flotte/flotte-brandenburg/gbfs.json"
     }
   ]
 }
