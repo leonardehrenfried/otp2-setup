@@ -7,6 +7,7 @@
     "OptimizeTransfers": false,
     "TransferConstraints": false,
     "ParallelRouting": true,
-    "VehicleToStopHeuristics": true
+    "VehicleToStopHeuristics": true,
+    "SandboxAPITransmodelApi": true
   }
 }
