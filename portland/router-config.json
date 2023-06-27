@@ -1,5 +1,7 @@
 {
-  "streetRoutingTimeout": "5m",
+  "routingDefaults":{
+    "streetRoutingTimeout": "5m"
+  },
   "updaters": [
     {
       "type" : "vehicle-rental",
@@ -11,8 +13,8 @@
       "type" : "vehicle-rental",
       "network": "spin",
       "sourceType" : "gbfs",
-      "url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfsssss",
-      //"url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfs",
+      //"url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfsssss",
+      "url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfs",
       "geofencingZones": true
     }
   ],
