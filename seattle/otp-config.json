@@ -1,7 +1,6 @@
 {
   "otpFeatures" : {
     "SandboxAPITransmodelApi": true,
-    "SandboxAPILegacyGraphQLApi": true,
     "FlexRouting": true,
     "VehicleToStopHeuristics": true,
     "OptimizeTransfers": false,
