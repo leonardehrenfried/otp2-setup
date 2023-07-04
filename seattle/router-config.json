@@ -14,7 +14,7 @@
     },
     {
       "type": "vehicle-positions",
-      "frequencySec": "30s",
+      "frequency": "30s",
       "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
       "feedId": "kcm"
     }
