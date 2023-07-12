@@ -1,0 +1,61 @@
+{
+  "flex": {
+    "maxAccessWalkDuration": "10m",
+    "maxEgressWalkDuration": "10m"
+  },
+  "routingDefaults": {
+  },
+  "updaters": [
+    {
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "network": "JUMP",
+      "url": "https://gbfs.uber.com/v1/seab/"
+    },
+    {
+      "type": "real-time-alerts",
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/alerts.pb",
+      "feedId": "CommTrans"
+    },
+    {
+      "type": "stop-time-updater",
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/tripupdates.pb",
+      "feedId": "CommTrans"
+    },
+    {
+      "type": "vehicle-positions",
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/vehiclepositions.pb",
+      "feedId": "CommTrans"
+    },
+    {
+      "type": "stop-time-updater",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/tripupdates.pb",
+      "feedId": "kcm"
+    },
+    {
+      "type": "real-time-alerts",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/alerts.pb",
+      "feedId": "kcm"
+    },
+    {
+      "type": "vehicle-positions",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
+      "feedId": "kcm"
+    },
+{
+      "type": "stop-time-updater",
+      "url": "http://www.skagittransit.org/gtfs/GTFS_TripUpdates.pb",
+      "feedId": "Skagit"
+    },
+    {
+      "type": "real-time-alerts",
+      "url": "http://www.skagittransit.org/gtfs/GTFS_ServiceAlerts.pb",
+      "feedId": "Skagit"
+    },
+    {
+      "type": "vehicle-positions",
+      "url": "https://www.skagittransit.org/gtfs/GTFS_VehiclePositions.pb",
+      "feedId": "Skagit"
+    }
+  ]
+}

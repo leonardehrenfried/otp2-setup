@@ -1,0 +1,10 @@
+{
+  "otpFeatures" : {
+    "FlexRouting": true,
+    "VehicleToStopHeuristics": true,
+    "OptimizeTransfers": false,
+    "FloatingBike": true,
+    "SandboxAPIParkAndRideApi": true,
+    "ParallelRouting": true
+  }
+}

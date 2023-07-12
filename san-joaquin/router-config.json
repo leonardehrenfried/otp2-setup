@@ -1,0 +1,43 @@
+{
+  "routingDefaults": {
+    "waitReluctance": 0.4,
+    "walkReluctance": 1.75,
+    "stairsReluctance": 1.65,
+    "numItineraries": 5,
+    "bikeTriangleSafetyFactor": 0.4,
+    "bikeTriangleSlopeFactor": 0.3,
+    "bikeTriangleTimeFactor": 0.3,
+    "vehicleRental" : {
+      "allowKeepingAtDestination": true,
+      "pickupCost" : 120,
+      "dropOffTime" : 30,
+      "dropOffCost" : 30
+    },
+    "maxAccessEgressDurationForMode": {
+      "BIKE_TO_PARK": "30m",
+      "CAR_TO_PARK": "30m",
+      "BIKE_RENTAL": "30m",
+      "BIKE": "30m",
+      "WALK": "30m"
+    },
+    "itineraryFilters" : {
+      "nonTransitGeneralizedCostLimit": "0 + 0.5 x"
+    }
+  },
+  "transit": {
+    "maxNumberOfTransfers" : 6,
+    "dynamicSearchWindow" : {
+      "minWindow" : "6h",
+      "maxWindow" : "36h"
+    }
+  },
+  "updaters": [
+    {
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "url": "https://cdn.dev.demandtrans-apis.com/vamos-miocar-gbfs/gbfs.json",
+      "frequency": "10m",
+      "allowKeepingRentedVehicleAtDestination" : true
+    }
+  ]
+}

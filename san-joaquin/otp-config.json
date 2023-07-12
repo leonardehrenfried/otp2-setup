@@ -1,0 +1,9 @@
+{
+  "otpFeatures" : {
+    "FloatingBike": true,
+    "ParallelRouting": true,
+    "VehicleToStopHeuristics": true,
+    "FlexRouting": true,
+    "FaresV2": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "staticBikeParkAndRide": true,
+  "areaVisibility": false,
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "feedId": "stanislaus",
+      "source": "https://data.trilliumtransit.com/gtfs/movestanislaus-ca-us/movestanislaus-ca-us--flex-v2.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "stantra",
+      "source": "https://www.stanrta.org/DocumentCenter/View/609/preview-gtfs.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "stantra-trillium",
+      "source": "https://data.trilliumtransit.com/gtfs/stanrta-ca-us/stanrta-ca-us--flex-v2.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "manteca",
+      "source": "https://data.trilliumtransit.com/gtfs/manteca-ca-us/manteca-ca-us--flex-v2.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "rtd",
+      "source": "https://www.sanjoaquinrtd.com/RTD-GTFS/RTD-GTFS.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "sanjoaquin",
+      "source": "https://data.trilliumtransit.com/gtfs/sanjoaquin-ca-us/sanjoaquin-ca-us--flex-v2.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "amtrak-sanjoaquins",
+      "source": "https://data.trilliumtransit.com/gtfs/sanjoaquins-ca-us/sanjoaquins-ca-us.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "turlock",
+      "source": "https://data.trilliumtransit.com/gtfs/turlock-ca-us/turlock-ca-us--flex-v2.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "blossomexpress",
+      "source": "https://data.trilliumtransit.com/gtfs/blossomexpress-ca-us/blossomexpress-ca-us.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "511",
+      "source": "https://api.511.org/transit/datafeeds?api_key=e74ef98b-6e66-4d18-92be-e06755664137&operator_id=CE&file=gtfs.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "lodi",
+      "source": "https://www.lodi.gov/DocumentCenter/View/2453/lodi_gtfs"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "tracy",
+      "source": "https://github.com/transitland/gtfs-archives-not-hosted-elsewhere/raw/master/tracy-tracer.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "escalon",
+      "source": "https://data.trilliumtransit.com/gtfs/escalon-ca-us/escalon-ca-us.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "tracyflex",
+      "source": "https://data.trilliumtransit.com/gtfs/tracy-ca-us/tracy-ca-us--flex-v2.zip"
+    }
+  ]
+}

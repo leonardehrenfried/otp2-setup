@@ -230,17 +230,17 @@ seattle/gtfs.zip:
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+hopelink/gtfs.zip:
+	echo "none"
+
+hopelink/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon hopelink/hopelink.geojson -o $@
+
 snow-goose/gtfs.zip:
 	echo "Downloaded by OTP"
 
 snow-goose/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon snow-goose/tiny.geojson -o $@
-
-hopelink/osm.pbf: seattle/osm.pbf
-	cp seattle/osm.pbf $@
-
-hopelink/gtfs.zip:
-	echo "no gtfs"
 
 noco/gtfs.zip:
 	${CURL} https://leonard.io/ibi/ride-noco.gtfs.zip -o $@
@@ -260,20 +260,11 @@ denver/osm.pbf: colorado/osm.pbf
 mexico/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
 
-turlock/StanRTA.gtfs.zip:
-	${CURL} https://leonard.io/trillium/StanRTA.gtfs.zip -o $@
+san-joaquin/gtfs.zip:
+	echo ""
 
-turlock/SJRTD.gtfs.zip:
-	${CURL} https://leonard.io/trillium/SJRTD.gtfs.zip -o $@
-
-turlock/manteca.gtfs.zip:
-	${CURL} https://leonard.io/trillium/manteca.gtfs.zip -o $@
-
-turlock/gtfs.zip: turlock/manteca.gtfs.zip turlock/SJRTD.gtfs.zip turlock/StanRTA.gtfs.zip
-	${CURL} https://leonard.io/otp/turlock-fares-v2.gtfs.zip -o $@
-
-turlock/osm.pbf: california/osm.pbf
-	osmium extract california/osm.pbf --polygon turlock/turlock.geojson -o $@
+san-joaquin/osm.pbf: california/osm.pbf
+	osmium extract california/osm.pbf --polygon san-joaquin/turlock.geojson -o $@
 
 baltimore/gtfs.zip:
 	${CURL} https://mdotmta-gtfs.s3.amazonaws.com/mdotmta_gtfs_metro.zip -o $@
@@ -314,9 +305,6 @@ vancouver/gtfs.zip:
 vancouver/osm.pbf: british-columbia/osm.pbf
 	osmium extract british-columbia/osm.pbf --polygon vancouver/vancouver.geojson -o $@
 
-mexico/osm.pbf:
-	${CURL} https://download.geofabrik.de/north-america/mexico-latest.osm.pbf -o $@
-
 mexico-city/gtfs.zip:
 	${CURL} https://datos.cdmx.gob.mx/dataset/75538d96-3ade-4bc5-ae7d-d85595e4522d/resource/32ed1b6b-41cd-49b3-b7f0-b57acb0eb819/download/gtfs.zip -o $@
 
@@ -343,7 +331,7 @@ build-%: otp.jar %/streetGraph.obj %/gtfs.zip
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx50G -jar otp.jar --loadStreet --save $*
 
 run-%: otp.jar
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx50G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
+	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -XX:+HeapDumpOnOutOfMemoryError -Xmx10G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nogtfs-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
