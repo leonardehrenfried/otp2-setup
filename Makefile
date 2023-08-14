@@ -296,6 +296,12 @@ portland/gtfs.zip:
 portland/osm.pbf: oregon/osm.pbf
 	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
 
+pierce-county/gtfs.zip:
+	echo "none"
+
+pierce-county/osm.pbf:
+	echo "none"
+
 british-columbia/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/canada/british-columbia-latest.osm.pbf -o $@
 
