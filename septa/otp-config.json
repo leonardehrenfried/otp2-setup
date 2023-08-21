@@ -1,7 +1,6 @@
 {
   "otpFeatures" : {
     "ActuatorAPI": true,
-    "SandboxAPILegacyGraphQLApi": true,
     "ParallelRouting": true
   }
 }
