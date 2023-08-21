@@ -53,6 +53,7 @@
   <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RaptorRoutingRequestTransitDataCreator" level="debug"/>
   <logger name="org.opentripplanner.routing.algorithm.raptoradapter.transit.request.RoutingRequestTransitDataProviderFilter" level="debug"/>
   <logger name="org.opentripplanner.transit.raptor.service.HeuristicSearchTask" level="info"/>
+  <logger name="org.opentripplanner.graph_builder.module.stopconsolidation.StopConsolidator" level="debug"/>
 
   <!-- THIRD PARTY LOGGERS -->
 
