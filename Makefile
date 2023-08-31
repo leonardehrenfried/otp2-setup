@@ -302,6 +302,9 @@ pierce-county/gtfs.zip:
 pierce-county/osm.pbf:
 	echo "none"
 
+pierce-county/osm.pbf:
+	echo "none"
+
 british-columbia/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/canada/british-columbia-latest.osm.pbf -o $@
 
