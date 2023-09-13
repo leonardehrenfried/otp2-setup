@@ -1,13 +1,6 @@
 {
   "routingDefaults": {
-    "allowKeepingRentedBicycleAtDestination": true,
-    "keepingRentedBicycleAtDestinationCost": 180,
     "numItineraries": 5,
-    "bikeTriangleSafetyFactor": 0.4,
-    "bikeTriangleSlopeFactor": 0.3,
-    "bikeTriangleTimeFactor": 0.3,
-    "bikeRentalPickupTime": 180,
-    "bikeRentalPickupCost": 850,
     "itineraryFilters": {
       // only show non-transit (ie. walking) when it's at least as good as the transit option
       "nonTransitGeneralizedCostLimit": "0 + 1.0 x",

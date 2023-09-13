@@ -19,6 +19,11 @@
       "source": "https://internal-test-gtfs-testing.s3.amazonaws.com/cobblinc-gtfs-flex.zip",
       "feedId": "cobblinc-flex",
       "type": "gtfs"
+    },
+    {
+      "source": "https://leonard.io/ibi/gwinnett-county.gtfs.zip",
+      "feedId": "gwinnet",
+      "type": "gtfs"
     }
   ]
 }

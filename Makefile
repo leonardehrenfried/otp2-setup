@@ -331,7 +331,7 @@ sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
 	osmium extract australia/osm.pbf --polygon sydney/new-south-wales.geojson -o $@
 
 otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/2.4.0-SNAPSHOT/otp-2.4.0-SNAPSHOT-shaded-latest.jar -o $@
+	${CURL} https://otp.leonard.io/snapshots/2.5.0-SNAPSHOT/otp-2.5.0-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj: %/osm.pbf
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*
