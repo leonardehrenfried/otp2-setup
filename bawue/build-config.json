@@ -1,5 +1,8 @@
 {
   "osmWayPropertySet": "germany",
   "staticBikeParkAndRide": true,
-  "discardMinTransferTimes": true
+  "gtfsDefaults" : {
+    "discardMinTransferTimes": true
+  },
+  "boardingLocationTags": []
 }

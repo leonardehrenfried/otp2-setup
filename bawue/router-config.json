@@ -80,30 +80,5 @@
     }
   ],
   "updaters": [
-    {
-      "type": "stop-time-updater",
-      "frequencySec": 60,
-      "sourceType": "gtfs-http",
-      "url": "https://gtfs.efa-bw.de/bwgesamt/",
-      "feedId": "1"
-    },
-    {
-      "type": "bike-rental",
-      "frequencySec": 60,
-      "sourceType": "gbfs",
-      "url": "https://www.mobidata-bw.de/data/stadtmobil-S/gbfs.json"
-    },
-    {
-      "type": "bike-rental",
-      "frequencySec": 600,
-      "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-stadtmobil-pforzheim/gbfs.json"
-    },
-    {
-      "type": "bike-rental",
-      "frequencySec": 60,
-      "sourceType": "gbfs",
-      "url": "https://ip-api.mobidata-bw.de/v1/NVBW/gbfs/v2/gbfs.json"
-    }
   ]
 }

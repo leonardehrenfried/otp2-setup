@@ -54,11 +54,6 @@
     },
     {
       "type": "gtfs",
-      "feedId": "lodi",
-      "source": "https://www.lodi.gov/DocumentCenter/View/2453/lodi_gtfs"
-    },
-    {
-      "type": "gtfs",
       "feedId": "tracy",
       "source": "https://github.com/transitland/gtfs-archives-not-hosted-elsewhere/raw/master/tracy-tracer.zip"
     },

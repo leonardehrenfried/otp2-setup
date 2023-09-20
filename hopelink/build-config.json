@@ -2,11 +2,11 @@
   "transitModelTimeZone": "America/Los_Angeles",
   "fares": "orca",
   "transitFeeds" : [
-    {
+    /*{
       "type" : "gtfs",
       "feedId" : "tap",
       "source" : "https://data.trilliumtransit.com/gtfs/homage-wa-us/homage-wa-us-tap--flex-v2.zip"
-    },
+    },*/
     {
       "type" : "gtfs",
       "feedId" : "ccsww",

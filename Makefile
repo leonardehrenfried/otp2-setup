@@ -62,7 +62,7 @@ reutlingen/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf -o $@
 
 bawue/gtfs.zip:
-	${CURL} https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwgesamt.zip -o $@
+	${CURL} https://leonard.io/otp/bwgesamt.tidy.gtfs.zip -o $@
 
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
@@ -77,7 +77,7 @@ slovenia/osm.pbf:
 	echo "none"
 
 slovenia/gtfs.zip:
-	echo "none"
+	echo "none"de
 
 norway/osm.pbf:
 	mkdir -p norway

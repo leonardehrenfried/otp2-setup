@@ -7,7 +7,7 @@
       "type" : "vehicle-rental",
       "sourceType" : "gbfs",
       "url" : "https://mds.bird.co/gbfs/v2/public/portland/gbfs.json",
-      "geofencingZones": true
+      "geofencingZones": false
     },
     {
       "type" : "vehicle-rental",
@@ -15,7 +15,7 @@
       "sourceType" : "gbfs",
       //"url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfsssss",
       "url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfs",
-      "geofencingZones": true
+      "geofencingZones": false
     }
   ],
   "rideHailingServices": [
