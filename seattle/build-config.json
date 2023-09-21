@@ -10,7 +10,8 @@
     {
       "type" : "gtfs",
       "feedId" : "kcm",
-      "source" : "https://metro.kingcounty.gov/GTFS/google_transit.zip"
+      /*"source" : "https://metro.kingcounty.gov/GTFS/google_transit.zip"*/
+      "source" : "https://leonard.io/ibi/kcm-with-bikes.gtfs.zip"
     },
     {
       "type" : "gtfs",
@@ -21,7 +22,7 @@
       "type" : "gtfs",
       "feedId" : "soundtransit",
       /*"source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"*/
-      "source" : "https://leonard.io/ibi/sound-transit-pathways.gtfs.zip"
+      "source" : "https://leonard.io/ibi/sound-transit-with-bikes.gtfs.zip"
     }
   ]
 }
