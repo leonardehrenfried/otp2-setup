@@ -1,5 +1,5 @@
 {
   "otpFeatures" : {
-    "VehicleToStopHeuristics": true
+    "FaresV2": true
   }
 }

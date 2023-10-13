@@ -29,5 +29,6 @@
       /*"source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"*/
       "source" : "https://leonard.io/ibi/sound-transit-with-bikes.gtfs.zip"
     }
-  ]
+  ],
+  "stopConsolidationFile":"consolidated-stops.csv"
 }
