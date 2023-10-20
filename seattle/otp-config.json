@@ -1,6 +1,5 @@
 {
   "otpFeatures" : {
-    "SandboxAPITransmodelApi": true,
     "FlexRouting": true,
     "OptimizeTransfers": false,
     "FloatingBike": true,

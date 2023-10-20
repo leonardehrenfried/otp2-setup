@@ -8,6 +8,6 @@
     "TransferConstraints": false,
     "ParallelRouting": true,
     "VehicleToStopHeuristics": true,
-    "SandboxAPITransmodelApi": true
+    "SandboxAPITransmodelApi": false
   }
 }
