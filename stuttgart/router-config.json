@@ -1,28 +1,25 @@
 {
   "routingDefaults": {
     "transferSlack": 100,
-    "maxTransfers": 4,
-    "waitReluctance": 0.4,
-    "waitAtBeginningFactor": 0.7,
     "stairsReluctance": 1.65,
-    "itineraryFiltering": 1.0,
-    "allowKeepingRentedBicycleAtDestination": true,
-    "keepingRentedBicycleAtDestinationCost": 180,
     "numItineraries": 5,
     "bikeTriangleSafetyFactor": 0.4,
     "bikeTriangleSlopeFactor": 0.3,
     "bikeTriangleTimeFactor": 0.3,
-    "bikeRentalPickupTime": 180,
-    "bikeRentalPickupCost": 850,
-    "bannedBikeRentalNetworks": ["car-sharing", "taxi", "cargo-bike"],
+    "vehicleRental": {
+      "pickupTime": 180,
+      "pickupCost": 850,
+      "bannedNetworks": ["car-sharing", "taxi", "cargo-bike"]
+    },
     "itineraryFilters" : {
-      "flexOnlyToDestination": true,
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
       "minBikeParkingDistance": 500
     },
-    "transit": {
-      "searchThreadPoolSize": 4
+    "accessEgress": {
+      "penalty": {
+        "car-to-park" : { "timePenalty": "10m + 2.5t", "costFactor": 4.5 }
+      }
     }
   },
   "vectorTileLayers": [
@@ -64,59 +61,47 @@
     }
   ],
   "flex": {
-    "maxTransferDurationSeconds": 240
+    "maxTransferDuration": "4m"
   },
   "updaters": [
     {
       "type": "vehicle-rental",
-      "frequencySec": 900,
       "sourceType": "gbfs",
       "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/alf/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 900,
       "sourceType": "gbfs",
       "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/bananologen/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 900,
       "sourceType": "gbfs",
       "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/gueltstein-mobil/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 60,
       "sourceType": "gbfs",
-      "url": "https://gtfs.mfdz.de/gbfs/regiorad_stuttgart/gbfs.json",
-      "allowKeepingRentedBicycleAtDestination": true
+      "url": "https://gtfs.mfdz.de/gbfs/regiorad_stuttgart/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://api.dev.stadtnavi.eu/herrenberg/taxi/gbfs.json",
-      "routeAsCar": true
+      "url": "https://api.dev.stadtnavi.eu/herrenberg/taxi/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing/gbfs.json",
-      "routeAsCar": true
+      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing/gbfs.json"
     },
     {
       "type": "vehicle-rental",
-      "frequencySec": 600,
       "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-teilauto-neckar-alb/gbfs.json",
-      "routeAsCar": true
+      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-teilauto-neckar-alb/gbfs.json"
     },
     {
       "type": "vehicle-parking",
       "sourceType": "park-api",
-      "frequencySec": 60,
       "feedId": "park-api-rt",
       "timeZone": "Europe/Berlin",
       "url": "https://api.stadtnavi.de/herrenberg/parking/parkapi.json"

@@ -1,6 +1,9 @@
 {
   "transitModelTimeZone": "America/Los_Angeles",
   "fares": "orca",
+  "gtfsDefaults":{
+    "blockBasedInterlining": false
+  },
   "transitFeeds" : [
     {
       "type" : "gtfs",
@@ -28,6 +31,11 @@
       "feedId" : "soundtransit",
       /*"source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"*/
       "source" : "https://leonard.io/ibi/sound-transit-with-bikes.gtfs.zip"
+    },
+    {
+      "type" : "gtfs",
+      "feedId" : "hydeshuttle",
+      "source" : "https://data.trilliumtransit.com/gtfs/soundgenerations-wa-us/soundgenerations-wa-us-hyde--flex-v2.zip"
     }
   ],
   "stopConsolidationFile":"consolidated-stops.csv"
