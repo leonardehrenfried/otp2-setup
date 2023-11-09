@@ -5,6 +5,12 @@
       "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
     }
   },
+  "transitx": {
+    "dynamicSearchWindow": {
+      "minWindow": "8h",
+      "maxWindow": "10h"
+    }
+  },
   "updaters": [
     {
       "type": "stop-time-updater",
