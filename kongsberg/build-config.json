@@ -1,5 +1,24 @@
 {
-  "areaVisibility": false,
+  "dataImportReport": true,
+  "subwayAccessTime": 0,
+  "embedRouterConfig": true,
+  "areaVisibility": true,
+  "platformEntriesLinking": true,
+  "matchBusRoutesToStreets": false,
+  "staticParkAndRide": true,
+  "staticBikeParkAndRide": true,
+  "maxDataImportIssuesPerFile": 1000,
+  "islandPruning": {
+    "islandWithoutStopsMaxSize": 5,
+    "islandWithStopsMaxSize": 5
+  },
+  "maxTransferDuration": "30m",
+  "distanceBetweenElevationSamples": 25,
+  "multiThreadElevationCalculations": true,
+  "osmDefaults": {
+    "osmTagMapping": "norway",
+    "timeZone": "Europe/Oslo"
+  },
   "transitFeeds":[
     {
       "source":"https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_bra-aggregated-gtfs.zip",
@@ -11,6 +30,5 @@
       "type": "gtfs",
       "feedId": "nsb"
     }
-
   ]
 }
