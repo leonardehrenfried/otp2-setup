@@ -1,0 +1,16 @@
+{
+  "areaVisibility": false,
+  "transitFeeds":[
+    {
+      "source":"https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_bra-aggregated-gtfs.zip",
+      "type": "gtfs",
+      "feedId": "bra"
+    },
+    {
+      "source":"https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_nsb-aggregated-gtfs.zip",
+      "type": "gtfs",
+      "feedId": "nsb"
+    }
+
+  ]
+}

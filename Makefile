@@ -89,6 +89,7 @@ norway/rb_norway-aggregated-netex.zip:
 norway/gtfs.zip: norway/rb_norway-aggregated-netex.zip
 	echo "No GTFS, but Netex instead."
 
+
 germany/gtfs.zip:
 	echo "No GTFS, but Netex instead."
 
@@ -109,6 +110,12 @@ drammen/rb_bra_aggregate-netex.zip:
 	#${CURL} https://storage.googleapis.com/marduk-production/outbound/netex/rb_bra-aggregated-netex.zip -o $@
 
 drammen/gtfs.zip: drammen/rb_bra_aggregate-netex.zip
+	echo "No GTFS"
+
+kongsberg/osm.pbf: norway/osm.pbf
+	osmium extract norway/osm.pbf --polygon kongsberg/kongsberg.geojson -o $@
+
+kongsberg/gtfs.zip:
 	echo "No GTFS"
 
 oslo/osm.pbf: norway/osm.pbf
@@ -297,9 +304,6 @@ portland/osm.pbf: oregon/osm.pbf
 	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
 
 pierce-county/gtfs.zip:
-	echo "none"
-
-pierce-county/osm.pbf:
 	echo "none"
 
 pierce-county/osm.pbf:
