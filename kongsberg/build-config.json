@@ -19,16 +19,17 @@
     "osmTagMapping": "norway",
     "timeZone": "Europe/Oslo"
   },
+  "netexDefaults": {
+    "sharedFilePattern": "_stops.xml",
+    "sharedGroupFilePattern": "_(\\w{3})(_flexible)?_shared_data.xml",
+    "groupFilePattern": "(\\w{3})_.*\\.xml",
+    "feedId": "EN"
+  },
   "transitFeeds":[
     {
-      "source":"https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_bra-aggregated-gtfs.zip",
-      "type": "gtfs",
-      "feedId": "bra"
-    },
-    {
-      "source":"https://storage.googleapis.com/marduk-production/outbound/gtfs/rb_nsb-aggregated-gtfs.zip",
-      "type": "gtfs",
-      "feedId": "nsb"
+      "source":"https://storage.googleapis.com/marduk-production/outbound/netex/rb_norway-aggregated-netex.zip",
+      "type": "netex",
+      "feedId": "EN"
     }
   ]
 }
