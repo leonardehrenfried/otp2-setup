@@ -62,7 +62,8 @@ reutlingen/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf -o $@
 
 bawue/gtfs.zip:
-	${CURL} https://leonard.io/otp/bwgesamt.tidy.gtfs.zip -o $@
+	#${CURL} https://leonard.io/otp/bwgesamt.tidy.gtfs.zip -o $@
+	echo "none"
 
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@

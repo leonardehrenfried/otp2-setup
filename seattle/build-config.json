@@ -38,5 +38,16 @@
       "source" : "https://data.trilliumtransit.com/gtfs/soundgenerations-wa-us/soundgenerations-wa-us-hyde--flex-v2.zip"
     }
   ],
-  "stopConsolidationFile":"consolidated-stops.csv"
+  "stopConsolidationFile":"consolidated-stops.csv",
+  "transferRequests": [
+    {
+      "modes": "WALK"
+    },
+    {
+      "modes": "WALK",
+      "wheelchairAccessibility": {
+        "enabled": true
+      }
+    }
+  ]
 }
