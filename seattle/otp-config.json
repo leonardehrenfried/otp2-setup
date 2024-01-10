@@ -3,7 +3,6 @@
     "FlexRouting": true,
     "OptimizeTransfers": false,
     "FloatingBike": true,
-    "SandboxAPIParkAndRideApi": true,
-    "ParallelRouting":true
+    "SandboxAPIParkAndRideApi": true
   }
 }

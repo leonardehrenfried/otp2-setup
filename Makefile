@@ -1,5 +1,6 @@
 .PRECIOUS: %/streetGraph.obj
 CURL:=curl -L -\# --fail --create-dirs
+JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml
 current_dir = $(shell pwd)
 
 download: otp.jar
@@ -342,7 +343,10 @@ otp.jar:
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -Xmx50G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx50G -jar otp.jar --loadStreet --save $*
+
+build-full-%: otp.jar %/gtfs.zip %/osm.pbf
+	${JAVA} -Xmx50G -jar otp.jar --build --save $*
 
 run-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -XX:+HeapDumpOnOutOfMemoryError -Xmx10G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*

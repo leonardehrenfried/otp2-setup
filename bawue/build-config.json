@@ -7,7 +7,7 @@
   "boardingLocationTags": [],
   "transitFeeds":[
     {
-      "source":"https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/bwgesamt.zip",
+      "source":"gtfs.zip",
       "type": "gtfs",
       "feedId": "bw"
     }
