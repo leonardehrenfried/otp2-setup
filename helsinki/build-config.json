@@ -1,3 +1,10 @@
 {
-  "fares": "hsl"
+  "fares": "hsl",
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "https://leonard.io/otp/hsl.zip",
+      "feedId": "hsl"
+    }
+  ]
 }

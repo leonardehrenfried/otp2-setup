@@ -137,7 +137,7 @@ finland/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/finland-latest.osm.pbf -o $@
 
 helsinki/gtfs.zip:
-	${CURL} https://dev-api.digitransit.fi/routing-data/v3/hsl/HSL-gtfs.zip -o $@
+	echo "GTFS from build-config.json"
 
 helsinki/osm.pbf: finland/osm.pbf
 	osmium extract finland/osm.pbf --polygon helsinki/helsinki.geojson -o $@
