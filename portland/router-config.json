@@ -25,6 +25,19 @@
       "clientSecret": "${UBER_CLIENT_SECRET}",
       "wheelchairAccessibleProductId": "8ddc7ce4-67d1-4ac4-8b56-205bd6a6314e"
     }
-  ]
+  ],
+  "vectorTiles": {
+    "basePath": "/otp_ct/vectorTiles",
+    "layers": [
+      {
+        "name": "stops",
+        "type": "Stop",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 600
+      }
+    ]
+  }
 }
 
