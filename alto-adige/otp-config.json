@@ -1,0 +1,7 @@
+{
+  "otpFeatures": {
+    "SandboxAPIMapboxVectorTilesApi": true,
+    "FloatingBike": true,
+    "ActuatorAPI": true
+  }
+}

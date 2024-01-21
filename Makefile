@@ -69,6 +69,15 @@ bawue/gtfs.zip:
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
 
+italy/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/italy-latest.osm.pbf -o $@
+
+alto-adige/osm.pbf: italy/osm.pbf
+	osmium extract italy/osm.pbf --polygon alto-adige/alto-adige.geojson -o $@
+
+alto-adige/gtfs.zip:
+	echo "none"
+
 bedford/gtfs.zip:
 	${CURL} https://leonard.io/trillium/stagecoach-midlands-2022-08-30.gtfs.zip -o $@
 

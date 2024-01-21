@@ -1,0 +1,9 @@
+{
+  "updaters": [
+    {
+      "type" : "stop-time-updater",
+      "url" : "https://mobility.api.opendatahub.testingmachine.eu/v2/GTFS-RT",
+      "feedId" : "sta"
+    }
+  ]
+}
