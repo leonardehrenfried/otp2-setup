@@ -1,4 +1,10 @@
 {
+  "transit" : {
+    "dynamicSearchWindow" : {
+      "minWindow" : "4h",
+      "maxWindow" : "16h"
+    }
+  },
   "updaters": [
     {
       "type" : "stop-time-updater",
