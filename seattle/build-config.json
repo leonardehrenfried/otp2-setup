@@ -13,13 +13,12 @@
     {
       "type" : "gtfs",
       "feedId" : "kcm",
-      /*"source" : "https://metro.kingcounty.gov/GTFS/google_transit.zip"*/
-      "source" : "https://leonard.io/ibi/kcm-with-bikes.gtfs.zip"
+      "source" : "https://metro.kingcounty.gov/GTFS/google_transit.zip"
     },
     {
       "type" : "gtfs",
       "feedId" : "monorail",
-      "source" : "https://github.com/transitland/gtfs-archives-not-hosted-elsewhere/raw/master/seattlemonorail-wa-us.zip"
+      "source" : "https://www.soundtransit.org/GTFS-rail/40_gtfs.zip"
     },
     {
       "type" : "gtfs",
@@ -29,8 +28,7 @@
     {
       "type" : "gtfs",
       "feedId" : "soundtransit",
-      /*"source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"*/
-      "source" : "https://leonard.io/ibi/sound-transit-with-bikes.gtfs.zip"
+      "source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"
     },
     {
       "type" : "gtfs",
