@@ -1,8 +1,23 @@
 {
   "updaters": [
     {
+      "type" : "real-time-alerts",
+      "url" : "https://gtfs-rt.maasify.io/protobuf?network=dakar",
+      "feedId" : "dakar"
+    },
+    {
       "type": "stop-time-updater",
       "url": "http://185.50.129.229:39385/ProfilGtfsRt2_0RSProducer-Dakar/TripUpdate.pb",
+      "feedId": "dakar"
+    },
+    {
+      "type" : "vehicle-positions",
+      "url" : "http://185.50.129.229:39385/ProfilGtfsRt2_0RSProducer-Dakar/VehiclePosition.pb",
+      "feedId" : "dakar"
+    },
+    {
+      "type": "real-time-alerts",
+      "url": "http://185.50.129.229:39385/ProfilGtfsRt2_0RSProducer-Dakar/Alert.pb",
       "feedId": "dakar"
     }
   ]
