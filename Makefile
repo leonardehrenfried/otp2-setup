@@ -90,6 +90,12 @@ slovenia/osm.pbf:
 slovenia/gtfs.zip:
 	echo "none"de
 
+dakar/osm.pbf:
+	echo "none"
+
+dakar/gtfs.zip:
+	echo "none"de
+
 norway/osm.pbf:
 	mkdir -p norway
 	${CURL} https://download.geofabrik.de/europe/norway-latest.osm.pbf -o $@
@@ -360,7 +366,7 @@ build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 run-%: otp.jar
 	${JAVA} -XX:+HeapDumpOnOutOfMemoryError -Xmx10G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
-build-nogtfs-%: otp.jar
+build-nodeps-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
 
 build-otp:

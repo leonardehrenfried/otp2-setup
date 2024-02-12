@@ -1,0 +1,9 @@
+{
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "url": "http://185.50.129.229:39385/ProfilGtfsRt2_0RSProducer-Dakar/TripUpdate.pb",
+      "feedId": "dakar"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "source": "https://maasify.blob.core.windows.net/mybus/dakar-gtfs.zip",
+      "feedId": "dakar"
+    }
+  ]
+}
