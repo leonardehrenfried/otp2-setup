@@ -5,3 +5,6 @@ Flex to Powder Springs: https://atl-rides-qa.ibi-transit.com/#/?ui_activeSearch=
 Shared stop: http://localhost:8080/?module=planner&fromPlace=33.930373076044084%2C-84.17636632919312&toPlace=33.783980570825875%2C-84.3421483039856&time=7%3A20am&date=09-13-2023&mode=TRANSIT%2CWALK&arriveBy=false&wheelchair=false&showIntermediateStops=true&debugItineraryFilter=LIST_ALL&locale=en&baseLayer=OSM%20Standard%20Tiles
 
 City center: https://tinyurl.com/yuqumvca
+
+Flex exception: http://tinyurl.com/2doz8h4s
+

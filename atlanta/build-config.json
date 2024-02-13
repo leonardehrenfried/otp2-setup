@@ -10,11 +10,11 @@
       "feedId": "MARTA",
       "type": "gtfs"
     },
-    /*{
-      "source": "https://www.arcgis.com/sharing/rest/content/items/1ce8e370a12c41b5854d8baa21f8451c/data",
+    {
+      "source": "https://internal-test-gtfs-testing.s3.amazonaws.com/Cobblinc-static-extended-dates.zip",
       "feedId": "cobblinc",
       "type": "gtfs"
-    },*/
+    },
     {
       "source": "https://internal-test-gtfs-testing.s3.amazonaws.com/cobblinc-gtfs-flex.zip",
       "feedId": "cobblinc-flex",
