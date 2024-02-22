@@ -34,6 +34,11 @@
       "type" : "gtfs",
       "feedId" : "hydeshuttle",
       "source" : "https://data.trilliumtransit.com/gtfs/soundgenerations-wa-us/soundgenerations-wa-us-hyde--flex-v2.zip"
+    },
+    {
+      "type" : "gtfs",
+      "feedId" : "Kitsap",
+      "source" : "https://pride.kitsaptransit.com/gtfs/google_transit.zip"
     }
   ],
   "stopConsolidationFile":"consolidated-stops.csv",
