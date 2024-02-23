@@ -19,6 +19,18 @@
       }
     }
   },
+  "xvectorTiles": {
+    "layers": [
+      {
+        "name": "areaStops",
+        "type": "AreaStop",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 600
+      }
+    ]
+  },
   "transitx": {
     "dynamicSearchWindow": {
       "minWindow": "8h",

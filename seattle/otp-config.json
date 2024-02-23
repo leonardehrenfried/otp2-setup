@@ -4,6 +4,7 @@
     "OptimizeTransfers": false,
     "FloatingBike": true,
     "SandboxAPIParkAndRideApi": true,
-    "TransferConstraints": false
+    "TransferConstraints": false,
+    "SandboxAPIMapboxVectorTilesApi": true
   }
 }
