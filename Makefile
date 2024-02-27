@@ -249,7 +249,7 @@ atlanta/gtfs.zip:
 	echo "nothing"
 
 seattle/gtfs.zip:
-	${CURL} "https://picsapi.commtrans.org/download/liveGTFS.zip" -o $@
+	echo "nothing"
 
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@

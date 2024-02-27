@@ -8,7 +8,7 @@
     {
       "type" : "gtfs",
       "feedId" : "commtrans",
-      "source" : "gtfs.zip"
+      "source" : "https://picsapi.commtrans.org/download/liveGTFS.zip"
     },
     {
       "type" : "gtfs",
