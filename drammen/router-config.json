@@ -4,19 +4,10 @@
   },
   "updaters": [
     {
-      "type" : "vehicle-rental",
-      "sourceType" : "gbfs",
-      "frequencySec" : 3600,
-      "url" : "https://api.entur.io/mobility/v2/gbfs/tieroslo/gbfs"
+      "type" : "vehicle-parking",
+      "feedId" : "bikely",
+      "sourceType" : "bikely",
+      "url" : "https://api.safebikely.com/api/services/app/Location/GetPins"
     }
-  ],
-  "vehicleRentalServiceDirectory": {
-    "url": "https://api.entur.io/mobility/v2/gbfs",
-    "sourcesName": "systems",
-    "updaterUrlName": "url",
-    "updaterNetworkName": "id",
-    "headers": {
-      "ET-Client-Name": "hannes-otp2"
-    }
-  }
+  ]
 }

@@ -1,7 +1,0 @@
-{
-  "otpFeatures": {
-    "ReportApi": true,
-    "SandboxAPITransmodelApi": true,
-    "SandboxAPILegacyGraphQLApi": true
-  }
-}

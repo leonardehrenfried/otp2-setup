@@ -18,6 +18,14 @@
         "unknownCost": 600,
         "inaccessibleCost": 3600
       }
+    },
+    "accessEgress": {
+      "penalty": {
+        "FLEXIBLE" : {
+          "timePenalty" : "30m + 2t",
+          "costFactor" : 2
+        }
+      }
     }
   },
   "flex": {

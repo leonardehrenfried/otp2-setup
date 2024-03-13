@@ -326,6 +326,12 @@ pierce-county/gtfs.zip:
 pierce-county/osm.pbf:
 	echo "none"
 
+bellingham/gtfs.zip:
+	echo "none"
+
+bellingham/osm.pbf:
+	osmium extract washington/osm.pbf --polygon bellingham/bellingham.geojson -o $@
+
 british-columbia/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/canada/british-columbia-latest.osm.pbf -o $@
 
@@ -352,7 +358,7 @@ sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
 	osmium extract australia/osm.pbf --polygon sydney/new-south-wales.geojson -o $@
 
 otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/2.5.0-SNAPSHOT/otp-2.5.0-SNAPSHOT-shaded-latest.jar -o $@
+	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj: %/osm.pbf
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*

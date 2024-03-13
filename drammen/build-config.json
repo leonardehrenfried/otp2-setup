@@ -2,6 +2,7 @@
   "osmDefaults": {
     "tagMapping": "norway"
   },
-  "staticBikeParkAndRide":true
+  "staticBikeParkAndRide":false,
+  "staticParkAndRide":true
 }
 
