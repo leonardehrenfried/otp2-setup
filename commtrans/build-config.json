@@ -1,0 +1,18 @@
+{
+  "transitModelTimeZone": "America/Los_Angeles",
+  "fares": "orca",
+  "islandWithoutStopsMaxSize": 300,
+  "islandWithStopsMaxSize": 300,
+  "boardingLocationTags": [],
+"transferRequests": [
+    {
+      "modes": "WALK"
+    },
+    {
+      "modes": "WALK",
+      "wheelchairAccessibility": {
+        "enabled": true
+      }
+    }
+  ]
+}

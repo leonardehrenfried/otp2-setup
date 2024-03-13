@@ -1,0 +1,23 @@
+{
+  "routingDefaults": {
+    "accessEgress": {
+      "maxDurationForMode": {
+        "BIKE_TO_PARK": "30m",
+        "CAR_TO_PARK": "30m",
+        "BIKE_RENTAL": "30m",
+        "BIKE": "30m",
+        "WALK": "30m"
+      }
+    },
+    "itineraryFilters": {
+      "nonTransitGeneralizedCostLimit": "0 + 1.0 x"
+    }
+  },
+  "transit": {
+    "maxNumberOfTransfers": 4,
+    "dynamicSearchWindow": {
+      "minWindow": "6h",
+      "maxWindow": "18h"
+    }
+  }
+}

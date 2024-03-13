@@ -1,0 +1,60 @@
+{
+  "routingDefaults": {
+    "streetRoutingTimeout": "5m",
+    "itineraryFilters": {
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
+      "nonTransitGeneralizedCostLimit": "0 + 1.0 x",
+      "accessibilityScore": true
+    },
+    "wheelchairAccessibility": {
+      "trip": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      },
+      "stop": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      }
+    }
+  },
+  "xvectorTiles": {
+    "layers": [
+      {
+        "name": "areaStops",
+        "type": "AreaStop",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 600
+      }
+    ]
+  },
+  "transitx": {
+    "dynamicSearchWindow": {
+      "minWindow": "8h",
+      "maxWindow": "10h"
+    }
+  },
+  "updaters": [
+    {
+      "type": "stop-time-updater",
+      "frequency": "30s",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/tripupdates.pb",
+      "feedId": "kcm"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequency": "30s",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/alerts.pb",
+      "feedId": "kcm"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "30s",
+      "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
+      "feedId": "kcm"
+    }
+  ]
+}

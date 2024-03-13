@@ -1,0 +1,25 @@
+{
+  "transitModelTimeZone": "America/Los_Angeles",
+  "fares": "orca",
+  "gtfsDefaults":{
+    "blockBasedInterlining": false
+  },
+  "transitFeeds" : [
+    {
+      "type" : "gtfs",
+      "feedId" : "whatcom",
+      "source" : "https://github.com/whatcomtrans/publicwtadata/blob/master/GTFS/wta_gtfs_latest.zip?raw=true"
+    }
+  ],
+  "transferRequests": [
+    {
+      "modes": "WALK"
+    },
+    {
+      "modes": "WALK",
+      "wheelchairAccessibility": {
+        "enabled": true
+      }
+    }
+  ]
+}
