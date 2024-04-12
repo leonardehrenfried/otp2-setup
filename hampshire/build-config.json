@@ -1,0 +1,7 @@
+{
+  "osm" : [
+    {
+      "source" : "https://download.geofabrik.de/europe/united-kingdom/england/hampshire-latest.osm.pbf"
+    }
+  ]
+}

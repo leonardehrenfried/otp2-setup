@@ -254,6 +254,12 @@ seattle/gtfs.zip:
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+hyde-shuttle/gtfs.zip:
+	echo "nothing"
+
+hyde-shuttle/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon hyde-shuttle/hyde-shuttle.geojson -o $@
+
 hopelink/gtfs.zip:
 	echo "none"
 
@@ -331,6 +337,9 @@ bellingham/gtfs.zip:
 
 bellingham/osm.pbf:
 	osmium extract washington/osm.pbf --polygon bellingham/bellingham.geojson -o $@
+
+clackamas/osm.pbf: oregon/osm.pbf
+	osmium extract oregon/osm.pbf --polygon clackamas/clackamas.geojson -o $@
 
 british-columbia/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/canada/british-columbia-latest.osm.pbf -o $@

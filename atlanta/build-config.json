@@ -4,6 +4,10 @@
   },
   "transferRequests": [ { "modes": "WALK" }, { "modes": "WALK", "wheelchairAccessibility": { "enabled": true } } ],
   "fares": "atlanta",
+  "osmNaming": "default",
+  "gtfsDefaults": {
+    "blockBasedInterlining": false
+  },
   "transitFeeds": [
     {
       "source": "https://itsmarta.com/google_transit_feed/google_transit.zip",

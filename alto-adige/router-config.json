@@ -10,6 +10,12 @@
       "type" : "stop-time-updater",
       "url" : "https://mobility.api.opendatahub.testingmachine.eu/v2/GTFS-RT",
       "feedId" : "sta"
+    },
+     {
+      "type": "vehicle-parking",
+      "feedId": "noi",
+      "sourceType": "noi-open-data-hub",
+      "url": "https://parking.otp.opendatahub.com/parking/all.json"
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "otpFeatures" : {
+    "FlexRouting": true,
+    "OptimizeTransfers": false,
+    "FloatingBike": true,
+    "SandboxAPIParkAndRideApi": true,
+    "TransferConstraints": false,
+    "SandboxAPIMapboxVectorTilesApi": true
+  }
+}

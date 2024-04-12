@@ -1,0 +1,25 @@
+{
+  "transitModelTimeZone": "America/Los_Angeles",
+  "fares": "orca",
+  "gtfsDefaults":{
+    "blockBasedInterlining": false
+  },
+  "transitFeeds" : [
+    {
+      "type" : "gtfs",
+      "feedId" : "hydeshuttle",
+      "source" : "https://leonard.io/ibi/hyde-shuttle-duration-factors.gtfs.zip"
+    }
+  ],
+  "transferRequests": [
+    {
+      "modes": "WALK"
+    },
+    {
+      "modes": "WALK",
+      "wheelchairAccessibility": {
+        "enabled": true
+      }
+    }
+  ]
+}
