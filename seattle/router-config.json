@@ -17,6 +17,14 @@
         "unknownCost": 600,
         "inaccessibleCost": 3600
       }
+    },
+     "accessEgress" : {
+      "penalty" : {
+        "CAR_TO_PARK" : {
+          "timePenalty" : "5m + 5t",
+          "costFactor" : 5
+        }
+      }
     }
   },
   "xvectorTiles": {

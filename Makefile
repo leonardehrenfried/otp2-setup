@@ -69,6 +69,15 @@ bawue/gtfs.zip:
 bawue/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
 
+nordrhein-westfalen/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/germany/nordrhein-westfalen-latest.osm.pbf -o $@
+
+detmold/osm.pbf: nordrhein-westfalen/osm.pbf
+	osmium extract nordrhein-westfalen/osm.pbf --polygon detmold/detmold.geojson -o $@
+
+detmold/gtfs.zip:
+	echo "none"
+
 italy/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/italy-latest.osm.pbf -o $@
 
