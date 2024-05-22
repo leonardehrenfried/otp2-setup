@@ -395,7 +395,7 @@ build-nodeps-%: otp.jar
 
 build-otp:
 	cd ../OpenTripPlanner/ && \
-		mvn clean package -Dmaven.test.skip -P prettierSkip && cp target/otp-*-*-shaded.jar ../otp2-setup/otp.jar
+		mvn clean package -Dmaven.test.skip -Dmaven.source.skip=true -P prettierSkip && cp target/otp-*-*-shaded.jar ../otp2-setup/otp.jar
 
 clean-all:
 	find . -name osm.pbf -print -exec rm {} \;

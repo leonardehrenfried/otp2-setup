@@ -5,6 +5,7 @@
     "FloatingBike": true,
     "SandboxAPIParkAndRideApi": true,
     "TransferConstraints": false,
-    "SandboxAPIMapboxVectorTilesApi": true
+    "SandboxAPIMapboxVectorTilesApi": true,
+    "SandboxAPIGeocoder": true
   }
 }
