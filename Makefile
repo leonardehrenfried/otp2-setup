@@ -335,6 +335,12 @@ portland/gtfs.zip:
 portland/osm.pbf: oregon/osm.pbf
 	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
 
+rose-village/gtfs.zip:
+	echo "none"
+
+rose-village/osm.pbf: washington/osm.pbf
+	osmium extract washington/osm.pbf --polygon rose-village/rose-village.geojson -o $@
+
 pierce-county/gtfs.zip:
 	echo "none"
 

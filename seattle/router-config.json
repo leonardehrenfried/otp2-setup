@@ -21,8 +21,8 @@
      "accessEgress" : {
       "penalty" : {
         "CAR_TO_PARK" : {
-          "timePenalty" : "5m + 5t",
-          "costFactor" : 5
+          "timePenalty" : "10m + 2t",
+          "costFactor" : 3
         }
       }
     }
