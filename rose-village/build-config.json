@@ -1,0 +1,10 @@
+{
+  "transitFeeds": [
+    {
+      "source": "https://leonard.io/ibi/vancover-rose-village.gtfs.zip",
+      "feedId": "rose-village",
+      "type": "gtfs"
+    }
+  ]
+}
+
