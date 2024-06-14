@@ -47,7 +47,7 @@
     }
 
   ],
-  "xstopConsolidationFile":"consolidated-stops.csv",
+  "stopConsolidationFile":"consolidated-stops.csv",
   "transferRequests": [
     {
       "modes": "WALK"
