@@ -1,5 +1,11 @@
 {
   "routingDefaults": {
+    "car": {
+      "rental": {
+        "useAvailabilityInformation": false,
+        "allowKeepingAtDestination": true
+      }
+    },
     "transferSlack": 100,
     "stairsReluctance": 1.65,
     "numItineraries": 5,
@@ -67,44 +73,8 @@
     {
       "type": "vehicle-rental",
       "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/alf/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/bananologen/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/gueltstein-mobil/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://gtfs.mfdz.de/gbfs/regiorad_stuttgart/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://api.dev.stadtnavi.eu/herrenberg/taxi/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing/gbfs.json"
-    },
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://raw.githubusercontent.com/stadtnavi/static-gbfs-feeds/master/car-sharing-teilauto-neckar-alb/gbfs.json"
-    },
-    {
-      "type": "vehicle-parking",
-      "sourceType": "park-api",
-      "feedId": "park-api-rt",
-      "timeZone": "Europe/Berlin",
-      "url": "https://api.stadtnavi.de/herrenberg/parking/parkapi.json"
+      "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/stadtmobil_stuttgart/gbfs.json",
+      "allowKeepingRentedVehicleAtDestination": true
     }
   ]
 }
