@@ -5,7 +5,7 @@
       "maxWindow" : "16h"
     }
   },
-  "updaters": [
+  "xupdaters": [
     {
       "type" : "stop-time-updater",
       "url" : "https://mobility.api.opendatahub.testingmachine.eu/v2/GTFS-RT",
