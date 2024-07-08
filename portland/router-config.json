@@ -22,6 +22,11 @@
       "frequency": "30s",
       "url": "https://trimet.org/transweb/ws/V1/TripUpdate",
       "feedId": "trimet"
+    },
+    {
+      "type": "vehicle-positions",
+      "url": "https://developer.trimet.org/ws/V1/VehiclePositions?appId=${PDX_APP_ID}",
+      "feedId": "trimet"
     }
   ],
   "rideHailingServices": [
