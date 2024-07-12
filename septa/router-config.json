@@ -2,6 +2,9 @@
   "routingDefaults": {
     "itineraryFilters": {
       "bikeRentalDistanceRatio": 0.8
+    },
+    "walk": {
+      "reluctance": 20
     }
   },
   "updaters": [
