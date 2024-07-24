@@ -75,7 +75,7 @@
     }
   ],
   "updaters": [
-    {
+    /*{
       "type": "stop-time-updater",
       "frequencySec": 60,
       "url": "https://amarillo.bbnavi.de/gtfs/amarillo.bb.gtfsrt.pbf",
@@ -143,6 +143,11 @@
       "frequencySec": 60,
       "sourceType": "gbfs",
       "url": "https://opendata.bbnavi.de/flotte/flotte-brandenburg/gbfs.json"
+    },*/
+    {
+      "type": "vehicle-rental",
+      "sourceType": "gbfs",
+      "url": "https://data.mfdz.de/gbfs/zegg_badbelzig/gbfs.json"
     }
   ]
 }

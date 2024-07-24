@@ -5,17 +5,12 @@
       "maxWindow" : "16h"
     }
   },
-  "xupdaters": [
-    {
-      "type" : "stop-time-updater",
-      "url" : "https://mobility.api.opendatahub.testingmachine.eu/v2/GTFS-RT",
-      "feedId" : "sta"
-    },
-     {
+  "updaters": [
+    /*{
       "type": "vehicle-parking",
-      "feedId": "noi",
-      "sourceType": "noi-open-data-hub",
-      "url": "https://parking.otp.opendatahub.com/parking/all.json"
-    }
+      "feedId": "parking",
+      "sourceType": "siri-fm",
+      "url": "https://transmodel.api.opendatahub.com/siri-lite/fm/parking"
+    }*/
   ]
 }
