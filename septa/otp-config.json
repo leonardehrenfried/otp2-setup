@@ -2,6 +2,7 @@
   "otpFeatures" : {
     "ActuatorAPI": true,
     "ParallelRouting": true,
-    "SandboxAPIGeocoder": true
+    "SandboxAPIGeocoder": true,
+    "SandboxAPIMapboxVectorTilesApi": true
   }
 }
