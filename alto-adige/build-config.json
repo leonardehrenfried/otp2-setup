@@ -4,16 +4,16 @@
   "dataImportReport": true,
   "transitFeeds":[
     {
-      "source":"https://leonard.io/otp/alto-adige-netex-epip.xml.zip",
+      "source":"https://leonard.io/otp/sta-netex.xml.zip",
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
-    }/*,
+    },
     {
       "source":"https://leonard.io/otp/alto-adige-parking.netex.xml.zip",
       "type": "netex",
       "feedId": "parking",
       "ignoreParking": false
-    }*/
+    }
   ]
 }
