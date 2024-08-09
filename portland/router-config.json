@@ -38,11 +38,10 @@
     }
   ],
   "vectorTiles": {
-    "basePath": "/otp_ct/vectorTiles",
     "layers": [
       {
         "name": "stops",
-        "type": "Stop",
+        "type": "CurrentServiceWeekStop",
         "mapper": "Digitransit",
         "maxZoom": 20,
         "minZoom": 14,
