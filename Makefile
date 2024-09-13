@@ -385,7 +385,7 @@ otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj: %/osm.pbf
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*
+	${JAVA} -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
 	${JAVA} -Xmx50G -jar otp.jar --loadStreet --save $*
