@@ -41,7 +41,7 @@
     "layers": [
       {
         "name": "stops",
-        "type": "CurrentServiceWeekStop",
+        "type": "Stop",
         "mapper": "Digitransit",
         "maxZoom": 20,
         "minZoom": 14,
