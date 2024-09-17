@@ -18,7 +18,7 @@
     {
       "type" : "gtfs",
       "feedId" : "monorail",
-      "source" : "https://www.soundtransit.org/GTFS-rail/40_gtfs.zip"
+      "source" : "https://gtfs.sound.obaweb.org/prod/96_gtfs.zip"
     },
     {
       "type" : "gtfs",
