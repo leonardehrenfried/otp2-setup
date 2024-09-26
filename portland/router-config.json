@@ -10,14 +10,6 @@
       "geofencingZones": false
     },
     {
-      "type" : "vehicle-rental",
-      "network": "spin",
-      "sourceType" : "gbfs",
-      //"url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfsssss",
-      "url" : "https://gbfs.spin.pm/api/gbfs/v2_3/portland/gbfs",
-      "geofencingZones": false
-    },
-    {
       "type": "stop-time-updater",
       "frequency": "30s",
       "url": "https://trimet.org/transweb/ws/V1/TripUpdate",
