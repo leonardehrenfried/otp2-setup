@@ -25,24 +25,9 @@
           "costFactor" : 3
         }
       }
-    }
-  },
-  "xvectorTiles": {
-    "layers": [
-      {
-        "name": "areaStops",
-        "type": "AreaStop",
-        "mapper": "Digitransit",
-        "maxZoom": 20,
-        "minZoom": 14,
-        "cacheMaxSeconds": 600
-      }
-    ]
-  },
-  "transitx": {
-    "dynamicSearchWindow": {
-      "minWindow": "8h",
-      "maxWindow": "10h"
+    },
+    "walk": {
+      "reluctance": 15
     }
   },
   "updaters": [
