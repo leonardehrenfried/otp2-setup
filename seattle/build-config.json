@@ -25,11 +25,11 @@
       "feedId" : "pierce",
       "source" : "https://gtfs.sound.obaweb.org/prod/3_gtfs.zip"
     },
-    /*{
+    {
       "type" : "gtfs",
       "feedId" : "soundtransit",
       "source" : "https://gtfs.sound.obaweb.org/prod/40_gtfs.zip"
-    },*/
+    },
     {
       "type" : "gtfs",
       "feedId" : "hydeshuttle",
