@@ -335,6 +335,12 @@ portland/gtfs.zip:
 portland/osm.pbf: oregon/osm.pbf
 	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
 
+portland-reduced/gtfs.zip:
+	echo "none"
+
+portland-reduced/osm.pbf: oregon/osm.pbf
+	osmium extract oregon/osm.pbf --polygon portland/portland.geojson -o $@
+
 rose-village/gtfs.zip:
 	echo "none"
 
@@ -394,7 +400,7 @@ build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
 
 run-%: otp.jar
-	${JAVA} -XX:+HeapDumpOnOutOfMemoryError -Xmx10G -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
+	${JAVA} -Xmx1G -XX:+HeapDumpOnOutOfMemoryError -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nodeps-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
