@@ -23,6 +23,10 @@
         "CAR_TO_PARK" : {
           "timePenalty" : "10m + 2t",
           "costFactor" : 3
+        },
+        "FLEXIBLE" : {
+          "timePenalty" : "20m + 2t",
+          "costFactor" : 3
         }
       }
     },

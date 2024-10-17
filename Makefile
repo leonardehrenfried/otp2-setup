@@ -400,7 +400,7 @@ build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
 
 run-%: otp.jar
-	${JAVA} -Xmx1G -XX:+HeapDumpOnOutOfMemoryError -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
+	${JAVA} -Xmx20G -XX:+HeapDumpOnOutOfMemoryError -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nodeps-%: otp.jar
 	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
