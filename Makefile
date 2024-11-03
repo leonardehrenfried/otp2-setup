@@ -1,6 +1,7 @@
 .PRECIOUS: %/streetGraph.obj
 CURL:=curl -L -\# --fail --create-dirs
 JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml
+CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 current_dir = $(shell pwd)
 
 download: otp.jar
@@ -410,17 +411,17 @@ build-otp:
 		mvn clean package -Dmaven.test.skip -Dmaven.source.skip=true -P prettierSkip && cp application/target/otp-*-*-shaded.jar ../otp2-setup/otp.jar
 
 build-docker-%: %/osm.pbf
-	podman pull docker.io/opentripplanner/opentripplanner
+	podman pull ${CONTAINER_IMAGE}
 	podman run --rm \
     -e JAVA_TOOL_OPTIONS='-Xmx8g' \
 		-v "./$*:/var/opentripplanner:z" \
-    docker.io/opentripplanner/opentripplanner:latest --build --save
+    ${CONTAINER_IMAGE} --build --save
 
 run-docker-%:
 	podman run -it --rm -p 8080:8080 \
     -e JAVA_TOOL_OPTIONS='-Xmx8g' \
     -v "./$*:/var/opentripplanner" \
-    docker.io/opentripplanner/opentripplanner:latest --load --serve
+    ${CONTAINER_IMAGE} --load --serve
 
 clean-all:
 	find . -name osm.pbf -print -exec rm {} \;
