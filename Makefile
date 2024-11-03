@@ -409,6 +409,19 @@ build-otp:
 	cd ../OpenTripPlanner/ && \
 		mvn clean package -Dmaven.test.skip -Dmaven.source.skip=true -P prettierSkip && cp application/target/otp-*-*-shaded.jar ../otp2-setup/otp.jar
 
+build-docker-%: %/osm.pbf
+	podman pull docker.io/opentripplanner/opentripplanner
+	podman run --rm \
+    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
+		-v "./$*:/var/opentripplanner:z" \
+    docker.io/opentripplanner/opentripplanner:latest --build --save
+
+run-docker-%:
+	podman run -it --rm -p 8080:8080 \
+    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
+    -v "./$*:/var/opentripplanner" \
+    docker.io/opentripplanner/opentripplanner:latest --load --serve
+
 clean-all:
 	find . -name osm.pbf -print -exec rm {} \;
 	find . -name gtfs.zip -print -exec rm {} \;
