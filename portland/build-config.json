@@ -17,7 +17,7 @@
     {
       "type" : "gtfs",
       "feedId" : "clackamas",
-      "source" : "https://leonard.io/otp/clackamas-flex.gtfs.zip"
+      "source" : "https://oregon-gtfs.trilliumtransit.com/gtfs_data/clackamascounty-or-us/clackamascounty-or-us--flex-v2.zip"
     }
   ]
 }
