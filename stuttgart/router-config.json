@@ -75,6 +75,12 @@
       "sourceType": "gbfs",
       "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/stadtmobil_stuttgart/gbfs.json",
       "allowKeepingRentedVehicleAtDestination": true
+    },
+    {
+      "type" : "vehicle-parking",
+      "feedId": "park",
+      "sourceType" : "park-api",
+      "url" : "https://api.mobidata-bw.de/park-api/api/public/v1/bfrk_bw_car"
     }
   ]
 }
