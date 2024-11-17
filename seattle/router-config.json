@@ -7,6 +7,9 @@
       "accessibilityScore": true,
       "parkAndRideDurationRatio": 0.9
     },
+    "walk": {
+      "reluctance": 15
+    },
     "wheelchairAccessibility": {
       "trip": {
         "onlyConsiderAccessible": false,
