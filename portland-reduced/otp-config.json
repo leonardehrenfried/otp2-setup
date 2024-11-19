@@ -1,7 +1,0 @@
-{
-  "otpFeatures" : {
-    "FaresV2": true,
-    "SandboxAPIMapboxVectorTilesApi": true,
-    "FlexRouting": true
-  }
-}
