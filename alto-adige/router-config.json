@@ -17,6 +17,11 @@
       "feedId": "sta",
       "url": "https://efa.sta.bz.it/siri-lite/estimated-timetable/xml",
       "fuzzyTripMatching": true
+    },
+    {
+      "type": "siri-sx-light",
+      "feedId": "sta",
+      "url": "https://efa.sta.bz.it/siri-lite/situation-exchange/xml"
     }
   ]
 }
