@@ -10,6 +10,7 @@
       "feedId": "ctran",
       "type": "gtfs"
     }
-  ]
+  ],
+  "boardingLocationTags":[]
 }
 
