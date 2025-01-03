@@ -1,87 +1,122 @@
 {
   "routingDefaults": {
-    "car": {
+    "numItineraries": 5,
+    "transferSlack": "1m",
+    "waitReluctance": 2,
+    "walk": {
+      "reluctance": 3,
+      "stairsReluctance": 1
+    },
+    "bicycle": {
+      "triangle": {
+        "safety": 0.4,
+        "flatness": 0.3,
+        "time": 0.3
+      },
       "rental": {
-        "useAvailabilityInformation": false,
-        "allowKeepingAtDestination": true
+        "bannedNetworks": ["stadtmobil_stuttgart", "car-sharing", "taxi", "cargo-bike"],
+        "keepingAtDestinationCost": 180,
+        "allowKeepingAtDestination": true,
+        "pickupTime": "3m",
+        "pickupCost": 850
       }
     },
-    "transferSlack": 100,
-    "stairsReluctance": 1.65,
-    "numItineraries": 5,
-    "bikeTriangleSafetyFactor": 0.4,
-    "bikeTriangleSlopeFactor": 0.3,
-    "bikeTriangleTimeFactor": 0.3,
-    "vehicleRental": {
-      "pickupTime": 180,
-      "pickupCost": 850,
-      "bannedNetworks": ["car-sharing", "taxi", "cargo-bike"]
+    "car" :{
+      "reluctance": 2
     },
     "itineraryFilters" : {
       "bikeRentalDistanceRatio": 0.75,
       "parkAndRideDurationRatio": 0.6,
-      "minBikeParkingDistance": 500
+      "minBikeParkingDistance": 500,
+      "transitGeneralizedCostLimit": {
+        "costLimitFunction": "10m + 1.5x"
+      }
     },
     "accessEgress": {
       "penalty": {
-        "car-to-park" : { "timePenalty": "10m + 2.5t", "costFactor": 4.5 }
+        "car-to-park" : { "timePenalty": "10m + 1.5t", "costFactor": 2.5 }
+      },
+      "maxDurationForMode": {
+        "CAR_TO_PARK": "30m",
+        "BIKE_RENTAL": "30m",
+        "BIKE": "30m",
+        "WALK": "30m"
       }
     }
   },
-  "vectorTileLayers": [
-    {
-      "name": "stops",
-      "type": "Stop",
-      "mapper": "Digitransit",
-      "maxZoom": 20,
-      "minZoom": 14,
-      "cacheMaxSeconds": 600,
-      "expansionFactor": 0.5
-    },
-    {
-      "name": "stations",
-      "type": "Station",
-      "mapper": "Digitransit",
-      "maxZoom": 20,
-      "minZoom": 12,
-      "cacheMaxSeconds": 600,
-      "expansionFactor": 0.5
-    },
-    {
-      "name": "citybikes",
-      "type": "VehicleRental",
-      "mapper": "Digitransit",
-      "maxZoom": 20,
-      "minZoom": 14,
-      "cacheMaxSeconds": 60,
-      "expansionFactor": 0.5
-    },
-    {
-      "name": "parking",
-      "type": "VehicleParking",
-      "mapper": "Digitransit",
-      "maxZoom": 20,
-      "minZoom": 14,
-      "cacheMaxSeconds": 60,
-      "expansionFactor": 0.5
+  "transit": {
+    "maxNumberOfTransfers" : 6,
+    "dynamicSearchWindow" : {
+      "minTransitTimeCoefficient" : 0.5,
+      "minWindow" : "30m",
+      "maxWindow" : "18h"
     }
-  ],
-  "flex": {
-    "maxTransferDuration": "4m"
   },
-  "updaters": [
-    {
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "url": "https://api.mobidata-bw.de/sharing/gbfs/v2/stadtmobil_stuttgart/gbfs.json",
-      "allowKeepingRentedVehicleAtDestination": true
-    },
-    {
-      "type" : "vehicle-parking",
-      "feedId": "park",
-      "sourceType" : "park-api",
-      "url" : "https://api.mobidata-bw.de/park-api/api/public/v1/bfrk_bw_car"
-    }
-  ]
+  "vectorTiles":{
+    "layers": [
+      {
+        "name": "stops",
+        "type": "Stop",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 600,
+        "expansionFactor": 0.5
+      },
+      {
+        "name": "stations",
+        "type": "Station",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 12,
+        "cacheMaxSeconds": 600,
+        "expansionFactor": 0.5
+      },
+      {
+        "name": "citybikes",
+        "type": "VehicleRental",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 60,
+        "expansionFactor": 0.5
+      },
+      // just free-floating vehicles
+      {
+        "name": "rentalVehicles",
+        "type": "VehicleRentalVehicle",
+        "mapper": "DigitransitRealtime",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 60
+      },
+      // just rental stations
+      {
+        "name": "rentalStations",
+        "type": "VehicleRentalStation",
+        "mapper": "Digitransit",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 600
+      },
+      // Contains just stations and realtime information for them
+      {
+        "name": "realtimeRentalStations",
+        "type": "VehicleRentalStation",
+        "mapper": "DigitransitRealtime",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 60
+      },
+      {
+        "name": "parking",
+        "type": "VehicleParking",
+        "mapper": "Stadtnavi",
+        "maxZoom": 20,
+        "minZoom": 14,
+        "cacheMaxSeconds": 60,
+        "expansionFactor": 0.5
+      }
+    ]
+  }
 }
-

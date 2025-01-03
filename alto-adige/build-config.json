@@ -4,7 +4,7 @@
   "dataImportReport": true,
   "transitFeeds":[
     {
-      "source":"https://leonard.io/otp/sta-netex.xml.zip",
+      "source":"https://leonard.io/otp/sta.netex-sspis-fixed.xml.zip",
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
