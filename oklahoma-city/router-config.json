@@ -6,5 +6,12 @@
       "RECOMMENDED" : 600,
       "PREFERRED" : 0
     }
-  }
+  },
+  "updaters" : [
+    {
+      "type" : "stop-time-updater",
+      "url" : "https://mna.mecatran.com/utw/ws/gtfsfeed/realtime/okc?apiKey=${MECATRAN_API_KEY}",
+      "feedId" : "embark"
+    }
+  ]
 }

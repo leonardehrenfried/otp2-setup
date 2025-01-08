@@ -2,8 +2,8 @@
   "transitFeeds" : [
     {
       "type" : "gtfs",
-      "feedId" : "okc",
-      "source" : "https://mna.mecatran.com/utw-test/ws/gtfsfeed/static/okc?apiKey=${MECATRAN_API_KEY}"
+      "feedId" : "embark",
+      "source" : "https://mna.mecatran.com/utw/ws/gtfsfeed/static/okc?apiKey=${MECATRAN_API_KEY}"
     }
   ],
   "gtfsDefaults" : {
