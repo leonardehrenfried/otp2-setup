@@ -8,12 +8,6 @@
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
-    },
-    {
-      "source":"https://leonard.io/otp/alto-adige-parking.netex.xml.zip",
-      "type": "netex",
-      "feedId": "parking",
-      "ignoreParking": false
     }
   ]
 }
