@@ -2,6 +2,7 @@
   "otpFeatures" : {
     "SandboxAPIMapboxVectorTilesApi": true,
     "FlexRouting": true,
-    "ParallelRouting": true
+    "ParallelRouting": true,
+    "ActuatorApi": true
   }
 }

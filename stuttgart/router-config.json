@@ -118,5 +118,15 @@
         "expansionFactor": 0.5
       }
     ]
-  }
+  },
+  "updaters":[
+    {
+      "type": "real-time-alerts",
+      "url": "https://data.mfdz.de/vvs_gtfsrt_alerts_herrenberg/body.pbf",
+      "feedId": "hbg",
+      "headers": {
+        "User-Agent": "OpenTripPlanner (stadtnavi hbg)"
+      }
+    }
+  ]
 }

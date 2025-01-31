@@ -8,7 +8,7 @@
     "islandWithoutStopsMaxSize": 300,
     "islandWithStopsMaxSize": 20
   },
-  "areaVisibility": true,
+  "areaVisibility": false,
   "transitFeeds" : [
     {
       "type" : "gtfs",

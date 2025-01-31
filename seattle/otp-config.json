@@ -6,6 +6,7 @@
     "SandboxAPIParkAndRideApi": true,
     "TransferConstraints": false,
     "SandboxAPIMapboxVectorTilesApi": true,
-    "SandboxAPIGeocoder": true
+    "SandboxAPIGeocoder": true,
+    "ActuatorAPI": true
   }
 }
