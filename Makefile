@@ -49,8 +49,8 @@ karlsruhe/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.pbf -o $@
 
 stuttgart/gtfs.zip:
-	mkdir -p stuttgart
-	${CURL} https://gtfs.mfdz.de/hbg6.merged.with_flex.gtfs.zip -o $@
+	echo "none"
+	${CURL} -o $@
 
 stuttgart/osm.pbf:
 	mkdir -p stuttgart
