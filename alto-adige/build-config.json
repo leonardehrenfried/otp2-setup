@@ -4,7 +4,7 @@
   "dataImportReport": true,
   "transitFeeds":[
     {
-      "source":"https://leonard.io/otp/sta.netex-sspis-fixed.xml.zip",
+      "source":"https://nightly.link/noi-techpark/odh-mentor-otp/workflows/main/main/sta-netex-correct-ssids.zip",
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
