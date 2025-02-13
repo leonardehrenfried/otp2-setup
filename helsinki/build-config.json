@@ -3,7 +3,7 @@
   "transitFeeds": [
     {
       "type": "gtfs",
-      "source": "http://dev.hsl.fi/gtfs/hsl.zip",
+      "source": "https://dev.hsl.fi/gtfs/hsl.zip",
       "feedId": "hsl"
     }
   ]
