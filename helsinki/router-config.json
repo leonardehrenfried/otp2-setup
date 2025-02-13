@@ -73,17 +73,6 @@
       "fuzzyTripMatching": true
     },
     {
-      "id": "hsl-park",
-      "type": "vehicle-parking",
-      "sourceType": "hsl-park",
-      "feedId": "hslpark",
-      "timeZone": "Europe/Helsinki",
-      "facilitiesFrequencySec": 3600,
-      "facilitiesUrl": "http://digitransit-proxy:8080/out/test.liipi.hsldev.com/api/v1/facilities.json?limit=-1",
-      "utilizationsFrequencySec": 600,
-      "utilizationsUrl": "http://digitransit-proxy:8080/out/test.liipi.hsldev.com/api/v1/utilizations.json?limit=-1"
-    },
-    {
       "id": "vantaa-bike-rental",
       "type": "vehicle-rental",
       "sourceType": "gbfs",

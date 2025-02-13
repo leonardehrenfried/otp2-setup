@@ -3,7 +3,7 @@
   "transitFeeds": [
     {
       "type": "gtfs",
-      "source": "https://dev-api.digitransit.fi/routing-data/v3/hsl/HSL-gtfs.zip?digitransit-subscription-key=cd0e8f1e0100417593300210c012b618",
+      "source": "http://dev.hsl.fi/gtfs/hsl.zip",
       "feedId": "hsl"
     }
   ]
