@@ -1,5 +1,5 @@
 .PRECIOUS: %/streetGraph.obj
-CURL:=curl -L -\# --fail --create-dirs
+CURL:=curl -L -\# --fail --create-dirs --remote-time
 JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml
 CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 current_dir = $(shell pwd)

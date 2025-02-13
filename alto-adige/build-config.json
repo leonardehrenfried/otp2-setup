@@ -2,6 +2,7 @@
   "staticParkAndRide": false,
   "areaVisibility": false,
   "dataImportReport": true,
+  "transitModelTimeZone": "Europe/Rome",
   "transitFeeds":[
     {
       "source":"https://nightly.link/noi-techpark/odh-mentor-otp/workflows/main/main/sta-netex-correct-ssids.zip",
