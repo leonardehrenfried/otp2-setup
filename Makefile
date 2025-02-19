@@ -50,7 +50,6 @@ karlsruhe/osm.pbf:
 
 stuttgart/gtfs.zip:
 	echo "none"
-	${CURL} -o $@
 
 stuttgart/osm.pbf:
 	mkdir -p stuttgart

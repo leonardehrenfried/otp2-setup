@@ -1,6 +1,6 @@
 {
   "staticBikeParkAndRide": true,
-  "areaVisibility": false,
+  "areaVisibility": true,
   "boardingLocationTags": ["ref", "ref:IFOPT"],
 
   "osmDefaults": {

@@ -42,5 +42,9 @@
     }
   ],
   "updaters": [
-  ]
+  ],
+  "triasApi": {
+    "hideFeedId": true,
+    "hardcodedInputFeedId": "tampere"
+  }
 }
