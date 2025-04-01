@@ -7,7 +7,7 @@
     {
       "type" : "gtfs",
       "feedId" : "trimet",
-      "source" : "https://developer.trimet.org/schedule/gtfs.zip"
+      "source" : "https://leonard.io/ibi/trimet-faresv2.gtfs.zip"
     },
     {
       "type" : "gtfs",

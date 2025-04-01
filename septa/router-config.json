@@ -36,7 +36,7 @@
         "type": "Stop",
         "mapper": "Digitransit",
         "maxZoom": 20,
-        "minZoom": 14,
+        "minZoom": 2,
         "cacheMaxSeconds": 600
       },
       // flex zones
