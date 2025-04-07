@@ -65,34 +65,9 @@
       "fuzzyTripMatching": true
     },
     {
-      "id": "hsl-alerts",
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "https://dev-api.digitransit.fi/realtime/service-alerts/v2/hsl",
-      "feedId": "HSL",
-      "fuzzyTripMatching": true
-    },
-    {
-      "id": "vantaa-bike-rental",
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "frequencySec": 30,
-      "network": "vantaa",
-      "url": "http://digitransit-proxy:8080/out/vantaa-api.giravolta.io/api-opendata/gbfs/2_3/gbfs"
-    },
-    {
-      "id": "hsl-bike-rental",
-      "type": "vehicle-rental",
-      "sourceType": "gbfs",
-      "frequencySec": 30,
-      "network": "smoove",
-      "url": "https://helsinki-gbfs.smoove.pro/gbfs/gbfs.json"
-    },
-    {
       "type" : "vehicle-positions",
       "url" : "https://realtime.hsl.fi/realtime/vehicle-positions/v2/hsl",
-      "feedId" : "HSL",
-      "frequencySec" : 60
+      "feedId" : "HSL"
     }
   ]
 }
