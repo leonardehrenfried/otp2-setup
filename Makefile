@@ -403,7 +403,7 @@ run-%: otp.jar
 	${JAVA} -Xmx20G -XX:+HeapDumpOnOutOfMemoryError -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
 
 build-nodeps-%: otp.jar
-	java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Xmx36G -jar otp.jar --build --save $*
+	${JAVA} -Xmx36G -jar otp.jar --build --save $*
 
 build-otp:
 	cd ../OpenTripPlanner/ && \
