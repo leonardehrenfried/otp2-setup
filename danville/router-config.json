@@ -1,0 +1,34 @@
+{
+  "routingDefaults": {
+    "numItineraries": 5,
+    "itineraryFilters": {
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
+      "nonTransitGeneralizedCostLimit": "0 + 1.0 x",
+      // add IBI accessibility score between 0 and 1
+      "accessibilityScore": true
+    },
+    "wheelchairAccessibility": {
+      "trip": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      },
+      "stop": {
+        "onlyConsiderAccessible": false,
+        "unknownCost": 600,
+        "inaccessibleCost": 3600
+      }
+    },
+    "accessEgress": {
+      "penalty": {
+        "FLEXIBLE" : {
+          "timePenalty" : "30m + 2t",
+          "costFactor" : 2
+        }
+      }
+    }
+  },
+  "flex": {
+    "maxTransferDuration": "4m"
+  }
+}

@@ -353,6 +353,12 @@ pierce-county/gtfs.zip:
 pierce-county/osm.pbf:
 	echo "none"
 
+danville/gtfs.zip:
+	echo "none"
+
+danville/osm.pbf:
+	echo "none"
+
 bellingham/gtfs.zip:
 	echo "none"
 

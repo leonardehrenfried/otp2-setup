@@ -1,0 +1,16 @@
+{
+  "osm":[
+    {
+      "source" : "https://leonard.io/trillium/danville.osm.pbf",
+      "timeZone" : "America/New_York"
+    }
+  ],
+  "transitFeeds": [
+    {
+      "source": "https://leonard.io/trillium/danville-va-us--flex-v2-TEST.zip",
+      "feedId": "danville",
+      "type": "gtfs"
+    }
+  ]
+}
+
