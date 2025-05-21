@@ -287,10 +287,8 @@ noco/gtfs.zip:
 noco/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
-denver/easyride.gtfs.zip:
-	${CURL} https://data.trilliumtransit.com/gtfs/broomfield-co-us/broomfield-co-us--flex-v2.zip -o $@
-
-denver/gtfs.zip: denver/easyride.gtfs.zip
+denver/gtfs.zip:
+	echo "none"
 	${CURL} https://www.rtd-denver.com/files/gtfs/google_transit.zip -o $@
 
 denver/osm.pbf: colorado/osm.pbf
