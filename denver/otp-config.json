@@ -4,6 +4,7 @@
     "SandboxAPILegacyGraphQLApi": true,
     "VehicleToStopHeuristics": true,
     "ParallelRouting": true,
-    "SandboxAPIParkAndRideApi": true
+    "SandboxAPIParkAndRideApi": true,
+    "FaresV2": true
   }
 }
