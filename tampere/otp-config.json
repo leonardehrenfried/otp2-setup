@@ -1,12 +1,9 @@
 {
   "otpFeatures": {
     "MinimumTransferTimeIsDefinitive": true,
-    "SandboxAPILegacyGraphQLApi": true,
-    "APIGraphInspectorTile": true,
     "SandboxAPIMapboxVectorTilesApi": true,
     "FloatingBike": true,
     "ActuatorAPI": true,
-    "SandboxAPITransmodelApi": true,
     "SandboxAPIGeocoder": true,
     "TriasApi": true
   }
