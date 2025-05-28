@@ -8,53 +8,41 @@
     "stairsReluctance": 4.0,
     "carDropoffTime": 240
   },
-  updaters: [
+  "updaters": [
     {
       "type": "vehicle-positions",
       "sourceType": "gtfs-http",
       "url": "https://www.rtd-denver.com/files/gtfs-rt/VehiclePosition.pb",
-      "feedId": "10",
-      "frequencySec": 60
+      "feedId": "rtd"
     },
     {
       "type": "stop-time-updater",
-      "frequencySec": 30,
       "url": "https://www.rtd-denver.com/files/gtfs-rt/TripUpdate.pb",
       "sourceType": "gtfs-http",
-      "feedId": "10"
+      "feedId": "rtd"
     },
     {
       "type": "real-time-alerts",
-      "frequencySec": 30,
       "url": "https://www.rtd-denver.com/files/gtfs-rt/Alerts.pb",
-      "feedId": "10"
-    },
-    {
-      "type": "real-time-alerts",
-      "frequencySec": 30,
-      "url": "www.ridetransfort.com/img/site_specific/uploads/alerts.pb",
-      "feedId": "tf"
+      "feedId": "rtd"
     },
     {
       "type": "vehicle-rental",
       "sourceType": "gbfs",
       "network": "SPIN",
-      "url": "https://gbfs.spin.pm/api/gbfs/v2_2/denver/gbfs",
-      "frequencySec": 30
+      "url": "https://gbfs.spin.pm/api/gbfs/v2_2/denver/gbfs"
     },
     {
       "type": "vehicle-rental",
       "sourceType": "gbfs",
       "network": "SPIN",
-      "url": "https://gbfs.spin.pm/api/gbfs/v2_2/fort_collins/gbfs",
-      "frequencySec": 30
+      "url": "https://gbfs.spin.pm/api/gbfs/v2_2/fort_collins/gbfs"
     },
     {
       "type": "vehicle-rental",
       "sourceType": "gbfs",
       "network": "LYFT",
-      "url": "https://s3.amazonaws.com/lyft-lastmile-production-iad/lbs/den/gbfs.json",
-      "frequencySec": 30
+      "url": "https://s3.amazonaws.com/lyft-lastmile-production-iad/lbs/den/gbfs.json"
     }
   ],
   "vectorTiles": {
