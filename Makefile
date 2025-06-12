@@ -289,7 +289,6 @@ noco/osm.pbf: washington/osm.pbf
 
 denver/gtfs.zip:
 	echo "none"
-	${CURL} https://www.rtd-denver.com/files/gtfs/google_transit.zip -o $@
 
 denver/osm.pbf: colorado/osm.pbf
 	osmium extract colorado/osm.pbf --polygon denver/denver.geojson -o $@
