@@ -2,7 +2,7 @@
   "transitFeeds": [
     {
       "type": "gtfs",
-      "source": "https://www.rtd-denver.com/files/gtfs/google_transit.zip",
+      "source": "https://leonard.io/ibi/denver-flex-fares.gtfs.zip",
       "feedId": "rtd"
     }
   ]
