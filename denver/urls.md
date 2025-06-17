@@ -1,1 +1,1 @@
-FaresV2: https://leonard.io/ibi/denver-flex-fares.gtfs.zip
+FaresV2: https://tinyurl.com/24mbaclv
