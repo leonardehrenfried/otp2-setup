@@ -1,43 +1,211 @@
 {
-  "routingDefaults":{
-    "streetRoutingTimeout": "5m"
+  "routingDefaults": {
+    "maxJourneyDuration": "6h",
+    "boardSlack": "0M",
+    "alightSlack": "0M",
+    "transferSlack": 180,
+    "waitReluctance": 0.9,
+    "numItineraries": 3,
+    "itineraryFilters": {
+      "parkAndRideDurationRatio": 0.15,
+      "bikeRentalDistanceRatio": 0.15,
+
+      // only show non-transit (ie. walking) when it's at least as good as the transit option
+      "nonTransitGeneralizedCostLimit": "0 + 1.5 x"
+    },
+    "car" : {
+      "reluctance" : 20.0
+    },
+    "streetRoutingTimeout" : "7s"
+  },
+  "flex": {
+    "maxAccessWalkDuration": "10m",
+    "maxEgressWalkDuration": "10m"
+  },
+  "transit": {
+    "maxNumberOfTransfers": 4,
+    "dynamicSearchWindow": {
+      "minTransitTimeCoefficient": 0.5,
+      "minWaitTimeCoefficient": 0.5,
+      "minWindow": "1h",
+      "maxWindow": "8h"
+    }
   },
   "updaters": [
     {
-      "type" : "vehicle-rental",
-      "sourceType" : "gbfs",
-      "url" : "https://mds.bird.co/gbfs/v2/public/portland/gbfs.json",
-      "geofencingZones": false
+      "type": "real-time-alerts",
+      "frequency": "45s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/clackamas/passioTransit/gtfs/realtime/serviceAlerts",
+      "feedId": "CLACKAMAS"
     },
     {
       "type": "stop-time-updater",
-      "frequency": "30s",
-      "url": "https://trimet.org/transweb/ws/V1/TripUpdate",
-      "feedId": "trimet"
+      "frequency": "31s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/clackamas/passioTransit/gtfs/realtime/tripUpdates",
+      "feedId": "CLACKAMAS"
     },
     {
       "type": "vehicle-positions",
-      "url": "https://developer.trimet.org/ws/V1/VehiclePositions?appId=${PDX_APP_ID}",
-      "feedId": "trimet"
-    }
-  ],
-  "rideHailingServices": [
+      "frequency": "29s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/clackamas/passioTransit/gtfs/realtime/vehiclePositions",
+      "feedId": "CLACKAMAS"
+    },
     {
-      "type": "uber-car-hailing",
-      "clientId": "${UBER_CLIENT_ID}",
-      "clientSecret": "${UBER_CLIENT_SECRET}",
-      "wheelchairAccessibleProductId": "8ddc7ce4-67d1-4ac4-8b56-205bd6a6314e"
+      "type": "stop-time-updater",
+      "frequency": "31s",
+      "url": "http://gtfs-rt.c-tran.org/gtfsrealtime/TripUpdates",
+      "feedId": "CTRAN"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "29s",
+      "url": "http://gtfs-rt.c-tran.org/gtfsrealtime/VehiclePositions",
+      "feedId": "CTRAN"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequency": "45s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/sandyor/passioTransit/gtfs/realtime/serviceAlerts",
+      "feedId": "SAM"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequency": "31s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/sandyor/passioTransit/gtfs/realtime/tripUpdates",
+      "feedId": "SAM"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "29s",
+      "fuzzyTripMatching": true,
+      "url": "https://passio3.com/sandyor/passioTransit/gtfs/realtime/vehiclePositions",
+      "feedId": "SAM"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequency": "45s",
+      "url": "https://mysmartbus.com/gtfs-rt/alerts",
+      "feedId": "SMART"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequency": "31s",
+      "url": "https://mysmartbus.com/gtfs-rt/tripupdates",
+      "feedId": "SMART"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "29s",
+      "url": "https://mysmartbus.com/gtfs-rt/vehiclepositions",
+      "feedId": "SMART"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequency": "45s",
+      "url": "http://trimet.org/transweb/ws/V1/FeedSpecAlerts/includeFuture/true/suppressSystemWideAlerts/true",
+      "feedId": "TRIMET"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequency": "11s",
+      "url": "http://trimet.org/transweb/ws/V1/TripUpdate",
+      "feedId": "TRIMET"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "9s",
+      "url": "http://trimet.org/transweb/ws/V1/VehiclePositions",
+      "feedId": "TRIMET"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequency": "29s",
+      "fuzzyTripMatching": true,
+      "url": "https://ewp.transloc.com/subscriptions/gtfsrt/vehicles.ashx",
+      "feedId": "WAPARK"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequency": "40s",
+      "sourceType": "gbfs",
+      "url": "https://gbfs.biketownpdx.com/gbfs/2.3/gbfs.json"
+    },
+    {
+      "type": "vehicle-rental",
+      "frequency": "43s",
+      "network": "LIME",
+      "sourceType": "gbfs",
+      "url": "https://data.lime.bike/api/partners/v2/gbfs/portland/gbfs.json"
     }
   ],
   "vectorTiles": {
+    "basePath": "/rtp/routers/default/vectorTiles",
+    "attribution": "<a href='https://rtp.trimet.org/rtp/#/route'>Regional Partners</a>",
     "layers": [
       {
         "name": "stops",
         "type": "Stop",
         "mapper": "Digitransit",
-        "maxZoom": 20,
-        "minZoom": 14,
+        "maxZoom": 30,
+        "minZoom": 1,
+        "filter": "sunday-to-sunday-service-week",
         "cacheMaxSeconds": 600
+      },
+      {
+        "name": "areaStops",
+        "type": "AreaStop",
+        "mapper": "OTPRR",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "filter": "sunday-to-sunday-service-week",
+        "cacheMaxSeconds": 600
+      },
+      {
+        "name": "stations",
+        "type": "Station",
+        "mapper": "Digitransit",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "filter": "sunday-to-sunday-service-week",
+        "cacheMaxSeconds": 600
+      },
+      {
+        "name": "rentalVehicles",
+        "type": "VehicleRentalVehicle",
+        "mapper": "Digitransit",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "cacheMaxSeconds": 60
+      },
+      {
+        "name": "realtimeRentalStations",
+        "type": "VehicleRentalStation",
+        "mapper": "DigitransitRealtime",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "cacheMaxSeconds": 90
+      },
+      {
+        "name": "rentalStations",
+        "type": "VehicleRentalStation",
+        "mapper": "Digitransit",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "cacheMaxSeconds": 600
+      },
+      {
+        "name": "vehicleParking",
+        "type": "VehicleParking",
+        "mapper": "Digitransit",
+        "maxZoom": 30,
+        "minZoom": 1,
+        "cacheMaxSeconds": 600,
+        "expansionFactor": 0.25
       }
     ]
   }
