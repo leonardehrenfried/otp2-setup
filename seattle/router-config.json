@@ -22,7 +22,7 @@
         "inaccessibleCost": 3600
       }
     },
-     "accessEgress" : {
+    "accessEgress" : {
       "penalty" : {
         "CAR_TO_PARK" : {
           "timePenalty" : "10m + 2t",

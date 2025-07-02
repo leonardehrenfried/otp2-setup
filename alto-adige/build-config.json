@@ -5,7 +5,7 @@
   "transitModelTimeZone": "Europe/Rome",
   "transitFeeds":[
     {
-      "source":"https://nightly.link/noi-techpark/opendatahub-mentor-otp/workflows/main/main/sta-netex-correct-ssids.zip",
+      "source":"https://leonard.io/noi/sta.netex.xml.zip",
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
