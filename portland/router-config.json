@@ -20,8 +20,8 @@
     "accessEgress" : {
       "penalty" : {
         "SCOOTER_RENTAL" : {
-          "timePenalty" : "0m + 0.8t",
-          "costFactor" : 1.0
+          "timePenalty" : "5m + 1.3t",
+          "costFactor" : 1.3
         }
       }
     }
