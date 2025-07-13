@@ -11,7 +11,7 @@
       "feedId": "parking",
       "sourceType": "siri-fm",
       "url": "https://transmodel.api.opendatahub.com/siri-lite/fm/parking"
-    },*/
+    },
     {
       "type": "siri-et-lite",
       "feedId": "sta",
@@ -37,6 +37,12 @@
       "type" : "vehicle-rental",
       "sourceType" : "gbfs",
       "url" : "https://gbfs.otp.opendatahub.com/papin/2.1/gbfs.json"
+    },
+    */
+    {
+      "type" : "vehicle-rental",
+      "sourceType" : "gbfs",
+      "url" : "https://carsharing.otp.opendatahub.testingmachine.eu/noi/gbfs.json"
     }
   ]
 }
