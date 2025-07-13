@@ -1,8 +1,8 @@
 .PRECIOUS: %/streetGraph.obj
-CURL:=curl -L -\# --fail --create-dirs --remote-time
-JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml
-CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 current_dir = $(shell pwd)
+CURL:=curl -L -\# --fail --create-dirs --remote-time
+JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -XX:+HeapDumpOnOutOfMemoryError
+CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 
 download: otp.jar
 
@@ -394,16 +394,16 @@ otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
 
 %/streetGraph.obj: %/osm.pbf
-	${JAVA} -Xmx36G -jar otp.jar --buildStreet --save $*
+	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx50G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx13G -jar otp.jar --loadStreet --save $*
 
 build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
 
 run-%: otp.jar
-	${JAVA} -Xmx20G -XX:+HeapDumpOnOutOfMemoryError -Dlogback.configurationFile=${current_dir}/logback.xml -jar otp.jar --load --serve $*
+	${JAVA} -Xmx20G -XX:+HeapDumpOnOutOfMemoryError -jar otp.jar --load --serve $*
 
 build-nodeps-%: otp.jar
 	${JAVA} -Xmx36G -jar otp.jar --build --save $*
