@@ -6,6 +6,57 @@ CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 
 download: otp.jar
 
+otp.jar:
+	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
+
+%/streetGraph.obj: %/osm.pbf
+	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
+
+build-%: otp.jar %/streetGraph.obj %/gtfs.zip
+	${JAVA} -Xmx4G -jar otp.jar --loadStreet --save $*
+
+build-full-%: otp.jar %/gtfs.zip %/osm.pbf
+	${JAVA} -Xmx50G -jar otp.jar --build --save $*
+
+run-%: otp.jar
+	${JAVA} -Xmx20G -jar otp.jar --load --serve $*
+
+build-nodeps-%: otp.jar
+	${JAVA} -Xmx36G -jar otp.jar --build --save $*
+
+build-otp:
+	cd ../OpenTripPlanner/ && \
+		mvn clean package -Dmaven.test.skip -Dmaven.source.skip=true -P prettierSkip && cp otp-shaded/target/otp-shaded-*-*.jar ../otp2-setup/otp.jar
+
+build-docker-%: %/osm.pbf
+	podman pull ${CONTAINER_IMAGE}
+	podman run --rm \
+    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
+		-v "./$*:/var/opentripplanner:z" \
+    ${CONTAINER_IMAGE} --build --save
+
+run-docker-%:
+	podman run -it --rm -p 8080:8080 \
+    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
+    -v "./$*:/var/opentripplanner" \
+    ${CONTAINER_IMAGE} --load --serve
+
+clean-all:
+	find . -name osm.pbf -print -exec rm {} \;
+	find . -name gtfs.zip -print -exec rm {} \;
+	find . -name graph.obj -print -exec rm {} \;
+	find . -name streetGraph.obj -print -exec rm {} \;
+	rm -f otp.jar
+
+clean-%:
+	find $* -name *gtfs.zip -print -exec rm {} \;
+	find $* -name graph.obj -print -exec rm {} \;
+	find $* -name streetGraph.obj -print -exec rm {} \;
+	find $* -name osm.pbf -print -exec rm {} \;
+	find $* -name *netex.zip -print -exec rm {} \;
+
+# Regions
+
 berlin/osm.pbf:
 	${CURL} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
 
@@ -390,52 +441,4 @@ sydney/gtfs.zip:
 sydney/osm.pbf: australia/osm.pbf sydney/gtfs.zip
 	osmium extract australia/osm.pbf --polygon sydney/new-south-wales.geojson -o $@
 
-otp.jar:
-	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
-
-%/streetGraph.obj: %/osm.pbf
-	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
-
-build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx13G -jar otp.jar --loadStreet --save $*
-
-build-full-%: otp.jar %/gtfs.zip %/osm.pbf
-	${JAVA} -Xmx50G -jar otp.jar --build --save $*
-
-run-%: otp.jar
-	${JAVA} -Xmx20G -XX:+HeapDumpOnOutOfMemoryError -jar otp.jar --load --serve $*
-
-build-nodeps-%: otp.jar
-	${JAVA} -Xmx36G -jar otp.jar --build --save $*
-
-build-otp:
-	cd ../OpenTripPlanner/ && \
-		mvn clean package -Dmaven.test.skip -Dmaven.source.skip=true -P prettierSkip && cp otp-shaded/target/otp-shaded-*-*.jar ../otp2-setup/otp.jar
-
-build-docker-%: %/osm.pbf
-	podman pull ${CONTAINER_IMAGE}
-	podman run --rm \
-    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
-		-v "./$*:/var/opentripplanner:z" \
-    ${CONTAINER_IMAGE} --build --save
-
-run-docker-%:
-	podman run -it --rm -p 8080:8080 \
-    -e JAVA_TOOL_OPTIONS='-Xmx8g' \
-    -v "./$*:/var/opentripplanner" \
-    ${CONTAINER_IMAGE} --load --serve
-
-clean-all:
-	find . -name osm.pbf -print -exec rm {} \;
-	find . -name gtfs.zip -print -exec rm {} \;
-	find . -name graph.obj -print -exec rm {} \;
-	find . -name streetGraph.obj -print -exec rm {} \;
-	rm -f otp.jar
-
-clean-%:
-	find $* -name *gtfs.zip -print -exec rm {} \;
-	find $* -name graph.obj -print -exec rm {} \;
-	find $* -name streetGraph.obj -print -exec rm {} \;
-	find $* -name osm.pbf -print -exec rm {} \;
-	find $* -name *netex.zip -print -exec rm {} \;
 
