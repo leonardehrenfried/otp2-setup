@@ -1,10 +1,6 @@
 {
   "otpFeatures" : {
     "FlexRouting": true,
-    "SandboxAPILegacyGraphQLApi": true,
-    "VehicleToStopHeuristics": true,
-    "ParallelRouting": true,
-    "SandboxAPIParkAndRideApi": true,
     "FaresV2": true
   }
 }
