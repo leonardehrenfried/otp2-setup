@@ -29,5 +29,13 @@
       "feedId" : "clackamas",
       "source" : "https://oregon-gtfs.trilliumtransit.com/gtfs_data/clackamascounty-or-us/clackamascounty-or-us--flex-v2.zip"
     }
+  ],
+  "transferRequests": [
+    {
+      "modes": "WALK"
+    },
+    {
+      "modes": "BICYCLE"
+    }
   ]
 }

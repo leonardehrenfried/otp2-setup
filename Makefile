@@ -13,7 +13,7 @@ otp.jar:
 	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx10G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx11G -jar otp.jar --loadStreet --save $*
 
 build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
