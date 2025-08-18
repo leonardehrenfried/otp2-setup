@@ -45,6 +45,11 @@
   <!-- Avoid printing debug messages about free-flowing vertices -->
   <logger name="org.opentripplanner.routing.vertextype.IntersectionVertex" level="info"/>
 
+  <!--Log errors in GraphQL data fetchers. This is disabled by default.
+     Set it to "warn" to log these errors.
+  -->
+  <logger name="org.opentripplanner.apis.support.graphql.LoggingDataFetcherExceptionHandler" level="warn" />
+
   <!-- Raptor request debug logging - Turn on/off: debug/info -->
   <logger name="org.opentripplanner.transit.raptor.RaptorService" level="info"/>
   <logger name="org.opentripplanner.updater.stoptime.TimetableSnapshotSource" level="info"/>
