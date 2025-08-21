@@ -16,5 +16,6 @@
       "feedId": "patco"
     }
   ],
-  "fares": "combine-interlined-legs"
+  "fares": "combine-interlined-legs",
+  "dataImportReport": true
 }

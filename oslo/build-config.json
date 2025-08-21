@@ -1,3 +1,13 @@
 {
-  "transitModelTimeZone":"Europe/Oslo"
+  "transitModelTimeZone":"Europe/Oslo",
+  "transitFeeds": [{
+    "feedId": "RU",
+    "source": "https://storage.googleapis.com/marduk-production/outbound/netex/rb_rut-aggregated-netex.zip",
+    "type": "netex"
+  }],
+  "netexDefaults": {
+    "sharedFilePattern": "_stops.xml",
+    "sharedGroupFilePattern": "_(\\w{3})(_flexible)?_shared_data.xml",
+    "groupFilePattern": "(\\w{3})_.*\\.xml"
+  }
 }

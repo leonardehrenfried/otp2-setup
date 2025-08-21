@@ -56,6 +56,12 @@
       "frequency": "30s",
       "url": "https://s3.amazonaws.com/kcm-alerts-realtime-prod/vehiclepositions.pb",
       "feedId": "kcm"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequency": "30s",
+      "url": "http://s3.amazonaws.com/commtrans-realtime-prod/tripupdates.pb",
+      "feedId": "commtrans"
     }
   ]
 }

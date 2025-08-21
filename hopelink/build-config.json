@@ -4,6 +4,11 @@
   "transitFeeds" : [
     {
       "type" : "gtfs",
+      "feedId" : "kcm-flex",
+      "source" : "https://business.wsdot.wa.gov/Transit/GTFS/MetroFlex/kcm-flex-wa-us.zip"
+    },
+    {
+      "type" : "gtfs",
       "feedId" : "tap",
       "source" : "https://data.trilliumtransit.com/gtfs/homage-wa-us/homage-wa-us-tap--flex-v2.zip"
     },
