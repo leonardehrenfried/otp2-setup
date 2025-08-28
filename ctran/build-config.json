@@ -1,0 +1,10 @@
+{
+  "transitFeeds": [
+    {
+      "source": "https://c-tran.com/images/Google/TheCurrent_GTFSFlex.zip",
+      "feedId": "current",
+      "type": "gtfs"
+    }
+  ]
+}
+
