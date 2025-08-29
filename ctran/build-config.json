@@ -5,6 +5,9 @@
       "feedId": "current",
       "type": "gtfs"
     }
-  ]
+  ],
+  "gtfsDefaults": {
+    "removeRepeatedStops": false
+  }
 }
 
