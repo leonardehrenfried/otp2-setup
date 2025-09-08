@@ -2,10 +2,6 @@
 current_dir = $(shell pwd)
 CURL:=curl -L -\# --fail --create-dirs --remote-time
 JAVA:=java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Dlogback.configurationFile=${current_dir}/logback.xml -XX:+HeapDumpOnOutOfMemoryError
-UNAME := $(shell uname)
-ifeq ($(UNAME),Darwin)
-	JAVA += -Djavax.net.ssl.trustStoreType=KeychainStore
-endif
 
 CONTAINER_IMAGE=docker.io/opentripplanner/opentripplanner
 
