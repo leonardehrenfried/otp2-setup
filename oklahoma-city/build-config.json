@@ -3,7 +3,7 @@
     {
       "type" : "gtfs",
       "feedId" : "embark",
-      "source" : "https://mna.mecatran.com/utw/ws/gtfsfeed/static/okc?apiKey=${MECATRAN_API_KEY}"
+      "source" : "https://mna.mecatran.com/utw/ws/gtfsfeed/static/okc?apiKey=${MECATRAN_API_KEY}&type=gtfs_otp"
     }
   ],
   "gtfsDefaults" : {
