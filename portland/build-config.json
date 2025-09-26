@@ -30,8 +30,8 @@
     },
     {
       "type" : "gtfs",
-      "feedId" : "clackamas",
-      "source" : "https://leonard.io/ibi/sandy-flex.gtfs.zip"
+      "feedId" : "sandy",
+      "source" : "https://leonard.io/ibi/sandy-flex-faresv2.gtfs.zip"
     }
   ],
   "transferRequests": [
