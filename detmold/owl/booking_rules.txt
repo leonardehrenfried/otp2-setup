@@ -1,2 +1,0 @@
-booking_rule_id,booking_type,info_url,message,phone_number,prior_notice_duration_max,prior_notice_duration_min
-"booking_rule_4_0_1","1","https://antavio.tdimo.net/owl/","","0 5231 - 977 681","","30"

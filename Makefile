@@ -45,6 +45,7 @@ run-docker-%:
 clean-all:
 	find . -name osm.pbf -print -exec rm {} \;
 	find . -name gtfs.zip -print -exec rm {} \;
+	find . -name *.zip -print -exec rm {} \;
 	find . -name graph.obj -print -exec rm {} \;
 	find . -name streetGraph.obj -print -exec rm {} \;
 	rm -f otp.jar

@@ -1,5 +1,0 @@
-agency_id,agency_name,agency_url,agency_timezone,agency_lang
-11,Stadtbus B.Salzuflen,https://voyagerr.com/,Europe/Berlin,DE
-7,Stadtbus Lemgo,https://voyagerr.com/,Europe/Berlin,DE
-12,Stadtverkehr Detmold,https://voyagerr.com/,Europe/Berlin,DE
-1,Wellhausen,https://voyagerr.com/,Europe/Berlin,DE
