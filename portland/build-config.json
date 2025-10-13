@@ -31,7 +31,7 @@
     {
       "type" : "gtfs",
       "feedId" : "sandy",
-      "source" : "https://leonard.io/ibi/sandy-flex-faresv2.gtfs.zip"
+      "source" : "https://leonard.io/ibi/sandy-faresv2-rule-priority.gtfs.zip"
     }
   ],
   "transferRequests": [
