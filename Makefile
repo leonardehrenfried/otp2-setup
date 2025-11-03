@@ -256,6 +256,10 @@ oregon/osm.pbf:
 maryland/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/maryland-latest.osm.pbf -o $@
 
+maryland/gtfs.zip:
+	echo "nothing"
+
+
 washington/osm.pbf:
 	${CURL} https://download.geofabrik.de/north-america/us/washington-latest.osm.pbf -o $@
 

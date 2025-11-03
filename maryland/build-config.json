@@ -1,0 +1,9 @@
+{
+  "transitFeeds" : [
+    {
+      "type" : "gtfs",
+      "feedId" : "bus",
+      "source" : "https://feeds.mta.maryland.gov/gtfs/local-bus"
+    }
+  ]
+}
