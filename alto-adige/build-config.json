@@ -10,5 +10,10 @@
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
     }
+  ],
+  "dem" : [
+    {
+      "source" : "https://leonard.io/noi/srtm_39_03.tif"
+    }
   ]
 }
