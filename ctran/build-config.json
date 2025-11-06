@@ -1,7 +1,7 @@
 {
   "transitFeeds": [
     {
-      "source": "https://c-tran.com/images/Google/TheCurrent_GTFSFlex.zip",
+      "source": "https://leonard.io/ibi/C-TRAN_Flex.gtfs.zip",
       "feedId": "current",
       "type": "gtfs"
     }
