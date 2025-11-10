@@ -104,7 +104,7 @@ karlsruhe/osm.pbf:
 stuttgart/gtfs.zip:
 	echo "none"
 
-stuttgart/osm.pbf:
+stuttgart/osm.pbf: baden-wuerttemberg/osm.pbf
 	osmium extract baden-wuerttemberg/osm.pbf --polygon stuttgart/stuttgart.geojson -o $@
 
 reutlingen/gtfs.zip:
@@ -118,7 +118,7 @@ bawue/gtfs.zip:
 	#${CURL} https://leonard.io/otp/bwgesamt.tidy.gtfs.zip -o $@
 	echo "none"
 
-bawue/osm.pbf:
+baden-wuerttemberg/osm.pbf:
 	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf -o $@
 
 nordrhein-westfalen/osm.pbf:
