@@ -1,0 +1,12 @@
+{
+  "routingDefaults": {
+    "car" :{
+      "reluctance": 2
+    },
+    "accessEgress": {
+      "penalty": {
+        "car-to-park" : { "timePenalty": "30m + 2.5t", "costFactor": 3.5 }
+      }
+    }
+  }
+}
