@@ -10,7 +10,7 @@
     {
       "type" : "gtfs",
       "feedId" : "ch",
-      "source" : "https://data.opentransportdata.swiss/dataset/6cca1dfb-e53d-4da8-8d49-4797b3e768e3/resource/d5d9aac1-8251-4dda-9537-ae97cbb810c6/download/gtfs_fp2025_20251211.zip"
+      "source" : "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020/resource_permalink/gtfs_fp2026_20260107.zip"
     }
   ]
 }
