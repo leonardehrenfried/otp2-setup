@@ -1,10 +1,10 @@
 {
   "otpFeatures": {
-    "MinimumTransferTimeIsDefinitive": true,
     "SandboxAPIMapboxVectorTilesApi": true,
     "FloatingBike": true,
     "ActuatorAPI": true,
     "SandboxAPIGeocoder": true,
-    "TriasApi": true
+    "TriasApi": true,
+    "OjpApi": true
   }
 }

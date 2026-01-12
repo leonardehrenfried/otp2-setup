@@ -14,7 +14,7 @@ otp.jar:
 	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx10G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx20G -jar otp.jar --loadStreet --save $*
 
 build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
@@ -51,10 +51,10 @@ clean-all:
 	rm -f otp.jar
 
 clean-%:
-	find $* -name *gtfs.zip -print -exec rm {} \;
+	find $* -name "*gtfs.zip" -print -exec rm {} \;
 	find $* -name graph.obj -print -exec rm {} \;
 	find $* -name streetGraph.obj -print -exec rm {} \;
-	find $* -name osm.pbf -print -exec rm {} \;
+	find $* -name "osm.pbf" -print -exec rm {} \;
 	find $* -name *netex.zip -print -exec rm {} \;
 
 # Regions
@@ -93,7 +93,7 @@ hamburg/osm.pbf:
 
 hamburg/gtfs.zip:
 	mkdir -p hamburg
-	${CURL} https://gtfs.mfdz.de/HVV.with_bikes_allowed.gtfs.zip -o $@
+	#${CURL} https://gtfs.mfdz.de/HVV.with_bikes_allowed.gtfs.zip -o $@
 
 karlsruhe/gtfs.zip:
 	${CURL} https://gtfs.mfdz.de/KVV.with_shapes.gtfs.zip -o $@
@@ -150,6 +150,12 @@ slovenia/osm.pbf:
 
 slovenia/gtfs.zip:
 	echo "none"de
+
+switzerland/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/switzerland-latest.osm.pbf -o $@
+
+switzerland/gtfs.zip:
+	echo "none"
 
 dakar/osm.pbf:
 	echo "none"
