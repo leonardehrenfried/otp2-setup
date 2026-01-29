@@ -10,6 +10,11 @@ download: otp.jar
 otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
 
+upload-fifa:
+	rm -f otp.jar
+	make build-otp
+	rsync --info=progress2 --perms --chmod=u+rwx,g+rwx,o+rwx otp.jar leonard.io:www/ibi/otp-fifa-routing.jar
+
 %/streetGraph.obj: %/osm.pbf
 	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
 
