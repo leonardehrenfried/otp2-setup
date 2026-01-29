@@ -42,6 +42,12 @@
     }
   ],
   "updaters": [
+    {
+      "type": "stop-time-updater",
+      "url": "https://gtfsrt.blob.core.windows.net/tampere/tripupdate",
+      "feedId": "tampere",
+      "backwardsDelayPropagationType" : "ALWAYS"
+    }
   ],
   "triasApi": {
     "hideFeedId": true,

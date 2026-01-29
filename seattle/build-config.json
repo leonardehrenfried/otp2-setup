@@ -39,6 +39,11 @@
       "type" : "gtfs",
       "feedId" : "Kitsap",
       "source" : "https://pride.kitsaptransit.com/gtfs/google_transit.zip"
+    },
+    {
+      "type" : "gtfs",
+      "feedId" : "Skagit",
+      "source" : "https://strweb.skagittransit.org/GTFS/google_transit.zip"
     }
   ],
   "stopConsolidationFile":"consolidated-stops.csv",

@@ -2,7 +2,7 @@
   "transitFeeds": [
     {
       "type": "gtfs",
-      "source": "https://leonard.io/ibi/denver-flex-faresv2.gtfs.zip",
+      "source": "https://www.rtd-denver.com/files/gtfs/google_transit.zip",
       "feedId": "rtd"
     }
   ]

@@ -1,7 +1,6 @@
 {
   "staticParkAndRide": false,
   "areaVisibility": false,
-  "dataImportReport": true,
   "transitModelTimeZone": "Europe/Rome",
   "transitFeeds":[
     {
@@ -9,11 +8,16 @@
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
+    },
+    {
+      "source":"https://gtfs.api.opendatahub.com/v1/dataset/skyalps-flight-data/raw",
+      "type": "gtfs",
+      "feedId": "skyalps"
     }
   ],
   "dem" : [
-    {
+    /*{
       "source" : "https://leonard.io/noi/srtm_39_03.tif"
-    }
+    }*/
   ]
 }
