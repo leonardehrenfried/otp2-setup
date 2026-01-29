@@ -330,6 +330,11 @@ seattle/gtfs.zip:
 seattle/osm.pbf: washington/osm.pbf
 	osmium extract washington/osm.pbf --polygon seattle/seattle.geojson -o $@
 
+seattle-fifa:
+	rm -f otp.jar
+	${CURL} https://leonard.io/ibi/otp-fifa-routing.jar -o otp.jar
+	make clean-seattle build-seattle run-seattle
+
 hyde-shuttle/gtfs.zip:
 	echo "nothing"
 
