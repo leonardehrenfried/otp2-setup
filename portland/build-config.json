@@ -33,13 +33,12 @@
       "feedId": "spot",
       "type": "gtfs"
     }
-    /*
     ,
     {
       "type" : "gtfs",
       "feedId" : "sandy",
-      "source" : "https://leonard.io/ibi/sandy-faresv2-rule-priority.gtfs.zip"
-    }*/
+      "source" : "https://leonard.io/ibi/sandy-flex.gtfs.zip"
+    }
   ],
   "transferRequests": [
     {
