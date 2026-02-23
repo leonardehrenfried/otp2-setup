@@ -1,5 +1,6 @@
 {
   "otpFeatures" : {
-    "FlexRouting": true
+    "FlexRouting": true,
+    "FaresV2": true
   }
 }
