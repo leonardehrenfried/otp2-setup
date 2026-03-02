@@ -62,6 +62,12 @@
       "frequency": "30s",
       "url": "http://s3.amazonaws.com/commtrans-realtime-prod/tripupdates.pb",
       "feedId": "commtrans"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequency": "20s",
+      "url": "https://api.pugetsound.onebusaway.org/api/gtfs_realtime/trip-updates-for-agency/40.pb?key=cc1bd3b1-15a9-446b-a095-0b56aac88819",
+      "feedId": "soundtransit"
     }
   ]
 }
