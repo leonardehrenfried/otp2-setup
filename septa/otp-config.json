@@ -4,6 +4,7 @@
     "ActuatorAPI": true,
     "FlexRouting": false,
     "FloatingBike": false,
+    "FaresV2": true,
     "OptimizeTransfers": false,
     "ParallelRouting": true,
     "SandboxAPIGeocoder": true,

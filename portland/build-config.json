@@ -2,6 +2,7 @@
   "osmDefaults": {
     "osmTagMapping": "portland"
   },
+  "dataImportReport": true,
   "osmNaming":"portland",
   "osm" : [
     {

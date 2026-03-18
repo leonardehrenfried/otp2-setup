@@ -3,14 +3,17 @@
   "gtfsDefaults": {
     "discardMinTransferTimes": true
   },
+  "dataImportReport": false,
   "osmDefaults": {
     "timeZone": "Europe/Berlin"
   },
+  "areaVisibility": true,
   "transitFeeds" : [
     {
-      "type" : "gtfs",
+      "type" : "netex",
       "feedId" : "ch",
-      "source" : "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020/resource_permalink/gtfs_fp2026_20260107.zip"
+      "source" : "switzerland-epip.xml.zip",
+      "groupFilePattern": "(.*)\\.xml"
     }
   ]
 }
