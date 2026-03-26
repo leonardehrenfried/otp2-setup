@@ -1,6 +1,6 @@
 {
   "staticBikeParkAndRide": true,
-  "areaVisibility": true,
+  "areaVisibility": false,
   "boardingLocationTags": ["ref", "ref:IFOPT"],
   "gtfsDefaults": {
     "discardMinTransferTimes": true
