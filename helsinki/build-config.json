@@ -6,6 +6,21 @@
       "type": "gtfs",
       "source": "https://dev.hsl.fi/gtfs/hsl.zip",
       "feedId": "hsl"
+    },
+    {
+      "type": "gtfs",
+      "source": "https://gtfsdata.blob.core.windows.net/hsl/hsl_flex_test1-gtfs.zip",
+      "feedId": "hsl-flex"
+    },
+    {
+      "type": "gtfs",
+      "source": "https://gtfsdata.blob.core.windows.net/hsl/hsl_flex_test2-gtfs.zip",
+      "feedId": "flex-2"
+    },
+    {
+      "type": "gtfs",
+      "source": "https://resources.02taksi.fi/digitransit_02_taksi.zip",
+      "feedId": "taksi"
     }
   ]
 }
