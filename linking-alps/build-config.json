@@ -1,0 +1,26 @@
+{
+  "boardingLocationTags": ["ref", "ref:IFOPT"],
+  "gtfsDefaults": {
+    "discardMinTransferTimes": true
+  },
+  "dataImportReport": false,
+  "osmDefaults": {
+    "timeZone": "Europe/Berlin"
+  },
+  "areaVisibility": false,
+  "transitFeeds" : [
+    {
+      "type" : "netex",
+      "feedId" : "ch",
+      "source" : "https://leonard.io/noi/switzerland-epip.xml.zip",
+      "groupFilePattern": "(.*)\\.xml"
+    },
+    {
+      "type" : "netex",
+      "feedId" : "sta",
+      "source" : "https://leonard.io/noi/sta-netex-correct-ssids-prod.zip",
+      "groupFilePattern": "(.*)\\.xml"
+    }
+
+  ]
+}

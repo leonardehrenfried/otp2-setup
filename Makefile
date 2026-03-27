@@ -162,6 +162,12 @@ switzerland/osm.pbf:
 switzerland/gtfs.zip:
 	echo "none"
 
+linking-alps/gtfs.zip:
+	echo "none"
+
+linking-alps/osm.pbf:
+	echo "none"
+
 dakar/osm.pbf:
 	echo "none"
 

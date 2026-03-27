@@ -1,0 +1,49 @@
+{
+  "routingDefaults": {
+    "numItineraries": 5,
+    "transferSlack": "1m",
+    "waitReluctance": 2,
+    "walk": {
+      "reluctance": 3,
+      "stairsReluctance": 1
+    },
+    "bicycle": {
+      "triangle": {
+        "safety": 0.4,
+        "flatness": 0.3,
+        "time": 0.3
+      },
+      "rental": {
+        "bannedNetworks": ["stadtmobil_stuttgart", "car-sharing", "taxi", "cargo-bike"],
+        "keepingAtDestinationCost": 180,
+        "allowKeepingAtDestination": true,
+        "pickupTime": "3m",
+        "pickupCost": 850
+      }
+    },
+    "car" :{
+      "reluctance": 2
+    },
+    "itineraryFilters" : {
+      "bikeRentalDistanceRatio": 0.75,
+      "parkAndRideDurationRatio": 0.6,
+      "minBikeParkingDistance": 500,
+      "transitGeneralizedCostLimit": {
+        "costLimitFunction": "10m + 1.5x"
+      }
+    },
+    "accessEgress": {
+      "penalty": {
+        "car-to-park" : { "timePenalty": "10m + 1.5t", "costFactor": 2.5 }
+      },
+      "maxDurationForMode": {
+        "CAR_TO_PARK": "30m",
+        "BIKE_RENTAL": "30m",
+        "BIKE": "30m",
+        "WALK": "30m"
+      }
+    }
+  },
+  "updaters":[
+  ]
+}
