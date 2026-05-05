@@ -76,6 +76,12 @@ brandenburg/osm.pbf:
 brandenburg/gtfs.zip:
 	echo "no GTFS"
 
+niedersachsen/osm.pbf:
+	${CURL} http://download.geofabrik.de/europe/germany/niedersachsen-latest.osm.pbf -o $@
+
+niedersachsen/gtfs.zip:
+	echo "no GTFS"
+
 brandenburg/flex.gtfs.zip:
 	${CURL} https://github.com/bbnavi/gtfs-flex/releases/download/2022-01-25/gtfs-flex.zip -o $@
 

@@ -1,0 +1,7 @@
+{
+  "staticBikeParkAndRide": true,
+  "areaVisibility": false,
+  "osmDefaults": {
+    "timeZone": "Europe/Berlin"
+  }
+}
