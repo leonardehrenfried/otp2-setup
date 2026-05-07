@@ -3,5 +3,6 @@
   "areaVisibility": false,
   "osmDefaults": {
     "timeZone": "Europe/Berlin"
-  }
+  },
+  "fares": "gtfs"
 }
