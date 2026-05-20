@@ -2,7 +2,7 @@
   "otpFeatures": {
     "ExtraTransferLegOnSameStop": true,
     "ActuatorAPI": true,
-    "FlexRouting": false,
+    "FlexRouting": true,
     "FloatingBike": false,
     "FaresV2": true,
     "OptimizeTransfers": false,
