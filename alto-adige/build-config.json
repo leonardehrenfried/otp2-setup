@@ -4,7 +4,7 @@
   "transitModelTimeZone": "Europe/Rome",
   "transitFeeds":[
     {
-      "source":"https://leonard.io/noi/sta.epip.netex.zip",
+      "source":"https://otp-graph-build.opendatahub.testingmachine.eu/badger/sta.epip.netex.zip",
       "type": "netex",
       "feedId": "sta",
       "groupFilePattern": "(.*)\\.xml"
