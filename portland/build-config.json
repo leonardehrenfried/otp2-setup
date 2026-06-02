@@ -1,4 +1,6 @@
 {
+  "fares": "hop",
+  "transitServiceStart": "-P100Y",
   "osmDefaults": {
     "osmTagMapping": "portland"
   },
@@ -16,19 +18,19 @@
   "transitFeeds" : [
     {
       "type" : "gtfs",
-      "feedId" : "trimet",
+      "feedId" : "TRIMET",
       "source" : "https://developer.trimet.org/schedule/gtfs.zip"
     },
     {
       "type" : "gtfs",
-      "feedId" : "ctran",
+      "feedId" : "CTRAN",
       "source" : "https://mail.c-tran.com/images/Google/GoogleTransitUpload.zip"
     },
-    /*{
+    {
       "type" : "gtfs",
       "feedId" : "clackamas",
       "source" : "https://oregon-gtfs.trilliumtransit.com/gtfs_data/clackamascounty-or-us/clackamascounty-or-us--flex-v2.zip"
-    },*/
+    },
     {
       "source": "https://leonard.io/ibi/ctran-spot.gtfs.zip",
       "feedId": "spot",
@@ -39,6 +41,11 @@
       "type" : "gtfs",
       "feedId" : "sandy",
       "source" : "https://leonard.io/ibi/sandy-flex.gtfs.zip"
+    },
+    {
+      "type" : "gtfs",
+      "feedId" : "beaverton",
+      "source" : "https://leonard.io/ibi/beaverton.gtfs.zip"
     }
   ],
   "transferRequests": [

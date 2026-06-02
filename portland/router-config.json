@@ -6,8 +6,7 @@
     "transferSlack": 180,
     "waitReluctance": 0.9,
     "numItineraries": 3,
-    "itineraryFilters": {
-      "parkAndRideDurationRatio": 0.15,
+    "itineraryFilters": { "parkAndRideDurationRatio": 0.15,
       "bikeRentalDistanceRatio": 0.15,
 
       // only show non-transit (ie. walking) when it's at least as good as the transit option
@@ -51,19 +50,19 @@
       "type": "real-time-alerts",
       "frequency": "45s",
       "url": "http://trimet.org/transweb/ws/V1/FeedSpecAlerts/includeFuture/true/suppressSystemWideAlerts/true",
-      "feedId": "trimet"
+      "feedId": "TRIMET"
     },
     {
       "type": "stop-time-updater",
       "frequency": "11s",
       "url": "http://trimet.org/transweb/ws/V1/TripUpdate",
-      "feedId": "trimet"
+      "feedId": "TRIMET"
     },
     {
       "type": "vehicle-positions",
       "frequency": "9s",
       "url": "http://trimet.org/transweb/ws/V1/VehiclePositions",
-      "feedId": "trimet"
+      "feedId": "TRIMET"
     },
     {
       "type": "vehicle-rental",
