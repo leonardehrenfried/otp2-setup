@@ -1,4 +1,5 @@
 {
+  "transitServiceStart": "-P100Y",
   "transitFeeds": [
     {
       "source": "https://mail.c-tran.com/images/Google/GoogleTransitUpload.zip",
