@@ -8,19 +8,17 @@
     "timeZone": "Europe/Berlin"
   },
   "areaVisibility": false,
+  "osm": [
+    {
+      "source": "https://leonard.io/noi/switzerland-south-tyrol.pbf"
+    }
+  ],
   "transitFeeds" : [
     {
       "type" : "netex",
-      "feedId" : "ch",
-      "source" : "https://leonard.io/noi/switzerland-epip.xml.zip",
-      "groupFilePattern": "(.*)\\.xml"
-    },
-    {
-      "type" : "netex",
-      "feedId" : "sta",
-      "source" : "https://leonard.io/noi/NeTEx-Export_apb.zip",
+      "feedId" : "chit",
+      "source" : "https://leonard.io/noi/switzerland-italy-deduplicated.epip.zip",
       "groupFilePattern": "(.*)\\.xml"
     }
-
   ]
 }

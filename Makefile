@@ -16,7 +16,7 @@ upload-fifa:
 	rsync --info=progress2 --perms --chmod=u+rwx,g+rwx,o+rwx otp.jar leonard.io:www/ibi/otp-fifa-routing.jar
 
 %/streetGraph.obj: %/osm.pbf
-	${JAVA} -Xmx14G -jar otp.jar --buildStreet --save $*
+	${JAVA} -Xmx30G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
 	${JAVA} -Xmx30G -jar otp.jar --loadStreet --save $*
