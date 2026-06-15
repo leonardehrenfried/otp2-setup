@@ -32,7 +32,7 @@
     "maxTransferDuration": "4m"
   },
   "updaters": [
-    {
+    /*{
       "type": "stop-time-updater",
       "url": "https://api.goswift.ly/real-time/marta/gtfs-rt-trip-updates",
       "feedId": "MARTA",
@@ -47,6 +47,12 @@
       "headers": {
         "Authorization" : "ba8847745af6014949baf9258469ffae"
       }
+    },*/
+    {
+      "type": "vehicle-positions",
+      "url": "https://leonard.io/ibi/spoke-vehicle-positions.pb",
+      "feedId": "spoke",
+      "fuzzyTripMatching": true
     }
   ]
 }

@@ -118,6 +118,12 @@ stuttgart/gtfs.zip:
 stuttgart/osm.pbf: baden-wuerttemberg/osm.pbf
 	osmium extract baden-wuerttemberg/osm.pbf --polygon stuttgart/stuttgart.geojson -o $@
 
+pforzheim/gtfs.zip:
+	echo "none"
+
+pforzheim/osm.pbf:
+	${CURL} https://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.pbf -o $@
+
 reutlingen/gtfs.zip:
 	echo "none"
 

@@ -9,7 +9,7 @@
     "blockBasedInterlining": false
   },
   "transitFeeds": [
-    {
+    /*{
       "source": "https://itsmarta.com/google_transit_feed/google_transit.zip",
       "feedId": "MARTA",
       "type": "gtfs"
@@ -27,6 +27,11 @@
     {
       "source": "https://leonard.io/ibi/gwinnett-county.gtfs.zip",
       "feedId": "gwinnet",
+      "type": "gtfs"
+    },*/
+    {
+      "source": "https://leonard.io/ibi/atl-spoke.gtfs.zip",
+      "feedId": "spoke",
       "type": "gtfs"
     }
   ]
