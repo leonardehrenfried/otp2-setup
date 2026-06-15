@@ -1,0 +1,18 @@
+{
+  "boardingLocationTags": ["ref", "ref:IFOPT"],
+  "gtfsDefaults": {
+    "discardMinTransferTimes": true
+  },
+  "dataImportReport": false,
+  "osmDefaults": {
+    "timeZone": "Europe/Berlin"
+  },
+  "areaVisibility": false,
+  "transitFeeds" : [
+    {
+      "type" : "gtfs",
+      "feedId" : "vpe",
+      "source" : "https://opendata.vpe.de/gtfs_notices.zip"
+    }
+  ]
+}
