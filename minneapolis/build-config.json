@@ -1,0 +1,12 @@
+{
+  "osmDefaults": {
+    "osmTagMapping": "twin-cities"
+  },
+  "transitFeeds" : [
+    {
+      "type" : "gtfs",
+      "feedId" : "metro",
+      "source" : "https://svc.metrotransit.org/mtgtfs/gtfs.zip"
+    }
+  ]
+}
