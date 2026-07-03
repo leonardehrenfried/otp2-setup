@@ -156,6 +156,12 @@ alto-adige/osm.pbf: italy/osm.pbf
 alto-adige/gtfs.zip:
 	echo "none"
 
+alto-adige/osm.pbf: italy/osm.pbf
+	osmium extract italy/osm.pbf --polygon veneto/veneto.geojson -o $@
+
+veneto/gtfs.zip:
+	echo "none"
+
 bedford/gtfs.zip:
 	${CURL} https://leonard.io/trillium/stagecoach-midlands-2022-08-30.gtfs.zip -o $@
 

@@ -5,16 +5,11 @@
   "dataImportReport": true,
   "transitFeeds":[
     {
-      "source":"https://otp-graph-build.opendatahub.testingmachine.eu/data/sta.epip.netex.zip",
+      "source":"https://leonard.io/noi/veneto-netex.zip",
       "type": "netex",
       "feedId": "veneto",
       "groupFilePattern": "(.*)\\.xml"
     }
 
-  ],
-  "dem" : [
-    /*{
-      "source" : "https://leonard.io/noi/srtm_39_03.tif"
-    }*/
   ]
 }

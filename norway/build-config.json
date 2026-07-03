@@ -2,6 +2,7 @@
   "dataImportReport": true,
   "osmWayPropertySet": "norway",
   "staticParkAndRide": true,
+  "areaVisibility": true,
   "netexDefaults": {
     "sharedFilePattern": "_stops.xml",
     "sharedGroupFilePattern": "_(\\w{3})(_flexible)?_shared_data.xml",
