@@ -156,10 +156,16 @@ alto-adige/osm.pbf: italy/osm.pbf
 alto-adige/gtfs.zip:
 	echo "none"
 
-alto-adige/osm.pbf: italy/osm.pbf
+veneto/osm.pbf: italy/osm.pbf
 	osmium extract italy/osm.pbf --polygon veneto/veneto.geojson -o $@
 
 veneto/gtfs.zip:
+	echo "none"
+
+limburg/osm.pbf:
+	echo "none"
+
+limburg/gtfs.zip:
 	echo "none"
 
 bedford/gtfs.zip:

@@ -1,0 +1,19 @@
+{
+  "staticParkAndRide": false,
+  "areaVisibility": false,
+  "transitModelTimeZone": "Europe/Amsterdam",
+  "dataImportReport": true,
+  "osm": [
+    {
+      "source" : "https://download.geofabrik.de/europe/netherlands/limburg-latest.osm.pbf"
+    }
+  ],
+  "transitFeeds":[
+    {
+      "source":"https://leonard.io/noi/limburg.netex.zip",
+      "type": "netex",
+      "feedId": "limburg",
+      "groupFilePattern": "(.*)\\.xml"
+    }
+  ]
+}
