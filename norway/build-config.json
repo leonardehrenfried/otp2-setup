@@ -4,6 +4,7 @@
     "osmTagMapping": "norway"
   },
   "staticParkAndRide": true,
+  "platformEntriesLinking": true,
   "areaVisibility": true,
   "netexDefaults": {
     "sharedFilePattern": "_stops.xml",
