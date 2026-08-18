@@ -19,7 +19,7 @@ upload-fifa:
 	${JAVA} -Xmx30G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx30G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx50G -jar otp.jar --loadStreet --save $*
 
 build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
@@ -68,7 +68,7 @@ berlin/osm.pbf:
 	${CURL} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
 
 berlin/gtfs.zip:
-	${CURL} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
+	${CURL} https://www.vbb.de/fileadmin/user_upload/vbb/dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
 brandenburg/osm.pbf:
 	${CURL} http://download.geofabrik.de/europe/germany/brandenburg-latest.osm.pbf -o $@
@@ -90,7 +90,7 @@ herzberg/osm.pbf: berlin/osm.pbf
 	osmium extract berlin/osm.pbf --polygon herzberg/herzberg.geojson -o $@
 
 herzberg/gtfs.zip:
-	#${CURL} https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
+	#${CURL} https://www.vbb.de/fileadmin/user_upload/vbb/dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip -o $@
 
 angermuende/osm.pbf: berlin/osm.pbf
 	osmium extract berlin/osm.pbf --polygon angermuende/angermuende.geojson -o $@
@@ -186,10 +186,13 @@ switzerland/osm.pbf:
 switzerland/gtfs.zip:
 	echo "none"
 
-linking-alps/gtfs.zip:
-	echo "none"
-
 linking-alps/osm.pbf:
+	${CURL} https://otp-graph-build.opendatahub.testingmachine.eu/data/switzerland-italy.osm.pbf -o $@
+
+linking-alps/switzerland.epip.netex.zip:
+	${CURL} https://otp-graph-build.opendatahub.testingmachine.eu/data/switzerland.epip.netex.zip -o $@
+
+linking-alps/gtfs.zip: linking-alps/switzerland.epip.netex.zip
 	echo "none"
 
 dakar/osm.pbf:

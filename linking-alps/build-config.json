@@ -10,14 +10,14 @@
   "areaVisibility": false,
   "osm": [
     {
-      "source": "https://leonard.io/noi/switzerland-south-tyrol.pbf"
+      "source": "osm.pbf"
     }
   ],
   "transitFeeds" : [
     {
       "type" : "netex",
       "feedId" : "chit",
-      "source" : "https://leonard.io/noi/switzerland-italy-deduplicated.epip.zip",
+      "source" : "switzerland.epip.netex.zip",
       "groupFilePattern": "(.*)\\.xml"
     }
   ]
