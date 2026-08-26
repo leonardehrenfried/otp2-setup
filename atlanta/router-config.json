@@ -40,6 +40,7 @@
         "Authorization" : "${ATL_SWIFTLY_API_KEY}"
       }
     },
+    /*
     {
       "type": "vehicle-positions",
       "url": "https://api.goswift.ly/real-time/marta/gtfs-rt-vehicle-positions",
@@ -47,9 +48,10 @@
       "headers": {
         "Authorization" : "ba8847745af6014949baf9258469ffae"
       }
-    },
+    },*/
     {
       "type": "vehicle-positions",
+      //"url": "https://feed.prod.aws.go-beep.com/gtfs/rt/v1/cfedec55-27a4-4d55-9890-9c9956e0d664/vehicle-positions/",
       "url": "https://leonard.io/ibi/spoke-vehicle-positions.pb",
       "feedId": "spoke",
       "fuzzyTripMatching": true
