@@ -1,0 +1,9 @@
+{
+  "updaters": [
+    {
+      "type": "real-time-alerts",
+      "url": "https://leonard.io/ibi/metro-transit.alerts.pb",
+      "feedId": "metro"
+    }
+  ]
+}
