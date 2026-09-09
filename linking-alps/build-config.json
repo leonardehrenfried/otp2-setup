@@ -17,8 +17,10 @@
     {
       "type" : "netex",
       "feedId" : "chit",
-      "source" : "switzerland.epip.netex.zip",
-      "groupFilePattern": "(.*)\\.xml"
+      "source" : "linking-alps.epip.netex.zip",
+      "sharedFilePattern": "shared-.*\\.xml",
+      "sharedGroupFilePattern": "(g\\d+)-shared\\.xml",
+      "groupFilePattern": "(g\\d+)-\\d+\\.xml"
     }
   ]
 }

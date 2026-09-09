@@ -10,16 +10,11 @@ download: otp.jar
 otp.jar:
 	${CURL} https://otp.leonard.io/snapshots/otp-SNAPSHOT-shaded-latest.jar -o $@
 
-upload-fifa:
-	rm -f otp.jar
-	make build-otp
-	rsync --info=progress2 --perms --chmod=u+rwx,g+rwx,o+rwx otp.jar leonard.io:www/ibi/otp-fifa-routing.jar
-
 %/streetGraph.obj: %/osm.pbf
 	${JAVA} -Xmx30G -jar otp.jar --buildStreet --save $*
 
 build-%: otp.jar %/streetGraph.obj %/gtfs.zip
-	${JAVA} -Xmx50G -jar otp.jar --loadStreet --save $*
+	${JAVA} -Xmx30G -jar otp.jar --loadStreet --save $*
 
 build-full-%: otp.jar %/gtfs.zip %/osm.pbf
 	${JAVA} -Xmx50G -jar otp.jar --build --save $*
@@ -189,10 +184,11 @@ switzerland/gtfs.zip:
 linking-alps/osm.pbf:
 	${CURL} https://otp-graph-build.opendatahub.testingmachine.eu/data/switzerland-italy.osm.pbf -o $@
 
-linking-alps/switzerland.epip.netex.zip:
-	${CURL} https://otp-graph-build.opendatahub.testingmachine.eu/data/switzerland.epip.netex.zip -o $@
+linking-alps/linking-alps.epip.netex.zip:
+	#${CURL} https://leonard.io/noi/netex-epip-merged.zip -o $@
+	${CURL} http://178.105.210.3/graph/netex-epip-merged.zip -o $@
 
-linking-alps/gtfs.zip: linking-alps/switzerland.epip.netex.zip
+linking-alps/gtfs.zip: linking-alps/linking-alps.epip.netex.zip
 	echo "none"
 
 dakar/osm.pbf:

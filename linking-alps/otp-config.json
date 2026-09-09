@@ -1,6 +1,7 @@
 {
   "otpFeatures" : {
     "FlexRouting": true,
-    "OjpApi": true
+    "OjpApi": true,
+    "TransferConstraints": true
   }
 }
